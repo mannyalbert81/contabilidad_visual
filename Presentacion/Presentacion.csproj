@@ -55,7 +55,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Npgsql">
-      <HintPath>..\..\..\..\INSTALL\NpgSQl\Npgsql-2.1.2-net35\Npgsql.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\firmarTodo\SignDocumento\FirmadorElectronico\bin\Debug\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
