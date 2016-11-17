@@ -257,6 +257,7 @@
     <None Include="Properties\PublishProfiles\controlentrega.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Php\Inicio.aspx" />
+    <Content Include="Reporte.aspx" />
     <Content Include="Reportes\conListadoEntregas.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -328,6 +329,13 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporte.aspx.cs">
+      <DependentUpon>Reporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporte.aspx.designer.cs">
+      <DependentUpon>Reporte.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\conListadoEntregas.aspx.cs">
       <DependentUpon>conListadoEntregas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

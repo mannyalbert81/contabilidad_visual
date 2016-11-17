@@ -44,11 +44,11 @@ namespace Presentacion.Php
 
             string cadena = Server.MapPath("~/Php/Reporte/crCuentas.rpt");
 
-            Label2.Text = cadena;
-            //crystalReport.Load(cadena);
+            //Label2.Text = cadena;
+            crystalReport.Load(cadena);
             
-           // crystalReport.SetDataSource(dsCuentas.Tables[1]);
-            //CrystalReportViewer1.ReportSource = crystalReport;
+           crystalReport.SetDataSource(dsCuentas.Tables[1]);
+           CrystalReportViewer1.ReportSource = crystalReport;
         }
     }
 }
