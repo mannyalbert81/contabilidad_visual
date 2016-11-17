@@ -12,7 +12,7 @@ namespace Datos
         public static string cadenaConexion = @"Server=186.4.241.148;Port=5432;User Id=postgres;Password=.Romina.2012;Database=contabilidad_des;Preload Reader = true;";
 
         //186.65.24.196
-
+        //hjh
         public static DataTable EjecutarConsula(string comando)
         {
             DataTable data = new DataTable();
