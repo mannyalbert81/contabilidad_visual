@@ -14,6 +14,8 @@
     
         <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" />
     
+        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+    
     </form>
 </body>
 </html>

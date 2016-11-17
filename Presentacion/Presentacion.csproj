@@ -253,6 +253,7 @@
       <DependentUpon>dsCuentas.xsd</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\censoclientes.pubxml" />
+    <None Include="Properties\PublishProfiles\contabilidad2016.pubxml" />
     <None Include="Properties\PublishProfiles\controlentrega.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Php\Inicio.aspx" />

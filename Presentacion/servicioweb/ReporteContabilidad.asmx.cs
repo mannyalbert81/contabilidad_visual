@@ -1,4 +1,5 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Web;
 using Negocio;
 using System;
 using System.Collections.Generic;
@@ -66,8 +67,21 @@ namespace Presentacion.servicioweb
         [WebMethod]
         public void ReporteCuentas()
         {
+
+            Context.Response.Clear();
+
+            Context.Response.Buffer = false;
+
+            Context.Response.Redirect("~/Php/Inicio.aspx");
+
+        }
+
+        [WebMethod]
+        public void reporte()
+        {
             var dt_reporte = new DataTable();
-            var ds_reporte = new DataSet();
+
+            var ds_reporte = new Php.Datas.dsCuentas();
 
             string columnas = "plan_cuentas.nombre_plan_cuentas,entidades.nombre_entidades,plan_cuentas.nivel_plan_cuentas," +
                               "plan_cuentas.t_plan_cuentas,plan_cuentas.n_plan_cuentas,plan_cuentas.codigo_plan_cuentas";
@@ -79,17 +93,55 @@ namespace Presentacion.servicioweb
             dt_reporte = AccesoLogica.Select(columnas, tablas, where);
             ds_reporte.Tables.Add(dt_reporte);
 
-            string txtfileno1 = "";
+            CrystalReportViewer CrystalReportViewer1 = new CrystalReportViewer();
 
-            //string url = string.Format("www.google.com", txtfileno1);
-            //WebRequest request = WebRequest.Create(url);
+            ReportDocument _reporte = new ReportDocument();
 
-            Context.Response.Clear();
+            string url_file_rpt = Server.MapPath("~/Php/Reporte/crCuentas.rpt");
 
-            Context.Response.Buffer = false;
+            _reporte.Load(url_file_rpt);
 
-            Context.Response.Redirect("~/Php/Inicio.aspx");
+            _reporte.SetDataSource(ds_reporte.Tables[0]);
 
-    }
+            CrystalReportViewer1.ReportSource = _reporte;
+
+            CrystalReportViewer1.Visible = true;
+
+        }
+
+        /*[WebMethod]
+        public CrystalDecisions.Web.CrystalReportViewer reporte_cr()
+        {
+            var dt_reporte = new DataTable();
+
+            var ds_reporte = new Php.Datas.dsCuentas();
+
+            string columnas = "plan_cuentas.nombre_plan_cuentas,entidades.nombre_entidades,plan_cuentas.nivel_plan_cuentas," +
+                              "plan_cuentas.t_plan_cuentas,plan_cuentas.n_plan_cuentas,plan_cuentas.codigo_plan_cuentas";
+
+            string tablas = "public.plan_cuentas, public.entidades";
+
+            string where = "entidades.id_entidades = plan_cuentas.id_entidades AND entidades.id_entidades=3";
+
+            dt_reporte = AccesoLogica.Select(columnas, tablas, where);
+            ds_reporte.Tables.Add(dt_reporte);
+
+            CrystalReportViewer CrystalReportViewer1 = new CrystalReportViewer();
+
+            ReportDocument _reporte = new ReportDocument();
+
+            string url_file_rpt = Server.MapPath("~/Php/Reporte/crCuentas.rpt");
+
+            _reporte.Load(url_file_rpt);
+
+            _reporte.SetDataSource(ds_reporte.Tables[0]);
+
+            CrystalReportViewer1.ReportSource = _reporte;
+
+            CrystalReportViewer1.Visible = true;
+
+            return CrystalReportViewer1;
+
+        }*/
     }
 }
