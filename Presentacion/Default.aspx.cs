@@ -17,7 +17,7 @@ namespace Presentacion
             if (!IsPostBack)
             {
                 Master.Titulo("Bienvenid@ Manuel");
-                cargaEstablecimientos();
+                //cargaEstablecimientos();
             }
 
         }

@@ -50,8 +50,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Web.dll</HintPath>
     </Reference>
-    <Reference Include="GMaps">
-      <HintPath>..\..\..\..\Users\ManuelAlberto\Downloads\gmaps_v4_1_0_5(1)\GMaps.dll</HintPath>
+    <Reference Include="GMaps, Version=4.1.0.4, Culture=neutral, PublicKeyToken=564d55b144e7aa5a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Subgurim.Maps.4.1.0.4\lib\net20\GMaps.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=736440c9b414ea16, processorArchitecture=MSIL">
       <HintPath>..\packages\CodeContracts.Unofficial.1.0.0.0\lib\Net35\Microsoft.Contracts.dll</HintPath>
@@ -137,6 +138,7 @@
     <Content Include="Images\logomasoftsmallportadas.png" />
     <Content Include="Images\marcadornestle1.png" />
     <Content Include="Images\marcadorsombranestle1.png" />
+    <Content Include="Inicio.aspx" />
     <Content Include="logonestle2.png" />
     <Content Include="Images\logoOkidoki.png" />
     <Content Include="Images\logouser.png" />
@@ -239,9 +241,21 @@
     <Content Include="Datas\dtEntregas.xss">
       <DependentUpon>dtEntregas.xsd</DependentUpon>
     </Content>
+    <Content Include="Php\Datas\dsCuentas.xsc">
+      <DependentUpon>dsCuentas.xsd</DependentUpon>
+    </Content>
+    <None Include="Php\Datas\dsCuentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCuentas.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Php\Datas\dsCuentas.xss">
+      <DependentUpon>dsCuentas.xsd</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\censoclientes.pubxml" />
     <None Include="Properties\PublishProfiles\controlentrega.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Php\Inicio.aspx" />
     <Content Include="Reportes\conListadoEntregas.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -266,13 +280,14 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="favicon.ico" />
     <Content Include="servicioweb\controlentregas.asmx" />
+    <Content Include="servicioweb\ReporteContabilidad.asmx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClasesServicioWeb.cs" />
-    <Compile Include="Contenedor.cs" />
+    <Compile Include="Php\Contendor\Contenedor.cs" />
     <Compile Include="Datas\dtEntregas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -285,6 +300,31 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Datas\dsCuentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCuentas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Php\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Reporte\crCuentas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCuentas.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reportes\conListadoEntregas.aspx.cs">
@@ -308,6 +348,10 @@
     </Compile>
     <Compile Include="servicioweb\controlentregas.asmx.cs">
       <DependentUpon>controlentregas.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="servicioweb\ReporteContabilidad.asmx.cs">
+      <DependentUpon>ReporteContabilidad.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Site.Master.cs">
@@ -338,6 +382,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Php\Reporte\crCuentas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCuentas.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>

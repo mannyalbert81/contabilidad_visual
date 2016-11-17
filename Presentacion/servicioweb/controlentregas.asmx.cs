@@ -368,6 +368,40 @@ namespace Presentacion.servicioweb
 
         }
 
+        [WebMethod]
+        public List<Clases.ClasesServicioWeb.Cuentas_Entidad> busca_Cuentas(string str_cuenta)
+        {
+            //List<Clases.ClasesServicioWeb.ProductosEntrega> Entrega = new List<Clases.ClasesServicioWeb.ProductosEntrega>();
+            List<Clases.ClasesServicioWeb.Cuentas_Entidad> Cuenta = new List<Clases.ClasesServicioWeb.Cuentas_Entidad>();
+
+            string columnas = "entidades.nombre_entidades,plan_cuentas.codigo_plan_cuentas,plan_cuentas.nombre_plan_cuentas,plan_cuentas.n_plan_cuentas,plan_cuentas.t_plan_cuentas,plan_cuentas.nivel_plan_cuentas";
+            string from = "public.plan_cuentas, public.entidades";
+            string where = "entidades.id_entidades = plan_cuentas.id_entidades AND entidades.id_entidades = 3 AND plan_cuentas.nombre_plan_cuentas = '"+ str_cuenta+"'";
+
+
+            DataTable dtCuentas = AccesoLogica.Select(columnas, from ,where);
+
+            Clases.ClasesServicioWeb.Cuentas_Entidad cl_Cuenta = new Clases.ClasesServicioWeb.Cuentas_Entidad();
+
+            foreach (DataRow registro in dtCuentas.Rows)
+            {
+                cl_Cuenta = new Clases.ClasesServicioWeb.Cuentas_Entidad();
+                cl_Cuenta.nombre_entidades = registro["nombre_entidades"].ToString();
+                cl_Cuenta.codigo_plan_cuentas = registro["codigo_plan_cuentas"].ToString();
+                cl_Cuenta.nombre_plan_cuentas = registro["nombre_plan_cuentas"].ToString();
+                cl_Cuenta.n_plan_cuentas = registro["n_plan_cuentas"].ToString();
+                cl_Cuenta.t_plan_cuentas = registro["t_plan_cuentas"].ToString(); 
+                cl_Cuenta.nivel_plan_cuentas = Convert.ToInt32(registro["nivel_plan_cuentas"].ToString());
+
+
+                Cuenta.Add(cl_Cuenta);
+
+            }
+            dtCuentas.Clone();
+            return Cuenta;
+
+        }
+
 
     }
 }

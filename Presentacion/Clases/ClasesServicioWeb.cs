@@ -8,11 +8,7 @@ namespace Presentacion.Clases
     public class ClasesServicioWeb
     {
         
-        
-        
-        
-        
-        
+
         public class CredencialesAcceso
         {
 
@@ -71,7 +67,18 @@ namespace Presentacion.Clases
              public double importe_productos_entregas_d { get; set; }
              
         }
-          
+
+        public class Cuentas_Entidad
+        {
+           
+            public string nombre_entidades { get; set; }
+            public string codigo_plan_cuentas { get; set; }
+            public string nombre_plan_cuentas { get; set; }
+            public string n_plan_cuentas { get; set; }
+            public string t_plan_cuentas { get; set; }
+            public Int32 nivel_plan_cuentas { get; set; }
+        }
+
 
     }
 }

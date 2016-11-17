@@ -9,7 +9,7 @@ namespace Datos
 {
     class MetodosDatos
     {
-        public static string cadenaConexion = @"Server=186.71.172.100;Port=5432;User Id=postgres;Password=.Romina.2012;Database=controlequipos;Preload Reader = true;";
+        public static string cadenaConexion = @"Server=186.4.241.148;Port=5432;User Id=postgres;Password=.Romina.2012;Database=contabilidad_des;Preload Reader = true;";
 
         //186.65.24.196
 
