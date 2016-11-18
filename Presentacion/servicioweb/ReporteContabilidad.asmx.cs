@@ -99,13 +99,19 @@ namespace Presentacion.servicioweb
 
             string url_file_rpt = Server.MapPath("~/Php/Reporte/crCuentas.rpt");
 
-            _reporte.Load(url_file_rpt);
+            //_reporte.Load(url_file_rpt);
 
-            _reporte.SetDataSource(ds_reporte.Tables[0]);
+            //_reporte.SetDataSource(ds_reporte.Tables[0]);
 
-            CrystalReportViewer1.ReportSource = _reporte;
+            //CrystalReportViewer1.ReportSource = _reporte;
 
-            CrystalReportViewer1.Visible = true;
+            //CrystalReportViewer1.Visible = true;
+
+            Php.Reporte.crCuentas rptXMLReport = new Php.Reporte.crCuentas();
+            rptXMLReport.SetDataSource(ds_reporte.Tables[1]);
+            CrystalReportViewer1.ReportSource = rptXMLReport;
+
+
 
         }
 
