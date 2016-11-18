@@ -125,30 +125,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Images\androidApp.png" />
-    <Content Include="Images\android_blanco.png" />
-    <Content Include="Images\botonlogin1.jpg" />
-    <Content Include="Images\buscar.png" />
-    <Content Include="Images\letrasNestle.jpg" />
-    <Content Include="Images\letrasokikodi.jpg" />
-    <Content Include="Images\loginboton.png" />
-    <Content Include="Images\logoKioto.png" />
-    <Content Include="Images\logoKiotoColor.png" />
-    <Content Include="Images\logomasoftsmallportadas.png" />
-    <Content Include="Images\marcadornestle1.png" />
-    <Content Include="Images\marcadorsombranestle1.png" />
     <Content Include="Inicio.aspx" />
     <Content Include="logonestle2.png" />
-    <Content Include="Images\logoOkidoki.png" />
-    <Content Include="Images\logouser.png" />
-    <Content Include="Images\logouser1.png" />
-    <Content Include="Images\logouser2.png" />
-    <Content Include="Images\marcadorrojo.png" />
-    <Content Include="Images\marcadorrojo1.png" />
-    <Content Include="Images\marcadorrojosombra.png" />
-    <Content Include="Images\marcadorrojosombra1.png" />
-    <Content Include="Images\mas_menu.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -209,38 +187,10 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Default.aspx" />
-    <Content Include="Images\accent.png" />
-    <Content Include="Images\bullet.png" />
-    <Content Include="Images\heroAccent.png" />
-    <Content Include="Images\logo_okidoki.png" />
-    <Content Include="Images\orderedList0.png" />
-    <Content Include="Images\orderedList1.png" />
-    <Content Include="Images\orderedList2.png" />
-    <Content Include="Images\orderedList3.png" />
-    <Content Include="Images\orderedList4.png" />
-    <Content Include="Images\orderedList5.png" />
-    <Content Include="Images\orderedList6.png" />
-    <Content Include="Images\orderedList7.png" />
-    <Content Include="Images\orderedList8.png" />
-    <Content Include="Images\orderedList9.png" />
     <Content Include="packages.config" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="app\entrega.nfc.apk" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Datas\dtEntregas.xsc">
-      <DependentUpon>dtEntregas.xsd</DependentUpon>
-    </Content>
-    <None Include="Datas\dtEntregas.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dtEntregas.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Datas\dtEntregas.xss">
-      <DependentUpon>dtEntregas.xsd</DependentUpon>
-    </Content>
     <Content Include="Php\Datas\dsCuentas.xsc">
       <DependentUpon>dsCuentas.xsd</DependentUpon>
     </Content>
@@ -258,7 +208,6 @@
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Php\Inicio.aspx" />
     <Content Include="Reporte.aspx" />
-    <Content Include="Reportes\conListadoEntregas.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\DateTimePicker.js" />
@@ -289,12 +238,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClasesServicioWeb.cs" />
-    <Compile Include="Php\Contendor\Contenedor.cs" />
-    <Compile Include="Datas\dtEntregas.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dtEntregas.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Clases\Funciones.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -336,25 +279,6 @@
     <Compile Include="Reporte.aspx.designer.cs">
       <DependentUpon>Reporte.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\conListadoEntregas.aspx.cs">
-      <DependentUpon>conListadoEntregas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Reportes\conListadoEntregas.aspx.designer.cs">
-      <DependentUpon>conListadoEntregas.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\CrystalReport1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reportes\repEntregas.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>repEntregas.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="servicioweb\controlentregas.asmx.cs">
       <DependentUpon>controlentregas.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -371,7 +295,9 @@
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Php\Contendor\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
   </ItemGroup>
@@ -395,14 +321,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crCuentas.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\repEntregas.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>repEntregas.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
@@ -422,7 +340,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:53325/</IISUrl>
+          <IISUrl>http://localhost:5748/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
