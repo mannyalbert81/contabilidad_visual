@@ -23,7 +23,7 @@ namespace Presentacion.Php
 
             string tablas = "public.plan_cuentas, public.entidades";
 
-            string where = "entidades.id_entidades = plan_cuentas.id_entidades AND entidades.id_entidades=3";
+            string where = "entidades.id_entidades = plan_cuentas.id_entidades AND entidades.id_entidades=3 ORDER BY plan_cuentas.codigo_plan_cuentas ";
 
             dt_Reporte = AccesoLogica.Select(columnas, tablas, where);
 
@@ -49,6 +49,11 @@ namespace Presentacion.Php
             
            crystalReport.SetDataSource(dsCuentas.Tables[1]);
            CrystalReportViewer1.ReportSource = crystalReport;
+        }
+
+        protected void CrystalReportViewer1_Init(object sender, EventArgs e)
+        {
+
         }
     }
 }
