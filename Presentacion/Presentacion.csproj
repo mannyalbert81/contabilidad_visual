@@ -191,6 +191,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="app\entrega.nfc.apk" />
+    <Content Include="Php\Contendor\conMayorDetallado.aspx" />
     <Content Include="Php\Datas\dsCuentas.xsc">
       <DependentUpon>dsCuentas.xsd</DependentUpon>
     </Content>
@@ -201,6 +202,17 @@
     </None>
     <Content Include="Php\Datas\dsCuentas.xss">
       <DependentUpon>dsCuentas.xsd</DependentUpon>
+    </Content>
+    <Content Include="Php\Datas\dsMayor.xsc">
+      <DependentUpon>dsMayor.xsd</DependentUpon>
+    </Content>
+    <None Include="Php\Datas\dsMayor.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMayor.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Php\Datas\dsMayor.xss">
+      <DependentUpon>dsMayor.xsd</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\censoclientes.pubxml" />
     <None Include="Properties\PublishProfiles\contabilidad2016.pubxml" />
@@ -253,10 +265,22 @@
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Php\Contendor\conMayorDetallado.aspx.cs">
+      <DependentUpon>conMayorDetallado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Php\Contendor\conMayorDetallado.aspx.designer.cs">
+      <DependentUpon>conMayorDetallado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Php\Datas\dsCuentas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCuentas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Datas\dsMayor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMayor.xsd</DependentUpon>
     </Compile>
     <Compile Include="Php\Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
@@ -269,6 +293,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crCuentas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crMayorDetallado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crMayorDetallado.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -295,9 +325,7 @@
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Php\Contendor\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Site.Master" />
   </ItemGroup>
@@ -320,6 +348,10 @@
     <EmbeddedResource Include="Php\Reporte\crCuentas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crCuentas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crMayorDetallado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crMayorDetallado.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
