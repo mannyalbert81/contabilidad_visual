@@ -92,7 +92,7 @@ namespace Presentacion.Php.Contendor
 
             where = where + where_to;
 
-            string hola;
+            
           
 
 
