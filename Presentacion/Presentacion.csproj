@@ -278,6 +278,7 @@
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Php\Clases\ParametrosRpt.cs" />
     <Compile Include="Php\Contendor\conComprobantes.aspx.cs">
       <DependentUpon>conComprobantes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
