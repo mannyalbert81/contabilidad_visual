@@ -11,6 +11,9 @@ using System.Data;
 
 namespace Presentacion.Php.Contendor
 {
+
+
+
     public partial class conMayorDetallado : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
