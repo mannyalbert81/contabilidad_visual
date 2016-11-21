@@ -191,6 +191,9 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="app\entrega.nfc.apk" />
+    <Content Include="Php\Contendor\conComprobantes.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Php\Contendor\conMayorDetallado.aspx" />
     <Content Include="Php\Datas\dsCuentas.xsc">
       <DependentUpon>dsCuentas.xsd</DependentUpon>
@@ -205,6 +208,17 @@
     </Content>
     <Content Include="Php\Datas\dsMayor.xsc">
       <DependentUpon>dsMayor.xsd</DependentUpon>
+    </Content>
+    <Content Include="Php\Datas\dsComprobantes.xsc">
+      <DependentUpon>dsComprobantes.xsd</DependentUpon>
+    </Content>
+    <None Include="Php\Datas\dsComprobantes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsComprobantes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Php\Datas\dsComprobantes.xss">
+      <DependentUpon>dsComprobantes.xsd</DependentUpon>
     </Content>
     <None Include="Php\Datas\dsMayor.xsd">
       <SubType>Designer</SubType>
@@ -265,6 +279,15 @@
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Php\Contendor\conComprobantes.aspx.cs">
+      <DependentUpon>conComprobantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Php\Contendor\conComprobantes.aspx.designer.cs">
+      <DependentUpon>conComprobantes.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Php\Contendor\conMayorDetallado.aspx.cs">
       <DependentUpon>conMayorDetallado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -277,6 +300,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCuentas.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Php\Datas\dsComprobantes.Designer.cs">
+      <DependentUpon>dsComprobantes.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Php\Datas\dsMayor.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -288,6 +316,12 @@
     </Compile>
     <Compile Include="Php\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Reporte\crComprobantes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crComprobantes.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Php\Reporte\crCuentas.cs">
       <AutoGen>True</AutoGen>
@@ -345,6 +379,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Php\Reporte\crComprobantes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crComprobantes.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Php\Reporte\crCuentas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crCuentas.cs</LastGenOutput>
