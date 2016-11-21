@@ -21,7 +21,8 @@ namespace Presentacion.Php
             parametros.Fecha_hasta = Request.QueryString["fecha_hasta"];
             parametros.id_entidades = Request.QueryString["id_entidades"];
 
-            ReportDocument crystalReport = new ReportDocument();
+            //ReportDocument crystalReport = new ReportDocument();
+            ReportDocument crystalReport = new Php.Reporte.crCuentas();
             var dsCuentas = new Datas.dsCuentas();
             DataTable dt_Reporte = new DataTable();
 
@@ -31,7 +32,7 @@ namespace Presentacion.Php
 
             string tablas = "public.plan_cuentas, public.entidades";
 
-            string where = "entidades.id_entidades = plan_cuentas.id_entidades" ;
+            string where = "entidades.id_entidades = plan_cuentas.id_entidades";
 
             string order = "plan_cuentas.codigo_plan_cuentas";
 
@@ -44,7 +45,7 @@ namespace Presentacion.Php
 
             where = where + where_to;
 
-            dt_Reporte = AccesoLogica.Select(columnas, tablas, where , order);
+            dt_Reporte = AccesoLogica.Select(columnas, tablas, where, order);
 
             //dsCuentas.Cuentas= dt_Reporte;
 
@@ -52,11 +53,27 @@ namespace Presentacion.Php
 
             string cadena = Server.MapPath("~/Php/Reporte/crCuentas.rpt");
 
-            //Label2.Text = cadena;
-            crystalReport.Load(cadena);
+            string nombre_entidad = dt_Reporte.Rows[0]["nombre_entidades"].ToString();
+
+            crystalReport.SetDataSource(dsCuentas.Tables[1]);
+
+            //crystalReport.Load(cadena);
+
+            //parametros   
+            crystalReport.SetParameterValue(@"nombre_entidad",nombre_entidad);         
+
+            //parametros discretos
+           /* CrystalDecisions.Shared.ParameterValues RpDatos = new CrystalDecisions.Shared.ParameterValues();
+            CrystalDecisions.Shared.ParameterDiscreteValue p_nombre_entidad = new CrystalDecisions.Shared.ParameterDiscreteValue();
+
+            p_nombre_entidad.Value = nombre_entidad;
+
+            RpDatos.Add(p_nombre_entidad);
+            crystalReport.DataDefinition.ParameterFields["nombre_entidad"].ApplyCurrentValues(RpDatos);
+            RpDatos.Clear();*/
             
-           crystalReport.SetDataSource(dsCuentas.Tables[1]);
-           CrystalReportViewer1.ReportSource = crystalReport;
+            
+            CrystalReportViewer1.ReportSource = crystalReport;
         }
 
         protected void CrystalReportViewer1_Init(object sender, EventArgs e)

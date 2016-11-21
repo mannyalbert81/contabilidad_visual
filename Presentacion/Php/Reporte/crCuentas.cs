@@ -90,7 +90,7 @@ namespace Presentacion.Php.Reporte {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_param_php {
+        public CrystalDecisions.Shared.IParameterField Parameter_nombre_entidad {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
