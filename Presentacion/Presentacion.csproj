@@ -322,6 +322,12 @@
       <DependentUpon>crCuentas.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Php\Reporte\crMayorSimplificado.cs">
+      <DependentUpon>crMayorSimplificado.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Php\Reporte\crMayorDetallado.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -379,6 +385,10 @@
     <EmbeddedResource Include="Php\Reporte\crCuentas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crCuentas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crMayorSimplificado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crMayorSimplificado.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Php\Reporte\crMayorDetallado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
