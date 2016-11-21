@@ -12,7 +12,7 @@
   <xs:element name="dsMayor" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsMayor" msprop:Generator_UserDSName="dsMayor">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_mayor" msprop:Generator_ColumnVarNameInTable="columnid_mayor" msprop:Generator_ColumnPropNameInRow="id_mayor" msprop:Generator_ColumnPropNameInTable="id_mayorColumn" msprop:Generator_UserColumnName="id_mayor" type="xs:int" minOccurs="0" />
@@ -46,6 +46,7 @@
               <xs:element name="saldo_mayor" msprop:Generator_ColumnVarNameInTable="columnsaldo_mayor" msprop:Generator_ColumnPropNameInRow="saldo_mayor" msprop:Generator_ColumnPropNameInTable="saldo_mayorColumn" msprop:Generator_UserColumnName="saldo_mayor" type="xs:double" minOccurs="0" />
               <xs:element name="saldo_ini_mayor" msprop:Generator_ColumnVarNameInTable="columnsaldo_ini_mayor" msprop:Generator_ColumnPropNameInRow="saldo_ini_mayor" msprop:Generator_ColumnPropNameInTable="saldo_ini_mayorColumn" msprop:Generator_UserColumnName="saldo_ini_mayor" type="xs:double" minOccurs="0" />
               <xs:element name="creado" msprop:Generator_ColumnVarNameInTable="columncreado" msprop:Generator_ColumnPropNameInRow="creado" msprop:Generator_ColumnPropNameInTable="creadoColumn" msprop:Generator_UserColumnName="creado" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="logo_entidades" msprop:Generator_ColumnVarNameInTable="columnlogo_entidades" msprop:Generator_ColumnPropNameInRow="logo_entidades" msprop:Generator_ColumnPropNameInTable="logo_entidadesColumn" msprop:Generator_UserColumnName="logo_entidades" type="xs:base64Binary" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
