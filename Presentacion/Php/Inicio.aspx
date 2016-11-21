@@ -17,3 +17,4 @@
     </form>
 </body>
 </html>
+<a href="Inicio.aspx">Inicio.aspx</a>
