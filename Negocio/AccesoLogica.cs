@@ -44,6 +44,12 @@ namespace Negocio
             return fun.Select(columnas, tabla, where);
         }
 
+        public static DataTable Select(string columnas, string tabla, string where, string order)
+        {
+            Consultas fun = new Consultas();
+            return fun.Select(columnas, tabla, where, order);
+        }
+
         public static DataTable Select_inner_join(string cadena1, string tabla_uno, string tabla_dos, string parametro)
         {
             Consultas fun = new Consultas();
