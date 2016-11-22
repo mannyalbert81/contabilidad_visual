@@ -34,6 +34,13 @@ namespace Datos
             return MetodosDatos.EjecutarConsula(comando);
         }
 
+        public DataTable Select(string columnas, string tabla, string where, string order)
+        {
+            where = where.Replace("''", "null");
+            string comando = "SELECT " + columnas + " FROM " + tabla + " WHERE " + where + " ORDER BY "+ order;
+            return MetodosDatos.EjecutarConsula(comando);
+        }
+
         public DataTable Select_inner_join(string cadena1, string tabla_uno, string tabla_dos, string parametro)
         {
 
