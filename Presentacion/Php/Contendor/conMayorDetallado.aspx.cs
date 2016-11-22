@@ -25,7 +25,7 @@ namespace Presentacion.Php.Contendor
 
         protected void CrystalReportViewer1_Init(object sender, EventArgs e)
         {
-            parametros.tipo_comprobantes = Request.QueryString["tipo_comprobantes"];
+            parametros.tipo_comprobantes = Request.QueryString["id_tipo_comprobantes"];
             parametros.fecha_desde = Request.QueryString["fecha_desde"];
             parametros.Fecha_hasta = Request.QueryString["fecha_hasta"];
             parametros.id_entidades = Request.QueryString["id_entidades"];
@@ -62,10 +62,10 @@ namespace Presentacion.Php.Contendor
 
             String where_to = "";
             //
-            if (!String.IsNullOrEmpty(parametros.tipo_comprobantes))
+            if (!String.IsNullOrEmpty(parametros.tipo_comprobantes) && Convert.ToInt32(parametros.tipo_comprobantes)!=0)
             {
 
-                where_to += " AND tipo_comprobantes.id_tipo_comprobantes='" + parametros.id_entidades+"'";
+                where_to += " AND tipo_comprobantes.id_tipo_comprobantes='" + parametros.tipo_comprobantes+"'";
             }
             
             if (!String.IsNullOrEmpty(parametros.fecha_desde) && !String.IsNullOrEmpty(parametros.Fecha_hasta))
