@@ -334,6 +334,12 @@
       <DependentUpon>crMayorDetallado.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Php\Reporte\empty.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>empty.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reporte.aspx.cs">
       <DependentUpon>Reporte.aspx</DependentUpon>
@@ -393,6 +399,10 @@
     <EmbeddedResource Include="Php\Reporte\crMayorDetallado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crMayorDetallado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\empty.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>empty.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

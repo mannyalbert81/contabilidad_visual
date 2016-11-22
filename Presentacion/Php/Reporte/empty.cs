@@ -16,14 +16,14 @@ namespace Presentacion.Php.Reporte {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class crMayorSimplificado : ReportClass {
+    public class empty : ReportClass {
         
-        public crMayorSimplificado() {
+        public empty() {
         }
         
         public override string ResourceName {
             get {
-                return "crMayorSimplificado.rpt";
+                return "empty.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Presentacion.Php.Reporte {
         
         public override string FullResourceName {
             get {
-                return "Presentacion.Php.Reporte.crMayorSimplificado.rpt";
+                return "Presentacion.Php.Reporte.empty.rpt";
             }
             set {
                 // Do nothing
@@ -66,7 +66,7 @@ namespace Presentacion.Php.Reporte {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection1 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[2];
             }
@@ -74,7 +74,7 @@ namespace Presentacion.Php.Reporte {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,49 +82,17 @@ namespace Presentacion.Php.Reporte {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
-            get {
-                return this.ReportDefinition.Sections[4];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
-            get {
-                return this.ReportDefinition.Sections[5];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public CrystalDecisions.CrystalReports.Engine.Section Section5 {
             get {
-                return this.ReportDefinition.Sections[6];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_fecha_desde {
-            get {
-                return this.DataDefinition.ParameterFields[0];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_fecha_hasta {
-            get {
-                return this.DataDefinition.ParameterFields[1];
+                return this.ReportDefinition.Sections[4];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcrMayorSimplificado : Component, ICachedReport {
+    public class Cachedempty : Component, ICachedReport {
         
-        public CachedcrMayorSimplificado() {
+        public Cachedempty() {
         }
         
         [Browsable(false)]
@@ -161,7 +129,7 @@ namespace Presentacion.Php.Reporte {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            crMayorSimplificado rpt = new crMayorSimplificado();
+            empty rpt = new empty();
             rpt.Site = this.Site;
             return rpt;
         }
