@@ -10,6 +10,7 @@ using System.Data;
 
 using System.IO;
 using System.Drawing;
+using Presentacion.Php.Clases;
 
 namespace Presentacion.Php.Contendor
 {
@@ -18,9 +19,16 @@ namespace Presentacion.Php.Contendor
 
     public partial class conMayorDetallado : System.Web.UI.Page
     {
+        ParametrosRpt parametros = new ParametrosRpt();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            parametros.tipo_comprobantes = Request.QueryString["tipo_comprobantes"];
+            parametros.numero_comprobantes = Request.QueryString["num_comprobantes"];
+            parametros.referencia_doc_comprobantes = Request.QueryString["ref_doc_comprobantes"];
+            parametros.fecha_desde = Request.QueryString["fecha_desde"];
+            parametros.Fecha_hasta = Request.QueryString["fecha_hasta"];
+            parametros.id_entidades = Request.QueryString["id_entidades"];
         }
 
         protected void CrystalReportViewer1_Init(object sender, EventArgs e)
@@ -28,7 +36,7 @@ namespace Presentacion.Php.Contendor
             ReportDocument crystalReport = new ReportDocument();
             var dsMayor = new Datas.dsMayor();
             DataTable dt_Reporte = new DataTable();
-           
+
 
             string columnas = "mayor.id_mayor, ccomprobantes.id_ccomprobantes,usuarios.nombre_usuarios, " +
                                "tipo_comprobantes.nombre_tipo_comprobantes, entidades.nombre_entidades, " +
@@ -48,9 +56,47 @@ namespace Presentacion.Php.Contendor
                               "mayor.id_ccomprobantes = ccomprobantes.id_ccomprobantes AND " +
                               "plan_cuentas.id_plan_cuentas = mayor.id_plan_cuentas AND " +
                               "tipo_comprobantes.id_tipo_comprobantes = ccomprobantes.id_tipo_comprobantes AND " +
-                              "entidades.id_entidades = ccomprobantes.id_entidades ORDER BY mayor.creado ";
+                              "entidades.id_entidades = ccomprobantes.id_entidades ";
 
-            dt_Reporte = AccesoLogica.Select(columnas, tablas, where);
+            string order = " mayor.creado";
+
+            //para cambiar el where
+
+            String where_to = "";
+            //
+            if (!String.IsNullOrEmpty(parametros.tipo_comprobantes))
+            {
+
+                where_to += " AND tipo_comprobantes.id_tipo_comprobantes='" + parametros.id_entidades+"'";
+            }
+            if (!String.IsNullOrEmpty(parametros.numero_comprobantes))
+            {
+
+                where_to += " AND ccomprobantes.numero_ccomprobantes='"+parametros.numero_comprobantes+"'";
+            }
+            if (!String.IsNullOrEmpty(parametros.referencia_doc_comprobantes))
+            {
+
+                where_to += " AND ccomprobantes.referencia_doc_ccomprobantes ='"+parametros.referencia_doc_comprobantes+"'";
+            }
+            if (!String.IsNullOrEmpty(parametros.fecha_desde) && !String.IsNullOrEmpty(parametros.Fecha_hasta))
+            {
+
+                where_to += " AND  ccomprobantes.fecha_ccomprobantes BETWEEN '"+parametros.fecha_desde+"' AND '"+parametros.Fecha_hasta+"'";
+            }
+            if (!String.IsNullOrEmpty(parametros.id_entidades))
+            {
+
+                where_to += " AND entidades.id_entidades = " + parametros.id_entidades;
+            }
+
+            where = where + where_to;
+
+            
+          
+
+
+            dt_Reporte = AccesoLogica.Select(columnas, tablas, where,order);
 
             //dsCuentas.Cuentas= dt_Reporte;
 

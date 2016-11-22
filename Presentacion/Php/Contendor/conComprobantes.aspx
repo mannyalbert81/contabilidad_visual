@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="Presentacion.Php.Inicio" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="conComprobantes.aspx.cs" Inherits="Presentacion.Php.Contendor.conComprobantes" %>
 
 <%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
 
@@ -9,12 +9,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body>    
-    <form id="form2" runat="server">
+<body>
+    <form id="form1" runat="server">
+    <div>
     
         <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" OnInit="CrystalReportViewer1_Init" ToolPanelView="None" />
-    
+        <a href="conComprobantes.aspx">conComprobantes.aspx</a>
+    </div>
     </form>
 </body>
 </html>
-<a href="Inicio.aspx">Inicio.aspx</a>

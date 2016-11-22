@@ -16,14 +16,14 @@ namespace Presentacion.Php.Reporte {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class cr_Cuentas1 : ReportClass {
+    public class crMayorSimplificado : ReportClass {
         
-        public cr_Cuentas1() {
+        public crMayorSimplificado() {
         }
         
         public override string ResourceName {
             get {
-                return "cr_Cuentas1.rpt";
+                return "crMayorSimplificado.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Presentacion.Php.Reporte {
         
         public override string FullResourceName {
             get {
-                return "Presentacion.Php.Reporte.cr_Cuentas1.rpt";
+                return "Presentacion.Php.Reporte.crMayorSimplificado.rpt";
             }
             set {
                 // Do nothing
@@ -66,7 +66,7 @@ namespace Presentacion.Php.Reporte {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection1 {
             get {
                 return this.ReportDefinition.Sections[2];
             }
@@ -74,7 +74,7 @@ namespace Presentacion.Php.Reporte {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,17 +82,41 @@ namespace Presentacion.Php.Reporte {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
             get {
                 return this.ReportDefinition.Sections[4];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+            get {
+                return this.ReportDefinition.Sections[5];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+            get {
+                return this.ReportDefinition.Sections[6];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_fecha_desde {
+            get {
+                return this.DataDefinition.ParameterFields[0];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class Cachedcr_Cuentas1 : Component, ICachedReport {
+    public class CachedcrMayorSimplificado : Component, ICachedReport {
         
-        public Cachedcr_Cuentas1() {
+        public CachedcrMayorSimplificado() {
         }
         
         [Browsable(false)]
@@ -129,7 +153,7 @@ namespace Presentacion.Php.Reporte {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            cr_Cuentas1 rpt = new cr_Cuentas1();
+            crMayorSimplificado rpt = new crMayorSimplificado();
             rpt.Site = this.Site;
             return rpt;
         }
