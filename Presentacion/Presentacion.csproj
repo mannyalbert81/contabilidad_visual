@@ -190,12 +190,18 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="app\entrega.nfc.apk" />
+    <Content Include="Php\Contendor\conCierre.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Php\Contendor\conComprobantes.aspx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Php\Contendor\conMayorDetallado.aspx" />
     <Content Include="Php\Datas\dsCuentas.xsc">
       <DependentUpon>dsCuentas.xsd</DependentUpon>
+    </Content>
+    <Content Include="Php\Datas\dsCierre.xsc">
+      <DependentUpon>dsCierre.xsd</DependentUpon>
     </Content>
     <None Include="Php\Datas\dsCuentas.xsd">
       <SubType>Designer</SubType>
@@ -218,6 +224,17 @@
     </None>
     <Content Include="Php\Datas\dsComprobantes.xss">
       <DependentUpon>dsComprobantes.xsd</DependentUpon>
+    </Content>
+    <Content Include="Php\Datas\dsMayor - Copia.xsc">
+      <DependentUpon>dsCierre.xsd</DependentUpon>
+    </Content>
+    <None Include="Php\Datas\dsCierre.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCierre1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Php\Datas\dsMayor - Copia.xss">
+      <DependentUpon>dsCierre.xsd</DependentUpon>
     </Content>
     <None Include="Php\Datas\dsMayor.xsd">
       <SubType>Designer</SubType>
@@ -272,6 +289,15 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Php\Clases\ParametrosRpt.cs" />
+    <Compile Include="Php\Contendor\conCierre.aspx.cs">
+      <DependentUpon>conCierre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Php\Contendor\conCierre.aspx.designer.cs">
+      <DependentUpon>conCierre.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Php\Contendor\conComprobantes.aspx.cs">
       <DependentUpon>conComprobantes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -295,6 +321,11 @@
     </Compile>
     <Compile Include="Php\Datas\dsComprobantes.Designer.cs">
       <DependentUpon>dsComprobantes.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Php\Datas\dsCierre1.Designer.cs">
+      <DependentUpon>dsCierre.xsd</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -332,6 +363,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crMayorDetallado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crCierre.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCierre.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -393,6 +430,10 @@
     <EmbeddedResource Include="Php\Reporte\crMayorDetallado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crMayorDetallado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crCierre.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCierre.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
