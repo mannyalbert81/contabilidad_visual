@@ -203,6 +203,9 @@
     <Content Include="Php\Datas\dsCierre.xsc">
       <DependentUpon>dsCierre.xsd</DependentUpon>
     </Content>
+    <Content Include="Php\Datas\dsCierre.xss">
+      <DependentUpon>dsCierre.xsd</DependentUpon>
+    </Content>
     <None Include="Php\Datas\dsCuentas.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
