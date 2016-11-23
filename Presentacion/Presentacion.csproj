@@ -317,6 +317,9 @@
     <Compile Include="Php\Contendor\conMayorDetallado.aspx.designer.cs">
       <DependentUpon>conMayorDetallado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Php\Datas\dsCierre.cs">
+      <DependentUpon>dsCierre.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Php\Datas\dsCuentas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
