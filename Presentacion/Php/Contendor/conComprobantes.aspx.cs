@@ -35,6 +35,11 @@ namespace Presentacion.Php.Contendor
             parametros.numero_comprobantes = Request.QueryString["numero_ccomprobantes"];
             parametros.referencia_doc_comprobantes = Request.QueryString["referencia_doc_ccomprobantes"];
 
+            try {
+                parametros.id_usuarios = Convert.ToInt32(Request.QueryString["id_usuarios"]);
+            }
+            catch (Exception) { parametros.id_usuarios = 0; }
+
             ReportDocument crystalReport = new ReportDocument();
             var dsComprobantes = new Datas.dsComprobantes();
             DataTable dt_Reporte1 = new DataTable();
@@ -68,7 +73,13 @@ namespace Presentacion.Php.Contendor
 
             String where_to = "";
             //
-            if (!String.IsNullOrEmpty(parametros.tipo_comprobantes))
+            if (parametros.id_usuarios>0)
+            {
+
+                where_to += " AND usuarios.id_usuarios=" + parametros.id_usuarios + "";
+            }
+
+            if (!String.IsNullOrEmpty(parametros.tipo_comprobantes) && Convert.ToInt32(parametros.tipo_comprobantes)!=0)
             {
 
                 where_to += " AND tipo_comprobantes.id_tipo_comprobantes='" + parametros.tipo_comprobantes + "'";
@@ -128,7 +139,10 @@ namespace Presentacion.Php.Contendor
                 }
 
             }
+            parametros.total_registros = 0;
+            if(dt_Reporte1.Rows.Count>0) { parametros.total_registros = dt_Reporte1.Rows.Count; }
 
+            crystalReport.SetParameterValue("total_registros", parametros.total_registros);
             crystalReport.SetParameterValue("fecha_desde", parametros.fecha_desde);
             crystalReport.SetParameterValue("fecha_hasta", parametros.Fecha_hasta);
 

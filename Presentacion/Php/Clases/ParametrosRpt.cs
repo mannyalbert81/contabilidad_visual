@@ -16,6 +16,8 @@ namespace Presentacion.Php.Clases
         public string numero_comprobantes { get; set; }
         public string referencia_doc_comprobantes { get; set; }
         public string reporte { get; set; }
+        public int id_usuarios { get; set; }
+        public int total_registros { get; set; }
 
     }
 }

@@ -30,11 +30,18 @@ namespace Presentacion.Php.Contendor
             parametros.Fecha_hasta = Request.QueryString["fecha_hasta"];
             parametros.id_entidades = Request.QueryString["id_entidades"];
             parametros.reporte = Request.QueryString["reporte"];
+            try
+            {
+                parametros.id_usuarios = Convert.ToInt32(Request.QueryString["id_usuarios"]);
 
+            }catch(Exception)
+            {
+                parametros.id_usuarios = 0;
+            }
             ReportDocument crystalReport = new ReportDocument();
             var dsMayor = new Datas.dsMayor();
             DataTable dt_Reporte = new DataTable();
-
+            
 
             string columnas = "mayor.id_mayor, ccomprobantes.id_ccomprobantes,usuarios.nombre_usuarios, " +
                                "tipo_comprobantes.nombre_tipo_comprobantes, entidades.nombre_entidades, " +
@@ -56,12 +63,18 @@ namespace Presentacion.Php.Contendor
                               "tipo_comprobantes.id_tipo_comprobantes = ccomprobantes.id_tipo_comprobantes AND " +
                               "entidades.id_entidades = ccomprobantes.id_entidades ";
 
-            string order = " mayor.creado";
+            string order = " plan_cuentas.codigo_plan_cuentas, ccomprobantes.creado";
 
             //para cambiar el where
 
             String where_to = "";
             //
+            if (parametros.id_usuarios>0)
+            {
+
+                where_to += " AND usuarios.id_usuarios=" + parametros.id_usuarios + "";
+            }
+
             if (!String.IsNullOrEmpty(parametros.tipo_comprobantes) && Convert.ToInt32(parametros.tipo_comprobantes)!=0)
             {
 
@@ -71,7 +84,7 @@ namespace Presentacion.Php.Contendor
             if (!String.IsNullOrEmpty(parametros.fecha_desde) && !String.IsNullOrEmpty(parametros.Fecha_hasta))
             {
 
-                where_to += " AND  ccomprobantes.fecha_ccomprobantes BETWEEN '"+parametros.fecha_desde+"' AND '"+parametros.Fecha_hasta+"'";
+                where_to += " AND  mayor.fecha_mayor BETWEEN '"+parametros.fecha_desde+"' AND '"+parametros.Fecha_hasta+"'";
             }
 
             if (!String.IsNullOrEmpty(parametros.id_entidades))
@@ -119,6 +132,14 @@ namespace Presentacion.Php.Contendor
 
                 }
 
+                parametros.total_registros = 0;
+
+                if (dt_Reporte.Rows.Count > 0)
+                {
+                    parametros.total_registros = dt_Reporte.Rows.Count;
+                }
+
+                crystalReport.SetParameterValue("total_registros", parametros.total_registros);
                 crystalReport.SetParameterValue("fecha_desde", parametros.fecha_desde);
                 crystalReport.SetParameterValue("fecha_hasta", parametros.Fecha_hasta);
 
