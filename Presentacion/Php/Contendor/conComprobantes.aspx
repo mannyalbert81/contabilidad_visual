@@ -14,7 +14,9 @@
     <div>
     
         <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" OnInit="CrystalReportViewer1_Init" ToolPanelView="None" />
-        <a href="conComprobantes.aspx">conComprobantes.aspx</a>
+        
+        <!--<a href="conComprobantes.aspx">conComprobantes.aspx</a>
+        -->
     </div>
     </form>
 </body>

@@ -16,14 +16,14 @@ namespace Presentacion.Php.Reporte {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class crComprobantes : ReportClass {
+    public class empty : ReportClass {
         
-        public crComprobantes() {
+        public empty() {
         }
         
         public override string ResourceName {
             get {
-                return "crComprobantes.rpt";
+                return "empty.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Presentacion.Php.Reporte {
         
         public override string FullResourceName {
             get {
-                return "Presentacion.Php.Reporte.crComprobantes.rpt";
+                return "Presentacion.Php.Reporte.empty.rpt";
             }
             set {
                 // Do nothing
@@ -87,36 +87,12 @@ namespace Presentacion.Php.Reporte {
                 return this.ReportDefinition.Sections[4];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_fecha_desde {
-            get {
-                return this.DataDefinition.ParameterFields[0];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_fecha_hasta {
-            get {
-                return this.DataDefinition.ParameterFields[1];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_total_registros {
-            get {
-                return this.DataDefinition.ParameterFields[2];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcrComprobantes : Component, ICachedReport {
+    public class Cachedempty : Component, ICachedReport {
         
-        public CachedcrComprobantes() {
+        public Cachedempty() {
         }
         
         [Browsable(false)]
@@ -153,7 +129,7 @@ namespace Presentacion.Php.Reporte {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            crComprobantes rpt = new crComprobantes();
+            empty rpt = new empty();
             rpt.Site = this.Site;
             return rpt;
         }

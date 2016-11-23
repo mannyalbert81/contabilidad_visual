@@ -14,29 +14,34 @@ using Presentacion.Php.Clases;
 
 namespace Presentacion.Php.Contendor
 {
-
-
-
     public partial class conMayorDetallado : System.Web.UI.Page
     {
         ParametrosRpt parametros = new ParametrosRpt();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            parametros.tipo_comprobantes = Request.QueryString["tipo_comprobantes"];
-            parametros.numero_comprobantes = Request.QueryString["num_comprobantes"];
-            parametros.referencia_doc_comprobantes = Request.QueryString["ref_doc_comprobantes"];
-            parametros.fecha_desde = Request.QueryString["fecha_desde"];
-            parametros.Fecha_hasta = Request.QueryString["fecha_hasta"];
-            parametros.id_entidades = Request.QueryString["id_entidades"];
+            
         }
 
         protected void CrystalReportViewer1_Init(object sender, EventArgs e)
         {
+            parametros.tipo_comprobantes = Request.QueryString["id_tipo_comprobantes"];
+            parametros.fecha_desde = Request.QueryString["fecha_desde"];
+            parametros.Fecha_hasta = Request.QueryString["fecha_hasta"];
+            parametros.id_entidades = Request.QueryString["id_entidades"];
+            parametros.reporte = Request.QueryString["reporte"];
+            try
+            {
+                parametros.id_usuarios = Convert.ToInt32(Request.QueryString["id_usuarios"]);
+
+            }catch(Exception)
+            {
+                parametros.id_usuarios = 0;
+            }
             ReportDocument crystalReport = new ReportDocument();
             var dsMayor = new Datas.dsMayor();
             DataTable dt_Reporte = new DataTable();
-
+            
 
             string columnas = "mayor.id_mayor, ccomprobantes.id_ccomprobantes,usuarios.nombre_usuarios, " +
                                "tipo_comprobantes.nombre_tipo_comprobantes, entidades.nombre_entidades, " +
@@ -58,32 +63,30 @@ namespace Presentacion.Php.Contendor
                               "tipo_comprobantes.id_tipo_comprobantes = ccomprobantes.id_tipo_comprobantes AND " +
                               "entidades.id_entidades = ccomprobantes.id_entidades ";
 
-            string order = " mayor.creado";
+            string order = " plan_cuentas.codigo_plan_cuentas, ccomprobantes.creado";
 
             //para cambiar el where
 
             String where_to = "";
             //
-            if (!String.IsNullOrEmpty(parametros.tipo_comprobantes))
+            if (parametros.id_usuarios>0)
             {
 
-                where_to += " AND tipo_comprobantes.id_tipo_comprobantes='" + parametros.id_entidades+"'";
+                where_to += " AND usuarios.id_usuarios=" + parametros.id_usuarios + "";
             }
-            if (!String.IsNullOrEmpty(parametros.numero_comprobantes))
+
+            if (!String.IsNullOrEmpty(parametros.tipo_comprobantes) && Convert.ToInt32(parametros.tipo_comprobantes)!=0)
             {
 
-                where_to += " AND ccomprobantes.numero_ccomprobantes='"+parametros.numero_comprobantes+"'";
+                where_to += " AND tipo_comprobantes.id_tipo_comprobantes='" + parametros.tipo_comprobantes+"'";
             }
-            if (!String.IsNullOrEmpty(parametros.referencia_doc_comprobantes))
-            {
-
-                where_to += " AND ccomprobantes.referencia_doc_ccomprobantes ='"+parametros.referencia_doc_comprobantes+"'";
-            }
+            
             if (!String.IsNullOrEmpty(parametros.fecha_desde) && !String.IsNullOrEmpty(parametros.Fecha_hasta))
             {
 
-                where_to += " AND  ccomprobantes.fecha_ccomprobantes BETWEEN '"+parametros.fecha_desde+"' AND '"+parametros.Fecha_hasta+"'";
+                where_to += " AND  mayor.fecha_mayor BETWEEN '"+parametros.fecha_desde+"' AND '"+parametros.Fecha_hasta+"'";
             }
+
             if (!String.IsNullOrEmpty(parametros.id_entidades))
             {
 
@@ -92,27 +95,68 @@ namespace Presentacion.Php.Contendor
 
             where = where + where_to;
 
-            
-          
-
-
             dt_Reporte = AccesoLogica.Select(columnas, tablas, where,order);
-
-            //dsCuentas.Cuentas= dt_Reporte;
+            
 
             dsMayor.Tables.Add(dt_Reporte);
-            
-            
-            string cadena = Server.MapPath("~/Php/Reporte/crMayorDetallado.rpt");
 
-            crystalReport.Load(cadena);
-            crystalReport.SetDataSource(dsMayor.Tables[1]);
-            CrystalReportViewer1.ReportSource = crystalReport;
-            
+            string cadena = "";
+
+            if (!String.IsNullOrEmpty(parametros.reporte))
+            {
+                if(parametros.reporte=="simplificado")
+                {
+                    cadena = Server.MapPath("~/Php/Reporte/crMayorSimplificado.rpt");
+                }else if(parametros.reporte=="detallado")
+                {
+                    cadena = Server.MapPath("~/Php/Reporte/crMayorDetallado.rpt");
+                }
+            }
+
+            try
+            {
+                crystalReport.Load(cadena);
+
+                crystalReport.SetDataSource(dsMayor.Tables[1]);
+
+                //paso de parametros
+
+                //en caso de estar vacios las fechas
+                if (String.IsNullOrEmpty(parametros.fecha_desde) || String.IsNullOrEmpty(parametros.Fecha_hasta))
+                {
+                    if (dt_Reporte.Rows.Count > 0)
+                    {
+                        parametros.fecha_desde = dt_Reporte.Rows[0]["fecha_ccomprobantes"].ToString();
+                        parametros.Fecha_hasta = dt_Reporte.Rows[dt_Reporte.Rows.Count - 1]["fecha_ccomprobantes"].ToString();
+                    }
+
+                }
+
+                parametros.total_registros = 0;
+
+                if (dt_Reporte.Rows.Count > 0)
+                {
+                    parametros.total_registros = dt_Reporte.Rows.Count;
+                }
+
+                crystalReport.SetParameterValue("total_registros", parametros.total_registros);
+                crystalReport.SetParameterValue("fecha_desde", parametros.fecha_desde);
+                crystalReport.SetParameterValue("fecha_hasta", parametros.Fecha_hasta);
+
+                CrystalReportViewer1.ReportSource = crystalReport;
+
+            }catch(EngineException)
+            {
+                cadena = Server.MapPath("~/Php/Reporte/empty.rpt");
+                crystalReport.Load(cadena);
+                    
+                CrystalReportViewer1.ReportSource = crystalReport;
+
+            }
+
+
         }
-
-
-       
+        
 
     }
 }
