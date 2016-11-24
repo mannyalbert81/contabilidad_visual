@@ -16,7 +16,7 @@ namespace Presentacion.Php.Contendor
 
 
 
-    public partial class conComprobantes : System.Web.UI.Page
+    public partial class conCierre : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,48 +26,27 @@ namespace Presentacion.Php.Contendor
         protected void CrystalReportViewer1_Init(object sender, EventArgs e)
         {
             ReportDocument crystalReport = new ReportDocument();
-            var dsComprobantes = new Datas.dsComprobantes();
+            var dsCierre = new Datas.dsCierre();
             DataTable dt_Reporte1 = new DataTable();
            
 
-            string columnas = " entidades.nombre_entidades, " +
-                                "entidades.ruc_entidades, entidades.telefono_entidades, entidades.direccion_entidades, " +
-                                "entidades.ciudad_entidades, entidades.logo_entidades, ccomprobantes.id_ccomprobantes, " +                                 
-                                "tipo_comprobantes.nombre_tipo_comprobantes, " + 
-								  "ccomprobantes.concepto_ccomprobantes, " +
-								  "usuarios.nombre_usuarios, " + 
-								  "ccomprobantes.valor_letras, "+
-								  "ccomprobantes.fecha_ccomprobantes, "+
-								  "ccomprobantes.numero_ccomprobantes, " + 
-								  "ccomprobantes.ruc_ccomprobantes, " +
-                                  "ccomprobantes.nombres_ccomprobantes, " +
-                                  "ccomprobantes.retencion_ccomprobantes, " +
-                                  "ccomprobantes.valor_ccomprobantes, " +
-                                  "ccomprobantes.referencia_doc_ccomprobantes, " +
-                                  "ccomprobantes.numero_cuenta_banco_ccomprobantes, " +
-                                  "ccomprobantes.numero_cheque_ccomprobantes, " +
-                                  "ccomprobantes.observaciones_ccomprobantes, " +
-                                  "forma_pago.nombre_forma_pago";
+            string columnas = "usuarios.nombre_usuarios,entidades.nombre_entidades, entidades.ruc_entidades, entidades.telefono_entidades, entidades.direccion_entidades, entidades.ciudad_entidades, entidades.logo_entidades, cierre_mes.fecha_cierre_mes, tipo_cierre.nombre_tipo_cierre, cuentas_cierre_mes.saldo_ini, cuentas_cierre_mes.debe, cuentas_cierre_mes.haber, cuentas_cierre_mes.saldo_final, plan_cuentas.codigo_plan_cuentas, plan_cuentas.nombre_plan_cuentas, cierre_mes.creado, cuentas_cierre_mes.creado";
 
-
-
+            string tablas = "public.tipo_cierre,  public.cierre_mes,  public.cuentas_cierre_mes, public.plan_cuentas, public.entidades,  public.usuarios";
+  
+            string where = "cierre_mes.id_tipo_cierre = tipo_cierre.id_tipo_cierre AND cierre_mes.id_entidades = entidades.id_entidades AND cuentas_cierre_mes.id_cierre_mes = cierre_mes.id_cierre_mes AND plan_cuentas.id_plan_cuentas = cuentas_cierre_mes.id_plan_cuentas AND usuarios.id_usuarios = cierre_mes.id_usuario_creador AND usuarios.id_entidades = entidades.id_entidades ORDER BY plan_cuentas.codigo_plan_cuentas";
             
-
-            string tablas = "public.ccomprobantes,  public.entidades,  public.usuarios,  public.tipo_comprobantes,  public.forma_pago";
-
-            string where = "ccomprobantes.id_forma_pago = forma_pago.id_forma_pago AND entidades.id_entidades = usuarios.id_entidades AND usuarios.id_usuarios = ccomprobantes.id_usuarios AND tipo_comprobantes.id_tipo_comprobantes = ccomprobantes.id_tipo_comprobantes";
-
             dt_Reporte1 = AccesoLogica.Select(columnas, tablas, where);
 
             //dsCuentas.Cuentas= dt_Reporte;
 
-            dsComprobantes.Tables.Add(dt_Reporte1);
+            dsCierre.Tables.Add(dt_Reporte1);
             
             
-            string cadena = Server.MapPath("~/Php/Reporte/crComprobantes.rpt");
+            string cadena = Server.MapPath("~/Php/Reporte/crCierre.rpt");
 
             crystalReport.Load(cadena);
-            crystalReport.SetDataSource(dsComprobantes.Tables[1]);
+            crystalReport.SetDataSource(dsCierre.Tables[1]);
             CrystalReportViewer1.ReportSource = crystalReport;
             
         }

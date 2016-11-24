@@ -228,17 +228,11 @@
     <Content Include="Php\Datas\dsComprobantes.xss">
       <DependentUpon>dsComprobantes.xsd</DependentUpon>
     </Content>
-    <Content Include="Php\Datas\dsMayor - Copia.xsc">
-      <DependentUpon>dsCierre.xsd</DependentUpon>
-    </Content>
     <None Include="Php\Datas\dsCierre.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsCierre1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Php\Datas\dsMayor - Copia.xss">
-      <DependentUpon>dsCierre.xsd</DependentUpon>
-    </Content>
     <None Include="Php\Datas\dsMayor.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -316,9 +310,6 @@
     </Compile>
     <Compile Include="Php\Contendor\conMayorDetallado.aspx.designer.cs">
       <DependentUpon>conMayorDetallado.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Datas\dsCierre.cs">
-      <DependentUpon>dsCierre.xsd</DependentUpon>
     </Compile>
     <Compile Include="Php\Datas\dsCuentas.Designer.cs">
       <AutoGen>True</AutoGen>

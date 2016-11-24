@@ -10,7 +10,7 @@
 namespace Presentacion.Php.Contendor {
     
     
-    public partial class conComprobantes {
+    public partial class conCierre {
         
         /// <summary>
         /// Control form1.
