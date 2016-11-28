@@ -16,7 +16,7 @@ namespace Presentacion.Php.Contendor
 
 
 
-    public partial class conCierre : System.Web.UI.Page
+    public partial class conBalanceComprobacionSimplificado : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,11 +26,11 @@ namespace Presentacion.Php.Contendor
         protected void CrystalReportViewer1_Init(object sender, EventArgs e)
         {
             ReportDocument crystalReport = new ReportDocument();
-            var dsCierre = new Datas.dsCierre();
+            var dsBalanceComprobacionSimplificado = new Datas.dsBalanceComprobacionSimplificado();
             DataTable dt_Reporte1 = new DataTable();
            
 
-            string columnas = "usuarios.nombre_usuarios,entidades.nombre_entidades, entidades.ruc_entidades, entidades.telefono_entidades, entidades.direccion_entidades, entidades.ciudad_entidades, entidades.logo_entidades, cierre_mes.fecha_cierre_mes, tipo_cierre.nombre_tipo_cierre, cuentas_cierre_mes.saldo_ini, cuentas_cierre_mes.debe, cuentas_cierre_mes.haber, cuentas_cierre_mes.saldo_final, plan_cuentas.codigo_plan_cuentas, plan_cuentas.nombre_plan_cuentas, cierre_mes.creado, cuentas_cierre_mes.creado";
+            string columnas = "usuarios.nombre_usuarios,entidades.nombre_entidades, entidades.ruc_entidades, entidades.telefono_entidades, entidades.direccion_entidades, entidades.ciudad_entidades, entidades.logo_entidades, cierre_mes.fecha_cierre_mes, tipo_cierre.nombre_tipo_cierre, cuentas_cierre_mes.debe_ene, cuentas_cierre_mes.haber_ene, cuentas_cierre_mes.saldo_final_ene, plan_cuentas.codigo_plan_cuentas, plan_cuentas.nombre_plan_cuentas, cierre_mes.creado";
 
             string tablas = "public.tipo_cierre,  public.cierre_mes,  public.cuentas_cierre_mes, public.plan_cuentas, public.entidades,  public.usuarios";
   
@@ -40,13 +40,13 @@ namespace Presentacion.Php.Contendor
 
             //dsCuentas.Cuentas= dt_Reporte;
 
-            dsCierre.Tables.Add(dt_Reporte1);
+            dsBalanceComprobacionSimplificado.Tables.Add(dt_Reporte1);
             
             
-            string cadena = Server.MapPath("~/Php/Reporte/crCierre.rpt");
+            string cadena = Server.MapPath("~/Php/Reporte/crBalanceComprobacionSimplificado.rpt");
 
             crystalReport.Load(cadena);
-            crystalReport.SetDataSource(dsCierre.Tables[1]);
+            crystalReport.SetDataSource(dsBalanceComprobacionSimplificado.Tables[1]);
             CrystalReportViewer1.ReportSource = crystalReport;
             
         }

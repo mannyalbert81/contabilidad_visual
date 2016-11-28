@@ -20,9 +20,9 @@ namespace Presentacion.Php.Datas {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsCierre")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsBalanceComprobacionDetallado")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsCierre : global::System.Data.DataSet {
+    public partial class dsBalanceComprobacionDetallado : global::System.Data.DataSet {
         
         private DataTable1DataTable tableDataTable1;
         
@@ -30,7 +30,7 @@ namespace Presentacion.Php.Datas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public dsCierre() {
+        public dsBalanceComprobacionDetallado() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Presentacion.Php.Datas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected dsCierre(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsBalanceComprobacionDetallado(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Presentacion.Php.Datas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsCierre cln = ((dsCierre)(base.Clone()));
+            dsBalanceComprobacionDetallado cln = ((dsBalanceComprobacionDetallado)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,7 +199,7 @@ namespace Presentacion.Php.Datas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsCierre";
+            this.DataSetName = "dsBalanceComprobacionDetallado";
             this.Prefix = "";
             this.Namespace = "http://tempuri.org/dsMayor.xsd";
             this.EnforceConstraints = true;
@@ -225,7 +225,7 @@ namespace Presentacion.Php.Datas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsCierre ds = new dsCierre();
+            dsBalanceComprobacionDetallado ds = new dsBalanceComprobacionDetallado();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -308,8 +308,6 @@ namespace Presentacion.Php.Datas {
             private global::System.Data.DataColumn columncodigo_plan_cuentas;
             
             private global::System.Data.DataColumn columnnombre_plan_cuentas;
-            
-            private global::System.Data.DataColumn columncreado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -466,14 +464,6 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn creadoColumn {
-                get {
-                    return this.columncreado;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -509,23 +499,7 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTable1Row AddDataTable1Row(
-                        string nombre_usuarios, 
-                        string nombre_entidades, 
-                        string ruc_entidades, 
-                        string telefono_entidades, 
-                        string direccion_entidades, 
-                        string ciudad_entidades, 
-                        byte[] logo_entidades, 
-                        System.DateTime fecha_cierre_mes, 
-                        string nombre_tipo_cierre, 
-                        decimal saldo_ini, 
-                        decimal debe, 
-                        decimal haber, 
-                        decimal saldo_final, 
-                        string codigo_plan_cuentas, 
-                        string nombre_plan_cuentas, 
-                        System.DateTime creado) {
+            public DataTable1Row AddDataTable1Row(string nombre_usuarios, string nombre_entidades, string ruc_entidades, string telefono_entidades, string direccion_entidades, string ciudad_entidades, byte[] logo_entidades, System.DateTime fecha_cierre_mes, string nombre_tipo_cierre, decimal saldo_ini, decimal debe, decimal haber, decimal saldo_final, string codigo_plan_cuentas, string nombre_plan_cuentas) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         nombre_usuarios,
@@ -542,8 +516,7 @@ namespace Presentacion.Php.Datas {
                         haber,
                         saldo_final,
                         codigo_plan_cuentas,
-                        nombre_plan_cuentas,
-                        creado};
+                        nombre_plan_cuentas};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -581,7 +554,6 @@ namespace Presentacion.Php.Datas {
                 this.columnsaldo_final = base.Columns["saldo_final"];
                 this.columncodigo_plan_cuentas = base.Columns["codigo_plan_cuentas"];
                 this.columnnombre_plan_cuentas = base.Columns["nombre_plan_cuentas"];
-                this.columncreado = base.Columns["creado"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -617,8 +589,6 @@ namespace Presentacion.Php.Datas {
                 base.Columns.Add(this.columncodigo_plan_cuentas);
                 this.columnnombre_plan_cuentas = new global::System.Data.DataColumn("nombre_plan_cuentas", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre_plan_cuentas);
-                this.columncreado = new global::System.Data.DataColumn("creado", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncreado);
                 this.Locale = new global::System.Globalization.CultureInfo("es-EC");
             }
             
@@ -687,7 +657,7 @@ namespace Presentacion.Php.Datas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsCierre ds = new dsCierre();
+                dsBalanceComprobacionDetallado ds = new dsBalanceComprobacionDetallado();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1002,22 +972,6 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime creado {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableDataTable1.creadoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'creado\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.creadoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isnombre_usuariosNull() {
                 return this.IsNull(this.tableDataTable1.nombre_usuariosColumn);
             }
@@ -1194,18 +1148,6 @@ namespace Presentacion.Php.Datas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setnombre_plan_cuentasNull() {
                 this[this.tableDataTable1.nombre_plan_cuentasColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscreadoNull() {
-                return this.IsNull(this.tableDataTable1.creadoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcreadoNull() {
-                this[this.tableDataTable1.creadoColumn] = global::System.Convert.DBNull;
             }
         }
         
