@@ -20,9 +20,9 @@ namespace Presentacion.Php.Datas {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsCierre")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsBalanceComprobacionDetallado")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsCierre : global::System.Data.DataSet {
+    public partial class dsBalanceComprobacionDetallado : global::System.Data.DataSet {
         
         private DataTable1DataTable tableDataTable1;
         
@@ -30,7 +30,7 @@ namespace Presentacion.Php.Datas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public dsCierre() {
+        public dsBalanceComprobacionDetallado() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Presentacion.Php.Datas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected dsCierre(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsBalanceComprobacionDetallado(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Presentacion.Php.Datas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsCierre cln = ((dsCierre)(base.Clone()));
+            dsBalanceComprobacionDetallado cln = ((dsBalanceComprobacionDetallado)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,7 +199,7 @@ namespace Presentacion.Php.Datas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsCierre";
+            this.DataSetName = "dsBalanceComprobacionDetallado";
             this.Prefix = "";
             this.Namespace = "http://tempuri.org/dsMayor.xsd";
             this.EnforceConstraints = true;
@@ -225,7 +225,7 @@ namespace Presentacion.Php.Datas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsCierre ds = new dsCierre();
+            dsBalanceComprobacionDetallado ds = new dsBalanceComprobacionDetallado();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -279,13 +279,7 @@ namespace Presentacion.Php.Datas {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
-            private global::System.Data.DataColumn columnid_mayor;
-            
-            private global::System.Data.DataColumn columnid_ccomprobantes;
-            
             private global::System.Data.DataColumn columnnombre_usuarios;
-            
-            private global::System.Data.DataColumn columnnombre_tipo_comprobantes;
             
             private global::System.Data.DataColumn columnnombre_entidades;
             
@@ -297,51 +291,23 @@ namespace Presentacion.Php.Datas {
             
             private global::System.Data.DataColumn columnciudad_entidades;
             
-            private global::System.Data.DataColumn columnconcepto_ccomprobantes;
+            private global::System.Data.DataColumn columnlogo_entidades;
             
-            private global::System.Data.DataColumn columnnumero_ccomprobantes;
+            private global::System.Data.DataColumn columnfecha_cierre_mes;
             
-            private global::System.Data.DataColumn columnruc_ccomprobantes;
+            private global::System.Data.DataColumn columnnombre_tipo_cierre;
             
-            private global::System.Data.DataColumn columnnombres_ccomprobantes;
+            private global::System.Data.DataColumn columnsaldo_ini;
             
-            private global::System.Data.DataColumn columnvalor_ccomprobantes;
+            private global::System.Data.DataColumn columndebe;
             
-            private global::System.Data.DataColumn columnvalor_letras;
+            private global::System.Data.DataColumn columnhaber;
             
-            private global::System.Data.DataColumn columnfecha_ccomprobantes;
-            
-            private global::System.Data.DataColumn columnreferencia_doc_ccomprobantes;
-            
-            private global::System.Data.DataColumn columnnumero_cuenta_banco_ccomprobantes;
-            
-            private global::System.Data.DataColumn columnnumero_cheque_ccomprobantes;
-            
-            private global::System.Data.DataColumn columnobservaciones_ccomprobantes;
-            
-            private global::System.Data.DataColumn columnid_plan_cuentas;
+            private global::System.Data.DataColumn columnsaldo_final;
             
             private global::System.Data.DataColumn columncodigo_plan_cuentas;
             
             private global::System.Data.DataColumn columnnombre_plan_cuentas;
-            
-            private global::System.Data.DataColumn columnsaldo_fin_plan_cuentas;
-            
-            private global::System.Data.DataColumn columnn_plan_cuentas;
-            
-            private global::System.Data.DataColumn columnfecha_mayor;
-            
-            private global::System.Data.DataColumn columndebe_mayor;
-            
-            private global::System.Data.DataColumn columnhaber_mayor;
-            
-            private global::System.Data.DataColumn columnsaldo_mayor;
-            
-            private global::System.Data.DataColumn columnsaldo_ini_mayor;
-            
-            private global::System.Data.DataColumn columncreado;
-            
-            private global::System.Data.DataColumn columnlogo_entidades;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -378,33 +344,9 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_mayorColumn {
-                get {
-                    return this.columnid_mayor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_ccomprobantesColumn {
-                get {
-                    return this.columnid_ccomprobantes;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn nombre_usuariosColumn {
                 get {
                     return this.columnnombre_usuarios;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nombre_tipo_comprobantesColumn {
-                get {
-                    return this.columnnombre_tipo_comprobantes;
                 }
             }
             
@@ -450,97 +392,57 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn concepto_ccomprobantesColumn {
+            public global::System.Data.DataColumn logo_entidadesColumn {
                 get {
-                    return this.columnconcepto_ccomprobantes;
+                    return this.columnlogo_entidades;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn numero_ccomprobantesColumn {
+            public global::System.Data.DataColumn fecha_cierre_mesColumn {
                 get {
-                    return this.columnnumero_ccomprobantes;
+                    return this.columnfecha_cierre_mes;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ruc_ccomprobantesColumn {
+            public global::System.Data.DataColumn nombre_tipo_cierreColumn {
                 get {
-                    return this.columnruc_ccomprobantes;
+                    return this.columnnombre_tipo_cierre;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nombres_ccomprobantesColumn {
+            public global::System.Data.DataColumn saldo_iniColumn {
                 get {
-                    return this.columnnombres_ccomprobantes;
+                    return this.columnsaldo_ini;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn valor_ccomprobantesColumn {
+            public global::System.Data.DataColumn debeColumn {
                 get {
-                    return this.columnvalor_ccomprobantes;
+                    return this.columndebe;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn valor_letrasColumn {
+            public global::System.Data.DataColumn haberColumn {
                 get {
-                    return this.columnvalor_letras;
+                    return this.columnhaber;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn fecha_ccomprobantesColumn {
+            public global::System.Data.DataColumn saldo_finalColumn {
                 get {
-                    return this.columnfecha_ccomprobantes;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn referencia_doc_ccomprobantesColumn {
-                get {
-                    return this.columnreferencia_doc_ccomprobantes;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn numero_cuenta_banco_ccomprobantesColumn {
-                get {
-                    return this.columnnumero_cuenta_banco_ccomprobantes;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn numero_cheque_ccomprobantesColumn {
-                get {
-                    return this.columnnumero_cheque_ccomprobantes;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn observaciones_ccomprobantesColumn {
-                get {
-                    return this.columnobservaciones_ccomprobantes;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_plan_cuentasColumn {
-                get {
-                    return this.columnid_plan_cuentas;
+                    return this.columnsaldo_final;
                 }
             }
             
@@ -557,78 +459,6 @@ namespace Presentacion.Php.Datas {
             public global::System.Data.DataColumn nombre_plan_cuentasColumn {
                 get {
                     return this.columnnombre_plan_cuentas;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn saldo_fin_plan_cuentasColumn {
-                get {
-                    return this.columnsaldo_fin_plan_cuentas;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn n_plan_cuentasColumn {
-                get {
-                    return this.columnn_plan_cuentas;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn fecha_mayorColumn {
-                get {
-                    return this.columnfecha_mayor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn debe_mayorColumn {
-                get {
-                    return this.columndebe_mayor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn haber_mayorColumn {
-                get {
-                    return this.columnhaber_mayor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn saldo_mayorColumn {
-                get {
-                    return this.columnsaldo_mayor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn saldo_ini_mayorColumn {
-                get {
-                    return this.columnsaldo_ini_mayor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn creadoColumn {
-                get {
-                    return this.columncreado;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn logo_entidadesColumn {
-                get {
-                    return this.columnlogo_entidades;
                 }
             }
             
@@ -669,73 +499,24 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTable1Row AddDataTable1Row(
-                        int id_mayor, 
-                        int id_ccomprobantes, 
-                        string nombre_usuarios, 
-                        string nombre_tipo_comprobantes, 
-                        string nombre_entidades, 
-                        string ruc_entidades, 
-                        string telefono_entidades, 
-                        string direccion_entidades, 
-                        string ciudad_entidades, 
-                        string concepto_ccomprobantes, 
-                        string numero_ccomprobantes, 
-                        string ruc_ccomprobantes, 
-                        string nombres_ccomprobantes, 
-                        double valor_ccomprobantes, 
-                        string valor_letras, 
-                        System.DateTime fecha_ccomprobantes, 
-                        string referencia_doc_ccomprobantes, 
-                        string numero_cuenta_banco_ccomprobantes, 
-                        string numero_cheque_ccomprobantes, 
-                        string observaciones_ccomprobantes, 
-                        int id_plan_cuentas, 
-                        string codigo_plan_cuentas, 
-                        string nombre_plan_cuentas, 
-                        double saldo_fin_plan_cuentas, 
-                        string n_plan_cuentas, 
-                        System.DateTime fecha_mayor, 
-                        double debe_mayor, 
-                        double haber_mayor, 
-                        double saldo_mayor, 
-                        double saldo_ini_mayor, 
-                        System.DateTime creado, 
-                        byte[] logo_entidades) {
+            public DataTable1Row AddDataTable1Row(string nombre_usuarios, string nombre_entidades, string ruc_entidades, string telefono_entidades, string direccion_entidades, string ciudad_entidades, byte[] logo_entidades, System.DateTime fecha_cierre_mes, string nombre_tipo_cierre, decimal saldo_ini, decimal debe, decimal haber, decimal saldo_final, string codigo_plan_cuentas, string nombre_plan_cuentas) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id_mayor,
-                        id_ccomprobantes,
                         nombre_usuarios,
-                        nombre_tipo_comprobantes,
                         nombre_entidades,
                         ruc_entidades,
                         telefono_entidades,
                         direccion_entidades,
                         ciudad_entidades,
-                        concepto_ccomprobantes,
-                        numero_ccomprobantes,
-                        ruc_ccomprobantes,
-                        nombres_ccomprobantes,
-                        valor_ccomprobantes,
-                        valor_letras,
-                        fecha_ccomprobantes,
-                        referencia_doc_ccomprobantes,
-                        numero_cuenta_banco_ccomprobantes,
-                        numero_cheque_ccomprobantes,
-                        observaciones_ccomprobantes,
-                        id_plan_cuentas,
+                        logo_entidades,
+                        fecha_cierre_mes,
+                        nombre_tipo_cierre,
+                        saldo_ini,
+                        debe,
+                        haber,
+                        saldo_final,
                         codigo_plan_cuentas,
-                        nombre_plan_cuentas,
-                        saldo_fin_plan_cuentas,
-                        n_plan_cuentas,
-                        fecha_mayor,
-                        debe_mayor,
-                        haber_mayor,
-                        saldo_mayor,
-                        saldo_ini_mayor,
-                        creado,
-                        logo_entidades};
+                        nombre_plan_cuentas};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -758,51 +539,28 @@ namespace Presentacion.Php.Datas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnid_mayor = base.Columns["id_mayor"];
-                this.columnid_ccomprobantes = base.Columns["id_ccomprobantes"];
                 this.columnnombre_usuarios = base.Columns["nombre_usuarios"];
-                this.columnnombre_tipo_comprobantes = base.Columns["nombre_tipo_comprobantes"];
                 this.columnnombre_entidades = base.Columns["nombre_entidades"];
                 this.columnruc_entidades = base.Columns["ruc_entidades"];
                 this.columntelefono_entidades = base.Columns["telefono_entidades"];
                 this.columndireccion_entidades = base.Columns["direccion_entidades"];
                 this.columnciudad_entidades = base.Columns["ciudad_entidades"];
-                this.columnconcepto_ccomprobantes = base.Columns["concepto_ccomprobantes"];
-                this.columnnumero_ccomprobantes = base.Columns["numero_ccomprobantes"];
-                this.columnruc_ccomprobantes = base.Columns["ruc_ccomprobantes"];
-                this.columnnombres_ccomprobantes = base.Columns["nombres_ccomprobantes"];
-                this.columnvalor_ccomprobantes = base.Columns["valor_ccomprobantes"];
-                this.columnvalor_letras = base.Columns["valor_letras"];
-                this.columnfecha_ccomprobantes = base.Columns["fecha_ccomprobantes"];
-                this.columnreferencia_doc_ccomprobantes = base.Columns["referencia_doc_ccomprobantes"];
-                this.columnnumero_cuenta_banco_ccomprobantes = base.Columns["numero_cuenta_banco_ccomprobantes"];
-                this.columnnumero_cheque_ccomprobantes = base.Columns["numero_cheque_ccomprobantes"];
-                this.columnobservaciones_ccomprobantes = base.Columns["observaciones_ccomprobantes"];
-                this.columnid_plan_cuentas = base.Columns["id_plan_cuentas"];
+                this.columnlogo_entidades = base.Columns["logo_entidades"];
+                this.columnfecha_cierre_mes = base.Columns["fecha_cierre_mes"];
+                this.columnnombre_tipo_cierre = base.Columns["nombre_tipo_cierre"];
+                this.columnsaldo_ini = base.Columns["saldo_ini"];
+                this.columndebe = base.Columns["debe"];
+                this.columnhaber = base.Columns["haber"];
+                this.columnsaldo_final = base.Columns["saldo_final"];
                 this.columncodigo_plan_cuentas = base.Columns["codigo_plan_cuentas"];
                 this.columnnombre_plan_cuentas = base.Columns["nombre_plan_cuentas"];
-                this.columnsaldo_fin_plan_cuentas = base.Columns["saldo_fin_plan_cuentas"];
-                this.columnn_plan_cuentas = base.Columns["n_plan_cuentas"];
-                this.columnfecha_mayor = base.Columns["fecha_mayor"];
-                this.columndebe_mayor = base.Columns["debe_mayor"];
-                this.columnhaber_mayor = base.Columns["haber_mayor"];
-                this.columnsaldo_mayor = base.Columns["saldo_mayor"];
-                this.columnsaldo_ini_mayor = base.Columns["saldo_ini_mayor"];
-                this.columncreado = base.Columns["creado"];
-                this.columnlogo_entidades = base.Columns["logo_entidades"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnid_mayor = new global::System.Data.DataColumn("id_mayor", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_mayor);
-                this.columnid_ccomprobantes = new global::System.Data.DataColumn("id_ccomprobantes", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_ccomprobantes);
                 this.columnnombre_usuarios = new global::System.Data.DataColumn("nombre_usuarios", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre_usuarios);
-                this.columnnombre_tipo_comprobantes = new global::System.Data.DataColumn("nombre_tipo_comprobantes", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre_tipo_comprobantes);
                 this.columnnombre_entidades = new global::System.Data.DataColumn("nombre_entidades", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre_entidades);
                 this.columnruc_entidades = new global::System.Data.DataColumn("ruc_entidades", typeof(string), null, global::System.Data.MappingType.Element);
@@ -813,52 +571,25 @@ namespace Presentacion.Php.Datas {
                 base.Columns.Add(this.columndireccion_entidades);
                 this.columnciudad_entidades = new global::System.Data.DataColumn("ciudad_entidades", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnciudad_entidades);
-                this.columnconcepto_ccomprobantes = new global::System.Data.DataColumn("concepto_ccomprobantes", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnconcepto_ccomprobantes);
-                this.columnnumero_ccomprobantes = new global::System.Data.DataColumn("numero_ccomprobantes", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnumero_ccomprobantes);
-                this.columnruc_ccomprobantes = new global::System.Data.DataColumn("ruc_ccomprobantes", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnruc_ccomprobantes);
-                this.columnnombres_ccomprobantes = new global::System.Data.DataColumn("nombres_ccomprobantes", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombres_ccomprobantes);
-                this.columnvalor_ccomprobantes = new global::System.Data.DataColumn("valor_ccomprobantes", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnvalor_ccomprobantes);
-                this.columnvalor_letras = new global::System.Data.DataColumn("valor_letras", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnvalor_letras);
-                this.columnfecha_ccomprobantes = new global::System.Data.DataColumn("fecha_ccomprobantes", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_ccomprobantes);
-                this.columnreferencia_doc_ccomprobantes = new global::System.Data.DataColumn("referencia_doc_ccomprobantes", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnreferencia_doc_ccomprobantes);
-                this.columnnumero_cuenta_banco_ccomprobantes = new global::System.Data.DataColumn("numero_cuenta_banco_ccomprobantes", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnumero_cuenta_banco_ccomprobantes);
-                this.columnnumero_cheque_ccomprobantes = new global::System.Data.DataColumn("numero_cheque_ccomprobantes", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnumero_cheque_ccomprobantes);
-                this.columnobservaciones_ccomprobantes = new global::System.Data.DataColumn("observaciones_ccomprobantes", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnobservaciones_ccomprobantes);
-                this.columnid_plan_cuentas = new global::System.Data.DataColumn("id_plan_cuentas", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_plan_cuentas);
+                this.columnlogo_entidades = new global::System.Data.DataColumn("logo_entidades", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlogo_entidades);
+                this.columnfecha_cierre_mes = new global::System.Data.DataColumn("fecha_cierre_mes", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_cierre_mes);
+                this.columnnombre_tipo_cierre = new global::System.Data.DataColumn("nombre_tipo_cierre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre_tipo_cierre);
+                this.columnsaldo_ini = new global::System.Data.DataColumn("saldo_ini", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_ini);
+                this.columndebe = new global::System.Data.DataColumn("debe", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndebe);
+                this.columnhaber = new global::System.Data.DataColumn("haber", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhaber);
+                this.columnsaldo_final = new global::System.Data.DataColumn("saldo_final", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_final);
                 this.columncodigo_plan_cuentas = new global::System.Data.DataColumn("codigo_plan_cuentas", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncodigo_plan_cuentas);
                 this.columnnombre_plan_cuentas = new global::System.Data.DataColumn("nombre_plan_cuentas", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre_plan_cuentas);
-                this.columnsaldo_fin_plan_cuentas = new global::System.Data.DataColumn("saldo_fin_plan_cuentas", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsaldo_fin_plan_cuentas);
-                this.columnn_plan_cuentas = new global::System.Data.DataColumn("n_plan_cuentas", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnn_plan_cuentas);
-                this.columnfecha_mayor = new global::System.Data.DataColumn("fecha_mayor", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_mayor);
-                this.columndebe_mayor = new global::System.Data.DataColumn("debe_mayor", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndebe_mayor);
-                this.columnhaber_mayor = new global::System.Data.DataColumn("haber_mayor", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnhaber_mayor);
-                this.columnsaldo_mayor = new global::System.Data.DataColumn("saldo_mayor", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsaldo_mayor);
-                this.columnsaldo_ini_mayor = new global::System.Data.DataColumn("saldo_ini_mayor", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsaldo_ini_mayor);
-                this.columncreado = new global::System.Data.DataColumn("creado", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncreado);
-                this.columnlogo_entidades = new global::System.Data.DataColumn("logo_entidades", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlogo_entidades);
+                this.Locale = new global::System.Globalization.CultureInfo("es-EC");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -926,7 +657,7 @@ namespace Presentacion.Php.Datas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsCierre ds = new dsCierre();
+                dsBalanceComprobacionDetallado ds = new dsBalanceComprobacionDetallado();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1001,38 +732,6 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int id_mayor {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTable1.id_mayorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_mayor\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.id_mayorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int id_ccomprobantes {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTable1.id_ccomprobantesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_ccomprobantes\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.id_ccomprobantesColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string nombre_usuarios {
                 get {
                     try {
@@ -1044,23 +743,6 @@ namespace Presentacion.Php.Datas {
                 }
                 set {
                     this[this.tableDataTable1.nombre_usuariosColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombre_tipo_comprobantes {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.nombre_tipo_comprobantesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre_tipo_comprobantes\' de la tabla \'DataTable1\' es DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.nombre_tipo_comprobantesColumn] = value;
                 }
             }
             
@@ -1146,200 +828,113 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string concepto_ccomprobantes {
+            public byte[] logo_entidades {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.concepto_ccomprobantesColumn]));
+                        return ((byte[])(this[this.tableDataTable1.logo_entidadesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'concepto_ccomprobantes\' de la tabla \'DataTable1\' es DBNul" +
-                                "l.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'logo_entidades\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.concepto_ccomprobantesColumn] = value;
+                    this[this.tableDataTable1.logo_entidadesColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string numero_ccomprobantes {
+            public System.DateTime fecha_cierre_mes {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.numero_ccomprobantesColumn]));
+                        return ((global::System.DateTime)(this[this.tableDataTable1.fecha_cierre_mesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'numero_ccomprobantes\' de la tabla \'DataTable1\' es DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_cierre_mes\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.numero_ccomprobantesColumn] = value;
+                    this[this.tableDataTable1.fecha_cierre_mesColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ruc_ccomprobantes {
+            public string nombre_tipo_cierre {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.ruc_ccomprobantesColumn]));
+                        return ((string)(this[this.tableDataTable1.nombre_tipo_cierreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ruc_ccomprobantes\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre_tipo_cierre\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.ruc_ccomprobantesColumn] = value;
+                    this[this.tableDataTable1.nombre_tipo_cierreColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombres_ccomprobantes {
+            public decimal saldo_ini {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.nombres_ccomprobantesColumn]));
+                        return ((decimal)(this[this.tableDataTable1.saldo_iniColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombres_ccomprobantes\' de la tabla \'DataTable1\' es DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_ini\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.nombres_ccomprobantesColumn] = value;
+                    this[this.tableDataTable1.saldo_iniColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double valor_ccomprobantes {
+            public decimal debe {
                 get {
                     try {
-                        return ((double)(this[this.tableDataTable1.valor_ccomprobantesColumn]));
+                        return ((decimal)(this[this.tableDataTable1.debeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'valor_ccomprobantes\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.valor_ccomprobantesColumn] = value;
+                    this[this.tableDataTable1.debeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string valor_letras {
+            public decimal haber {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.valor_letrasColumn]));
+                        return ((decimal)(this[this.tableDataTable1.haberColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'valor_letras\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.valor_letrasColumn] = value;
+                    this[this.tableDataTable1.haberColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime fecha_ccomprobantes {
+            public decimal saldo_final {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDataTable1.fecha_ccomprobantesColumn]));
+                        return ((decimal)(this[this.tableDataTable1.saldo_finalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_ccomprobantes\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.fecha_ccomprobantesColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string referencia_doc_ccomprobantes {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.referencia_doc_ccomprobantesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'referencia_doc_ccomprobantes\' de la tabla \'DataTable1\' es" +
-                                " DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.referencia_doc_ccomprobantesColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string numero_cuenta_banco_ccomprobantes {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.numero_cuenta_banco_ccomprobantesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'numero_cuenta_banco_ccomprobantes\' de la tabla \'DataTable" +
-                                "1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.numero_cuenta_banco_ccomprobantesColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string numero_cheque_ccomprobantes {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.numero_cheque_ccomprobantesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'numero_cheque_ccomprobantes\' de la tabla \'DataTable1\' es " +
-                                "DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.numero_cheque_ccomprobantesColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string observaciones_ccomprobantes {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.observaciones_ccomprobantesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'observaciones_ccomprobantes\' de la tabla \'DataTable1\' es " +
-                                "DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.observaciones_ccomprobantesColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int id_plan_cuentas {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTable1.id_plan_cuentasColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_plan_cuentas\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.id_plan_cuentasColumn] = value;
+                    this[this.tableDataTable1.saldo_finalColumn] = value;
                 }
             }
             
@@ -1377,175 +972,6 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double saldo_fin_plan_cuentas {
-                get {
-                    try {
-                        return ((double)(this[this.tableDataTable1.saldo_fin_plan_cuentasColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_fin_plan_cuentas\' de la tabla \'DataTable1\' es DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.saldo_fin_plan_cuentasColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string n_plan_cuentas {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.n_plan_cuentasColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'n_plan_cuentas\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.n_plan_cuentasColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime fecha_mayor {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableDataTable1.fecha_mayorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_mayor\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.fecha_mayorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double debe_mayor {
-                get {
-                    try {
-                        return ((double)(this[this.tableDataTable1.debe_mayorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe_mayor\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.debe_mayorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double haber_mayor {
-                get {
-                    try {
-                        return ((double)(this[this.tableDataTable1.haber_mayorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber_mayor\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.haber_mayorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double saldo_mayor {
-                get {
-                    try {
-                        return ((double)(this[this.tableDataTable1.saldo_mayorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_mayor\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.saldo_mayorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double saldo_ini_mayor {
-                get {
-                    try {
-                        return ((double)(this[this.tableDataTable1.saldo_ini_mayorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_ini_mayor\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.saldo_ini_mayorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime creado {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableDataTable1.creadoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'creado\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.creadoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte[] logo_entidades {
-                get {
-                    try {
-                        return ((byte[])(this[this.tableDataTable1.logo_entidadesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'logo_entidades\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.logo_entidadesColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isid_mayorNull() {
-                return this.IsNull(this.tableDataTable1.id_mayorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setid_mayorNull() {
-                this[this.tableDataTable1.id_mayorColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isid_ccomprobantesNull() {
-                return this.IsNull(this.tableDataTable1.id_ccomprobantesColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setid_ccomprobantesNull() {
-                this[this.tableDataTable1.id_ccomprobantesColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isnombre_usuariosNull() {
                 return this.IsNull(this.tableDataTable1.nombre_usuariosColumn);
             }
@@ -1554,18 +980,6 @@ namespace Presentacion.Php.Datas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setnombre_usuariosNull() {
                 this[this.tableDataTable1.nombre_usuariosColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isnombre_tipo_comprobantesNull() {
-                return this.IsNull(this.tableDataTable1.nombre_tipo_comprobantesColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setnombre_tipo_comprobantesNull() {
-                this[this.tableDataTable1.nombre_tipo_comprobantesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1630,146 +1044,86 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isconcepto_ccomprobantesNull() {
-                return this.IsNull(this.tableDataTable1.concepto_ccomprobantesColumn);
+            public bool Islogo_entidadesNull() {
+                return this.IsNull(this.tableDataTable1.logo_entidadesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setconcepto_ccomprobantesNull() {
-                this[this.tableDataTable1.concepto_ccomprobantesColumn] = global::System.Convert.DBNull;
+            public void Setlogo_entidadesNull() {
+                this[this.tableDataTable1.logo_entidadesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isnumero_ccomprobantesNull() {
-                return this.IsNull(this.tableDataTable1.numero_ccomprobantesColumn);
+            public bool Isfecha_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.fecha_cierre_mesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setnumero_ccomprobantesNull() {
-                this[this.tableDataTable1.numero_ccomprobantesColumn] = global::System.Convert.DBNull;
+            public void Setfecha_cierre_mesNull() {
+                this[this.tableDataTable1.fecha_cierre_mesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isruc_ccomprobantesNull() {
-                return this.IsNull(this.tableDataTable1.ruc_ccomprobantesColumn);
+            public bool Isnombre_tipo_cierreNull() {
+                return this.IsNull(this.tableDataTable1.nombre_tipo_cierreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setruc_ccomprobantesNull() {
-                this[this.tableDataTable1.ruc_ccomprobantesColumn] = global::System.Convert.DBNull;
+            public void Setnombre_tipo_cierreNull() {
+                this[this.tableDataTable1.nombre_tipo_cierreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isnombres_ccomprobantesNull() {
-                return this.IsNull(this.tableDataTable1.nombres_ccomprobantesColumn);
+            public bool Issaldo_iniNull() {
+                return this.IsNull(this.tableDataTable1.saldo_iniColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setnombres_ccomprobantesNull() {
-                this[this.tableDataTable1.nombres_ccomprobantesColumn] = global::System.Convert.DBNull;
+            public void Setsaldo_iniNull() {
+                this[this.tableDataTable1.saldo_iniColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isvalor_ccomprobantesNull() {
-                return this.IsNull(this.tableDataTable1.valor_ccomprobantesColumn);
+            public bool IsdebeNull() {
+                return this.IsNull(this.tableDataTable1.debeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setvalor_ccomprobantesNull() {
-                this[this.tableDataTable1.valor_ccomprobantesColumn] = global::System.Convert.DBNull;
+            public void SetdebeNull() {
+                this[this.tableDataTable1.debeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isvalor_letrasNull() {
-                return this.IsNull(this.tableDataTable1.valor_letrasColumn);
+            public bool IshaberNull() {
+                return this.IsNull(this.tableDataTable1.haberColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setvalor_letrasNull() {
-                this[this.tableDataTable1.valor_letrasColumn] = global::System.Convert.DBNull;
+            public void SethaberNull() {
+                this[this.tableDataTable1.haberColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isfecha_ccomprobantesNull() {
-                return this.IsNull(this.tableDataTable1.fecha_ccomprobantesColumn);
+            public bool Issaldo_finalNull() {
+                return this.IsNull(this.tableDataTable1.saldo_finalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setfecha_ccomprobantesNull() {
-                this[this.tableDataTable1.fecha_ccomprobantesColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isreferencia_doc_ccomprobantesNull() {
-                return this.IsNull(this.tableDataTable1.referencia_doc_ccomprobantesColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setreferencia_doc_ccomprobantesNull() {
-                this[this.tableDataTable1.referencia_doc_ccomprobantesColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isnumero_cuenta_banco_ccomprobantesNull() {
-                return this.IsNull(this.tableDataTable1.numero_cuenta_banco_ccomprobantesColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setnumero_cuenta_banco_ccomprobantesNull() {
-                this[this.tableDataTable1.numero_cuenta_banco_ccomprobantesColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isnumero_cheque_ccomprobantesNull() {
-                return this.IsNull(this.tableDataTable1.numero_cheque_ccomprobantesColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setnumero_cheque_ccomprobantesNull() {
-                this[this.tableDataTable1.numero_cheque_ccomprobantesColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isobservaciones_ccomprobantesNull() {
-                return this.IsNull(this.tableDataTable1.observaciones_ccomprobantesColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setobservaciones_ccomprobantesNull() {
-                this[this.tableDataTable1.observaciones_ccomprobantesColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isid_plan_cuentasNull() {
-                return this.IsNull(this.tableDataTable1.id_plan_cuentasColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setid_plan_cuentasNull() {
-                this[this.tableDataTable1.id_plan_cuentasColumn] = global::System.Convert.DBNull;
+            public void Setsaldo_finalNull() {
+                this[this.tableDataTable1.saldo_finalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1794,114 +1148,6 @@ namespace Presentacion.Php.Datas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setnombre_plan_cuentasNull() {
                 this[this.tableDataTable1.nombre_plan_cuentasColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Issaldo_fin_plan_cuentasNull() {
-                return this.IsNull(this.tableDataTable1.saldo_fin_plan_cuentasColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setsaldo_fin_plan_cuentasNull() {
-                this[this.tableDataTable1.saldo_fin_plan_cuentasColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isn_plan_cuentasNull() {
-                return this.IsNull(this.tableDataTable1.n_plan_cuentasColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setn_plan_cuentasNull() {
-                this[this.tableDataTable1.n_plan_cuentasColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isfecha_mayorNull() {
-                return this.IsNull(this.tableDataTable1.fecha_mayorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setfecha_mayorNull() {
-                this[this.tableDataTable1.fecha_mayorColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isdebe_mayorNull() {
-                return this.IsNull(this.tableDataTable1.debe_mayorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setdebe_mayorNull() {
-                this[this.tableDataTable1.debe_mayorColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Ishaber_mayorNull() {
-                return this.IsNull(this.tableDataTable1.haber_mayorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Sethaber_mayorNull() {
-                this[this.tableDataTable1.haber_mayorColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Issaldo_mayorNull() {
-                return this.IsNull(this.tableDataTable1.saldo_mayorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setsaldo_mayorNull() {
-                this[this.tableDataTable1.saldo_mayorColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Issaldo_ini_mayorNull() {
-                return this.IsNull(this.tableDataTable1.saldo_ini_mayorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setsaldo_ini_mayorNull() {
-                this[this.tableDataTable1.saldo_ini_mayorColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscreadoNull() {
-                return this.IsNull(this.tableDataTable1.creadoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcreadoNull() {
-                this[this.tableDataTable1.creadoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Islogo_entidadesNull() {
-                return this.IsNull(this.tableDataTable1.logo_entidadesColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setlogo_entidadesNull() {
-                this[this.tableDataTable1.logo_entidadesColumn] = global::System.Convert.DBNull;
             }
         }
         

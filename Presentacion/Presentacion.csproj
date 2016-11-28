@@ -190,7 +190,10 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="app\entrega.nfc.apk" />
-    <Content Include="Php\Contendor\conCierre.aspx">
+    <Content Include="Php\Contendor\conBalanceComprobacionSimplificado.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Php\Contendor\conBalanceComprobacionDetallado.aspx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Php\Contendor\conComprobantes.aspx">
@@ -200,11 +203,22 @@
     <Content Include="Php\Datas\dsCuentas.xsc">
       <DependentUpon>dsCuentas.xsd</DependentUpon>
     </Content>
-    <Content Include="Php\Datas\dsCierre.xsc">
-      <DependentUpon>dsCierre.xsd</DependentUpon>
+    <Content Include="Php\Datas\dsBalanceComprobacionDetallado.xsc">
+      <DependentUpon>dsBalanceComprobacionDetallado.xsd</DependentUpon>
     </Content>
-    <Content Include="Php\Datas\dsCierre.xss">
-      <DependentUpon>dsCierre.xsd</DependentUpon>
+    <Content Include="Php\Datas\dsBalanceComprobacionDetallado.xss">
+      <DependentUpon>dsBalanceComprobacionDetallado.xsd</DependentUpon>
+    </Content>
+    <Content Include="Php\Datas\dsBalanceComprobacionSimplificado.xsc">
+      <DependentUpon>dsBalanceComprobacionSimplificado.xsd</DependentUpon>
+    </Content>
+    <None Include="Php\Datas\dsBalanceComprobacionSimplificado.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBalanceComprobacionSimplificado.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Php\Datas\dsBalanceComprobacionSimplificado.xss">
+      <DependentUpon>dsBalanceComprobacionSimplificado.xsd</DependentUpon>
     </Content>
     <None Include="Php\Datas\dsCuentas.xsd">
       <SubType>Designer</SubType>
@@ -228,17 +242,11 @@
     <Content Include="Php\Datas\dsComprobantes.xss">
       <DependentUpon>dsComprobantes.xsd</DependentUpon>
     </Content>
-    <Content Include="Php\Datas\dsMayor - Copia.xsc">
-      <DependentUpon>dsCierre.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsCierre.xsd">
+    <None Include="Php\Datas\dsBalanceComprobacionDetallado.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsCierre1.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsBalanceComprobacionDetallado.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Php\Datas\dsMayor - Copia.xss">
-      <DependentUpon>dsCierre.xsd</DependentUpon>
-    </Content>
     <None Include="Php\Datas\dsMayor.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -292,13 +300,22 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Php\Clases\ParametrosRpt.cs" />
-    <Compile Include="Php\Contendor\conCierre.aspx.cs">
-      <DependentUpon>conCierre.aspx</DependentUpon>
+    <Compile Include="Php\Contendor\conBalanceComprobacionSimplificado.aspx.cs">
+      <DependentUpon>conBalanceComprobacionSimplificado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Php\Contendor\conCierre.aspx.designer.cs">
-      <DependentUpon>conCierre.aspx</DependentUpon>
+    <Compile Include="Php\Contendor\conBalanceComprobacionSimplificado.aspx.designer.cs">
+      <DependentUpon>conBalanceComprobacionSimplificado.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Php\Contendor\conBalanceComprobacionDetallado.aspx.cs">
+      <DependentUpon>conBalanceComprobacionDetallado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Php\Contendor\conBalanceComprobacionDetallado.aspx.designer.cs">
+      <DependentUpon>conBalanceComprobacionDetallado.aspx</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Php\Contendor\conComprobantes.aspx.cs">
@@ -317,8 +334,16 @@
     <Compile Include="Php\Contendor\conMayorDetallado.aspx.designer.cs">
       <DependentUpon>conMayorDetallado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Php\Datas\dsCierre.cs">
-      <DependentUpon>dsCierre.xsd</DependentUpon>
+    <Compile Include="Php\Datas\dsBalanceComprobacionSimplificado.cs">
+      <DependentUpon>dsBalanceComprobacionSimplificado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Datas\dsBalanceComprobacionSimplificado.Designer.cs">
+      <DependentUpon>dsBalanceComprobacionSimplificado.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Php\Datas\dsBalanceComprobacionDetallado.cs">
+      <DependentUpon>dsBalanceComprobacionDetallado.xsd</DependentUpon>
     </Compile>
     <Compile Include="Php\Datas\dsCuentas.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -330,8 +355,8 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Php\Datas\dsCierre1.Designer.cs">
-      <DependentUpon>dsCierre.xsd</DependentUpon>
+    <Compile Include="Php\Datas\dsBalanceComprobacionDetallado.Designer.cs">
+      <DependentUpon>dsBalanceComprobacionDetallado.xsd</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -346,6 +371,12 @@
     </Compile>
     <Compile Include="Php\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Reporte\crBalanceComprobacionDetallado.cs">
+      <DependentUpon>crBalanceComprobacionDetallado.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Php\Reporte\crComprobantes.cs">
       <AutoGen>True</AutoGen>
@@ -371,10 +402,10 @@
       <DependentUpon>crMayorDetallado.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Php\Reporte\crCierre.cs">
+    <Compile Include="Php\Reporte\crBalanceComprobancionSimplificado.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>crCierre.rpt</DependentUpon>
+      <DependentUpon>crBalanceComprobancionSimplificado.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Php\Reporte\empty.cs">
@@ -427,6 +458,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionDetallado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBalanceComprobacionDetallado.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Php\Reporte\crComprobantes.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crComprobantes.cs</LastGenOutput>
@@ -443,9 +478,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crMayorDetallado.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crCierre.rpt">
+    <EmbeddedResource Include="Php\Reporte\crBalanceComprobancionSimplificado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crCierre.cs</LastGenOutput>
+      <LastGenOutput>crBalanceComprobancionSimplificado.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Php\Reporte\empty.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

@@ -16,14 +16,14 @@ namespace Presentacion.Php.Reporte {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class crCierre : ReportClass {
+    public class crBalanceComprobancionSimplificado : ReportClass {
         
-        public crCierre() {
+        public crBalanceComprobancionSimplificado() {
         }
         
         public override string ResourceName {
             get {
-                return "crCierre.rpt";
+                return "crBalanceComprobancionSimplificado.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Presentacion.Php.Reporte {
         
         public override string FullResourceName {
             get {
-                return "Presentacion.Php.Reporte.crCierre.rpt";
+                return "Presentacion.Php.Reporte.crBalanceComprobancionSimplificado.rpt";
             }
             set {
                 // Do nothing
@@ -87,12 +87,36 @@ namespace Presentacion.Php.Reporte {
                 return this.ReportDefinition.Sections[4];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_fecha_desde {
+            get {
+                return this.DataDefinition.ParameterFields[0];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_fecha_hasta {
+            get {
+                return this.DataDefinition.ParameterFields[1];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_total_registros {
+            get {
+                return this.DataDefinition.ParameterFields[2];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcrCierre : Component, ICachedReport {
+    public class CachedcrBalanceComprobancionSimplificado : Component, ICachedReport {
         
-        public CachedcrCierre() {
+        public CachedcrBalanceComprobancionSimplificado() {
         }
         
         [Browsable(false)]
@@ -129,7 +153,7 @@ namespace Presentacion.Php.Reporte {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            crCierre rpt = new crCierre();
+            crBalanceComprobancionSimplificado rpt = new crBalanceComprobancionSimplificado();
             rpt.Site = this.Site;
             return rpt;
         }
