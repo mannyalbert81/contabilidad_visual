@@ -43,7 +43,7 @@ namespace Presentacion.Php.Contendor
             dsBalanceComprobacionSimplificado.Tables.Add(dt_Reporte1);
             
             
-            string cadena = Server.MapPath("~/Php/Reporte/crBalanceComprobacionSimplificado.rpt");
+            string cadena = Server.MapPath("~/Php/Reporte/crBalanceComprobancionSimplificado.rpt");
 
             crystalReport.Load(cadena);
             crystalReport.SetDataSource(dsBalanceComprobacionSimplificado.Tables[1]);

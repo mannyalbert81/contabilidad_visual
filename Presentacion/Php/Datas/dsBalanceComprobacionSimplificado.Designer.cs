@@ -297,13 +297,11 @@ namespace Presentacion.Php.Datas {
             
             private global::System.Data.DataColumn columnnombre_tipo_cierre;
             
-            private global::System.Data.DataColumn columnsaldo_ini;
+            private global::System.Data.DataColumn columndebe_ene;
             
-            private global::System.Data.DataColumn columndebe;
+            private global::System.Data.DataColumn columnhaber_ene;
             
-            private global::System.Data.DataColumn columnhaber;
-            
-            private global::System.Data.DataColumn columnsaldo_final;
+            private global::System.Data.DataColumn columnsaldo_final_ene;
             
             private global::System.Data.DataColumn columncodigo_plan_cuentas;
             
@@ -416,33 +414,25 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn saldo_iniColumn {
+            public global::System.Data.DataColumn debe_eneColumn {
                 get {
-                    return this.columnsaldo_ini;
+                    return this.columndebe_ene;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn debeColumn {
+            public global::System.Data.DataColumn haber_eneColumn {
                 get {
-                    return this.columndebe;
+                    return this.columnhaber_ene;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn haberColumn {
+            public global::System.Data.DataColumn saldo_final_eneColumn {
                 get {
-                    return this.columnhaber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn saldo_finalColumn {
-                get {
-                    return this.columnsaldo_final;
+                    return this.columnsaldo_final_ene;
                 }
             }
             
@@ -499,7 +489,7 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string nombre_usuarios, string nombre_entidades, string ruc_entidades, string telefono_entidades, string direccion_entidades, string ciudad_entidades, byte[] logo_entidades, System.DateTime fecha_cierre_mes, string nombre_tipo_cierre, decimal saldo_ini, decimal debe, decimal haber, decimal saldo_final, string codigo_plan_cuentas, string nombre_plan_cuentas) {
+            public DataTable1Row AddDataTable1Row(string nombre_usuarios, string nombre_entidades, string ruc_entidades, string telefono_entidades, string direccion_entidades, string ciudad_entidades, byte[] logo_entidades, System.DateTime fecha_cierre_mes, string nombre_tipo_cierre, decimal debe_ene, decimal haber_ene, decimal saldo_final_ene, string codigo_plan_cuentas, string nombre_plan_cuentas) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         nombre_usuarios,
@@ -511,10 +501,9 @@ namespace Presentacion.Php.Datas {
                         logo_entidades,
                         fecha_cierre_mes,
                         nombre_tipo_cierre,
-                        saldo_ini,
-                        debe,
-                        haber,
-                        saldo_final,
+                        debe_ene,
+                        haber_ene,
+                        saldo_final_ene,
                         codigo_plan_cuentas,
                         nombre_plan_cuentas};
                 rowDataTable1Row.ItemArray = columnValuesArray;
@@ -548,10 +537,9 @@ namespace Presentacion.Php.Datas {
                 this.columnlogo_entidades = base.Columns["logo_entidades"];
                 this.columnfecha_cierre_mes = base.Columns["fecha_cierre_mes"];
                 this.columnnombre_tipo_cierre = base.Columns["nombre_tipo_cierre"];
-                this.columnsaldo_ini = base.Columns["saldo_ini"];
-                this.columndebe = base.Columns["debe"];
-                this.columnhaber = base.Columns["haber"];
-                this.columnsaldo_final = base.Columns["saldo_final"];
+                this.columndebe_ene = base.Columns["debe_ene"];
+                this.columnhaber_ene = base.Columns["haber_ene"];
+                this.columnsaldo_final_ene = base.Columns["saldo_final_ene"];
                 this.columncodigo_plan_cuentas = base.Columns["codigo_plan_cuentas"];
                 this.columnnombre_plan_cuentas = base.Columns["nombre_plan_cuentas"];
             }
@@ -577,14 +565,12 @@ namespace Presentacion.Php.Datas {
                 base.Columns.Add(this.columnfecha_cierre_mes);
                 this.columnnombre_tipo_cierre = new global::System.Data.DataColumn("nombre_tipo_cierre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre_tipo_cierre);
-                this.columnsaldo_ini = new global::System.Data.DataColumn("saldo_ini", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsaldo_ini);
-                this.columndebe = new global::System.Data.DataColumn("debe", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndebe);
-                this.columnhaber = new global::System.Data.DataColumn("haber", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnhaber);
-                this.columnsaldo_final = new global::System.Data.DataColumn("saldo_final", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsaldo_final);
+                this.columndebe_ene = new global::System.Data.DataColumn("debe_ene", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndebe_ene);
+                this.columnhaber_ene = new global::System.Data.DataColumn("haber_ene", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhaber_ene);
+                this.columnsaldo_final_ene = new global::System.Data.DataColumn("saldo_final_ene", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_final_ene);
                 this.columncodigo_plan_cuentas = new global::System.Data.DataColumn("codigo_plan_cuentas", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncodigo_plan_cuentas);
                 this.columnnombre_plan_cuentas = new global::System.Data.DataColumn("nombre_plan_cuentas", typeof(string), null, global::System.Data.MappingType.Element);
@@ -876,65 +862,49 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal saldo_ini {
+            public decimal debe_ene {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDataTable1.saldo_iniColumn]));
+                        return ((decimal)(this[this.tableDataTable1.debe_eneColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_ini\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe_ene\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.saldo_iniColumn] = value;
+                    this[this.tableDataTable1.debe_eneColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal debe {
+            public decimal haber_ene {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDataTable1.debeColumn]));
+                        return ((decimal)(this[this.tableDataTable1.haber_eneColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber_ene\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.debeColumn] = value;
+                    this[this.tableDataTable1.haber_eneColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal haber {
+            public decimal saldo_final_ene {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDataTable1.haberColumn]));
+                        return ((decimal)(this[this.tableDataTable1.saldo_final_eneColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final_ene\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.haberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal saldo_final {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableDataTable1.saldo_finalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.saldo_finalColumn] = value;
+                    this[this.tableDataTable1.saldo_final_eneColumn] = value;
                 }
             }
             
@@ -1080,50 +1050,38 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Issaldo_iniNull() {
-                return this.IsNull(this.tableDataTable1.saldo_iniColumn);
+            public bool Isdebe_eneNull() {
+                return this.IsNull(this.tableDataTable1.debe_eneColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setsaldo_iniNull() {
-                this[this.tableDataTable1.saldo_iniColumn] = global::System.Convert.DBNull;
+            public void Setdebe_eneNull() {
+                this[this.tableDataTable1.debe_eneColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsdebeNull() {
-                return this.IsNull(this.tableDataTable1.debeColumn);
+            public bool Ishaber_eneNull() {
+                return this.IsNull(this.tableDataTable1.haber_eneColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetdebeNull() {
-                this[this.tableDataTable1.debeColumn] = global::System.Convert.DBNull;
+            public void Sethaber_eneNull() {
+                this[this.tableDataTable1.haber_eneColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IshaberNull() {
-                return this.IsNull(this.tableDataTable1.haberColumn);
+            public bool Issaldo_final_eneNull() {
+                return this.IsNull(this.tableDataTable1.saldo_final_eneColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SethaberNull() {
-                this[this.tableDataTable1.haberColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Issaldo_finalNull() {
-                return this.IsNull(this.tableDataTable1.saldo_finalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setsaldo_finalNull() {
-                this[this.tableDataTable1.saldo_finalColumn] = global::System.Convert.DBNull;
+            public void Setsaldo_final_eneNull() {
+                this[this.tableDataTable1.saldo_final_eneColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
