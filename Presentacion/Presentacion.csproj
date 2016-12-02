@@ -199,7 +199,11 @@
     <Content Include="Php\Contendor\conComprobantes.aspx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Php\Contendor\conComprobantesContables.aspx" />
+    <Content Include="Php\Contendor\conComprobantesEgresos.aspx" />
+    <Content Include="Php\Contendor\conComprobantesIngresos.aspx" />
     <Content Include="Php\Contendor\conMayorDetallado.aspx" />
+    <Content Include="Php\Contendor\conReporteComprobantes.aspx" />
     <Content Include="Php\Datas\dsCuentas.xsc">
       <DependentUpon>dsCuentas.xsd</DependentUpon>
     </Content>
@@ -219,6 +223,39 @@
     </None>
     <Content Include="Php\Datas\dsBalanceComprobacionSimplificado.xss">
       <DependentUpon>dsBalanceComprobacionSimplificado.xsd</DependentUpon>
+    </Content>
+    <Content Include="Php\Datas\dsComprobantesContables.xsc">
+      <DependentUpon>dsComprobantesContables.xsd</DependentUpon>
+    </Content>
+    <None Include="Php\Datas\dsComprobantesContables.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsComprobantesContables.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Php\Datas\dsComprobantesContables.xss">
+      <DependentUpon>dsComprobantesContables.xsd</DependentUpon>
+    </Content>
+    <Content Include="Php\Datas\dsComprobantesEgresos.xsc">
+      <DependentUpon>dsComprobantesEgresos.xsd</DependentUpon>
+    </Content>
+    <None Include="Php\Datas\dsComprobantesEgresos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsComprobantesEgresos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Php\Datas\dsComprobantesEgresos.xss">
+      <DependentUpon>dsComprobantesEgresos.xsd</DependentUpon>
+    </Content>
+    <Content Include="Php\Datas\dsComprobantesIngresos.xsc">
+      <DependentUpon>dsComprobantesIngresos.xsd</DependentUpon>
+    </Content>
+    <None Include="Php\Datas\dsComprobantesIngresos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsComprobantesIngresos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Php\Datas\dsComprobantesIngresos.xss">
+      <DependentUpon>dsComprobantesIngresos.xsd</DependentUpon>
     </Content>
     <None Include="Php\Datas\dsCuentas.xsd">
       <SubType>Designer</SubType>
@@ -254,6 +291,17 @@
     </None>
     <Content Include="Php\Datas\dsMayor.xss">
       <DependentUpon>dsMayor.xsd</DependentUpon>
+    </Content>
+    <Content Include="Php\Datas\dsReporteComprobantes.xsc">
+      <DependentUpon>dsReporteComprobantes.xsd</DependentUpon>
+    </Content>
+    <None Include="Php\Datas\dsReporteComprobantes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReporteComprobantes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Php\Datas\dsReporteComprobantes.xss">
+      <DependentUpon>dsReporteComprobantes.xsd</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\censoclientes.pubxml" />
     <None Include="Properties\PublishProfiles\contabilidad2016.pubxml" />
@@ -327,6 +375,27 @@
       <DependentUpon>conComprobantes.aspx</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Php\Contendor\conComprobantesContables.aspx.cs">
+      <DependentUpon>conComprobantesContables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Php\Contendor\conComprobantesContables.aspx.designer.cs">
+      <DependentUpon>conComprobantesContables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Contendor\conComprobantesEgresos.aspx.cs">
+      <DependentUpon>conComprobantesEgresos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Php\Contendor\conComprobantesEgresos.aspx.designer.cs">
+      <DependentUpon>conComprobantesEgresos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Contendor\conComprobantesIngresos.aspx.cs">
+      <DependentUpon>conComprobantesIngresos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Php\Contendor\conComprobantesIngresos.aspx.designer.cs">
+      <DependentUpon>conComprobantesIngresos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Php\Contendor\conMayorDetallado.aspx.cs">
       <DependentUpon>conMayorDetallado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -334,6 +403,14 @@
     <Compile Include="Php\Contendor\conMayorDetallado.aspx.designer.cs">
       <DependentUpon>conMayorDetallado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Php\Contendor\conReporteComprobantes.aspx.cs">
+      <DependentUpon>conReporteComprobantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Php\Contendor\conReporteComprobantes.aspx.designer.cs">
+      <DependentUpon>conReporteComprobantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Contendor\Contenedor.cs" />
     <Compile Include="Php\Datas\dsBalanceComprobacionSimplificado.cs">
       <DependentUpon>dsBalanceComprobacionSimplificado.xsd</DependentUpon>
     </Compile>
@@ -344,6 +421,21 @@
     </Compile>
     <Compile Include="Php\Datas\dsBalanceComprobacionDetallado.cs">
       <DependentUpon>dsBalanceComprobacionDetallado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Datas\dsComprobantesContables.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsComprobantesContables.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Datas\dsComprobantesEgresos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsComprobantesEgresos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Datas\dsComprobantesIngresos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsComprobantesIngresos.xsd</DependentUpon>
     </Compile>
     <Compile Include="Php\Datas\dsCuentas.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -365,6 +457,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMayor.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Php\Datas\dsReporteComprobantes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReporteComprobantes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Php\Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -372,16 +469,105 @@
     <Compile Include="Php\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Php\Reporte\crBalanceComprobacionAbril.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBalanceComprobacionAbril.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crBalanceComprobacionAgosto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBalanceComprobacionAgosto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Php\Reporte\crBalanceComprobacionDetallado.cs">
       <DependentUpon>crBalanceComprobacionDetallado.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Php\Reporte\crBalanceComprobacionDiciembre.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBalanceComprobacionDiciembre.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crBalanceComprobacionEnero.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBalanceComprobacionEnero.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crBalanceComprobacionFebrero.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBalanceComprobacionFebrero.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crBalanceComprobacionJulio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBalanceComprobacionJulio.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crBalanceComprobacionJunio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBalanceComprobacionJunio.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crBalanceComprobacionMarzo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBalanceComprobacionMarzo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crBalanceComprobacionMayo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBalanceComprobacionMayo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crBalanceComprobacionNoviembre.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBalanceComprobacionNoviembre.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crBalanceComprobacionOctubre.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBalanceComprobacionOctubre.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crBalanceComprobacionSeptiembre.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBalanceComprobacionSeptiembre.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Php\Reporte\crComprobantes.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crComprobantes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crComprobantesContables.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crComprobantesContables.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Reporte\crComprobantesEgresos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crComprobantesEgresos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crComprobantesIngresos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crComprobantesIngresos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Php\Reporte\crCuentas.cs">
@@ -406,6 +592,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crBalanceComprobancionSimplificado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Php\Reporte\crReporteComprobantes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crReporteComprobantes.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Php\Reporte\empty.cs">
@@ -458,13 +650,73 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionAbril.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBalanceComprobacionAbril.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionAgosto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBalanceComprobacionAgosto.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionDetallado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crBalanceComprobacionDetallado.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionDiciembre.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBalanceComprobacionDiciembre.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionEnero.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBalanceComprobacionEnero.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionFebrero.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBalanceComprobacionFebrero.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionJulio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBalanceComprobacionJulio.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionJunio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBalanceComprobacionJunio.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionMarzo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBalanceComprobacionMarzo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionMayo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBalanceComprobacionMayo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionNoviembre.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBalanceComprobacionNoviembre.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionOctubre.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBalanceComprobacionOctubre.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionSeptiembre.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBalanceComprobacionSeptiembre.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Php\Reporte\crComprobantes.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crComprobantes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crComprobantesContables.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crComprobantesContables.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crComprobantesEgresos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crComprobantesEgresos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crComprobantesIngresos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crComprobantesIngresos.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Php\Reporte\crCuentas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -481,6 +733,10 @@
     <EmbeddedResource Include="Php\Reporte\crBalanceComprobancionSimplificado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crBalanceComprobancionSimplificado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crReporteComprobantes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crReporteComprobantes.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Php\Reporte\empty.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
