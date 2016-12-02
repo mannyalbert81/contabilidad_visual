@@ -554,9 +554,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Php\Reporte\crComprobantesContables.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>crComprobantesContables.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Php\Reporte\crComprobantesEgresos.cs">
       <AutoGen>True</AutoGen>

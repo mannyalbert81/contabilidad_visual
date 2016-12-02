@@ -58,7 +58,7 @@ namespace Presentacion.Php.Contendor
 
             string tablas = "public.ccomprobantes, public.dcomprobantes, public.entidades, public.usuarios, public.tipo_comprobantes, public.plan_cuentas, public.rol, public.forma_pago";
 
-            string where = "ccomprobantes.id_usuarios = usuarios.id_usuarios AND dcomprobantes.id_ccomprobantes = ccomprobantes.id_ccomprobantes AND entidades.id_entidades = ccomprobantes.id_entidades AND usuarios.id_rol = rol.id_rol AND tipo_comprobantes.id_tipo_comprobantes = ccomprobantes.id_tipo_comprobantes AND plan_cuentas.id_plan_cuentas = dcomprobantes.id_plan_cuentas AND forma_pago.id_forma_pago = ccomprobantes.id_forma_pago AND ccomprobantes.id_ccomprobantes='178'";
+            string where = "ccomprobantes.id_usuarios = usuarios.id_usuarios AND dcomprobantes.id_ccomprobantes = ccomprobantes.id_ccomprobantes AND entidades.id_entidades = ccomprobantes.id_entidades AND usuarios.id_rol = rol.id_rol AND tipo_comprobantes.id_tipo_comprobantes = ccomprobantes.id_tipo_comprobantes AND plan_cuentas.id_plan_cuentas = dcomprobantes.id_plan_cuentas AND forma_pago.id_forma_pago = ccomprobantes.id_forma_pago";
 
             dt_Reporte1 = AccesoLogica.Select(columnas, tablas, where);
 
