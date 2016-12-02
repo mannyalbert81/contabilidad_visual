@@ -201,7 +201,7 @@ namespace Presentacion.Php.Datas {
         private void InitClass() {
             this.DataSetName = "dsBalanceComprobacionDetallado";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsMayor.xsd";
+            this.Namespace = "http://tempuri.org/dsBalanceComprobacionDetallado.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableDataTable1 = new DataTable1DataTable();
@@ -279,11 +279,11 @@ namespace Presentacion.Php.Datas {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
-            private global::System.Data.DataColumn columnnombre_usuarios;
-            
-            private global::System.Data.DataColumn columnnombre_entidades;
+            private global::System.Data.DataColumn columnid_entidades;
             
             private global::System.Data.DataColumn columnruc_entidades;
+            
+            private global::System.Data.DataColumn columnnombre_entidades;
             
             private global::System.Data.DataColumn columntelefono_entidades;
             
@@ -293,21 +293,139 @@ namespace Presentacion.Php.Datas {
             
             private global::System.Data.DataColumn columnlogo_entidades;
             
+            private global::System.Data.DataColumn columnid_cierre_mes;
+            
+            private global::System.Data.DataColumn columnid_usuario_creador;
+            
             private global::System.Data.DataColumn columnfecha_cierre_mes;
             
             private global::System.Data.DataColumn columnnombre_tipo_cierre;
             
-            private global::System.Data.DataColumn columnsaldo_ini;
-            
-            private global::System.Data.DataColumn columndebe;
-            
-            private global::System.Data.DataColumn columnhaber;
-            
-            private global::System.Data.DataColumn columnsaldo_final;
-            
             private global::System.Data.DataColumn columncodigo_plan_cuentas;
             
             private global::System.Data.DataColumn columnnombre_plan_cuentas;
+            
+            private global::System.Data.DataColumn columndebe_ene;
+            
+            private global::System.Data.DataColumn columnhaber_ene;
+            
+            private global::System.Data.DataColumn columnsaldo_final_ene;
+            
+            private global::System.Data.DataColumn columndebe_feb;
+            
+            private global::System.Data.DataColumn columnhaber_feb;
+            
+            private global::System.Data.DataColumn columnsaldo_final_feb;
+            
+            private global::System.Data.DataColumn columndebe_mar;
+            
+            private global::System.Data.DataColumn columnhaber_mar;
+            
+            private global::System.Data.DataColumn columnsaldo_final_mar;
+            
+            private global::System.Data.DataColumn columndebe_abr;
+            
+            private global::System.Data.DataColumn columnhaber_abr;
+            
+            private global::System.Data.DataColumn columnsaldo_final_abr;
+            
+            private global::System.Data.DataColumn columndebe_may;
+            
+            private global::System.Data.DataColumn columnhaber_may;
+            
+            private global::System.Data.DataColumn columnsaldo_final_may;
+            
+            private global::System.Data.DataColumn columndebe_jun;
+            
+            private global::System.Data.DataColumn columnhaber_jun;
+            
+            private global::System.Data.DataColumn columnsaldo_final_jun;
+            
+            private global::System.Data.DataColumn columndebe_jul;
+            
+            private global::System.Data.DataColumn columnhaber_jul;
+            
+            private global::System.Data.DataColumn columnsaldo_final_jul;
+            
+            private global::System.Data.DataColumn columndebe_ago;
+            
+            private global::System.Data.DataColumn columnhaber_ago;
+            
+            private global::System.Data.DataColumn columnsaldo_final_ago;
+            
+            private global::System.Data.DataColumn columndebe_sep;
+            
+            private global::System.Data.DataColumn columnhaber_sep;
+            
+            private global::System.Data.DataColumn columnsaldo_final_sep;
+            
+            private global::System.Data.DataColumn columndebe_oct;
+            
+            private global::System.Data.DataColumn columnhaber_oct;
+            
+            private global::System.Data.DataColumn columnsaldo_final_oct;
+            
+            private global::System.Data.DataColumn columndebe_nov;
+            
+            private global::System.Data.DataColumn columnhaber_nov;
+            
+            private global::System.Data.DataColumn columnsaldo_final_nov;
+            
+            private global::System.Data.DataColumn columndebe_dic;
+            
+            private global::System.Data.DataColumn columnhaber_dic;
+            
+            private global::System.Data.DataColumn columnsaldo_final_dic;
+            
+            private global::System.Data.DataColumn columnyear;
+            
+            private global::System.Data.DataColumn columnfecha_ene_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columncerrado_ene_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columnfecha_feb_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columncerrado_feb_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columnfecha_mar_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columncerrado_mar_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columnfecha_abr_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columncerrado_abr_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columnfecha_may_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columncerrado_may_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columnfecha_jun_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columncerrado_jun_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columnfecha_jul_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columncerrado_jul_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columnfecha_ago_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columncerrado_ago_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columnfecha_sep_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columncerrado_sep_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columnfecha_oct_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columncerrado_oct_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columnfecha_nov_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columncerrado_nov_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columnfecha_dic_cuentas_cierre_mes;
+            
+            private global::System.Data.DataColumn columncerrado_dic_cuentas_cierre_mes;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -344,17 +462,9 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nombre_usuariosColumn {
+            public global::System.Data.DataColumn id_entidadesColumn {
                 get {
-                    return this.columnnombre_usuarios;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nombre_entidadesColumn {
-                get {
-                    return this.columnnombre_entidades;
+                    return this.columnid_entidades;
                 }
             }
             
@@ -363,6 +473,14 @@ namespace Presentacion.Php.Datas {
             public global::System.Data.DataColumn ruc_entidadesColumn {
                 get {
                     return this.columnruc_entidades;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombre_entidadesColumn {
+                get {
+                    return this.columnnombre_entidades;
                 }
             }
             
@@ -400,6 +518,22 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn id_cierre_mesColumn {
+                get {
+                    return this.columnid_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn id_usuario_creadorColumn {
+                get {
+                    return this.columnid_usuario_creador;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn fecha_cierre_mesColumn {
                 get {
                     return this.columnfecha_cierre_mes;
@@ -416,38 +550,6 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn saldo_iniColumn {
-                get {
-                    return this.columnsaldo_ini;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn debeColumn {
-                get {
-                    return this.columndebe;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn haberColumn {
-                get {
-                    return this.columnhaber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn saldo_finalColumn {
-                get {
-                    return this.columnsaldo_final;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn codigo_plan_cuentasColumn {
                 get {
                     return this.columncodigo_plan_cuentas;
@@ -459,6 +561,494 @@ namespace Presentacion.Php.Datas {
             public global::System.Data.DataColumn nombre_plan_cuentasColumn {
                 get {
                     return this.columnnombre_plan_cuentas;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn debe_eneColumn {
+                get {
+                    return this.columndebe_ene;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn haber_eneColumn {
+                get {
+                    return this.columnhaber_ene;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn saldo_final_eneColumn {
+                get {
+                    return this.columnsaldo_final_ene;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn debe_febColumn {
+                get {
+                    return this.columndebe_feb;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn haber_febColumn {
+                get {
+                    return this.columnhaber_feb;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn saldo_final_febColumn {
+                get {
+                    return this.columnsaldo_final_feb;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn debe_marColumn {
+                get {
+                    return this.columndebe_mar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn haber_marColumn {
+                get {
+                    return this.columnhaber_mar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn saldo_final_marColumn {
+                get {
+                    return this.columnsaldo_final_mar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn debe_abrColumn {
+                get {
+                    return this.columndebe_abr;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn haber_abrColumn {
+                get {
+                    return this.columnhaber_abr;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn saldo_final_abrColumn {
+                get {
+                    return this.columnsaldo_final_abr;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn debe_mayColumn {
+                get {
+                    return this.columndebe_may;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn haber_mayColumn {
+                get {
+                    return this.columnhaber_may;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn saldo_final_mayColumn {
+                get {
+                    return this.columnsaldo_final_may;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn debe_junColumn {
+                get {
+                    return this.columndebe_jun;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn haber_junColumn {
+                get {
+                    return this.columnhaber_jun;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn saldo_final_junColumn {
+                get {
+                    return this.columnsaldo_final_jun;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn debe_julColumn {
+                get {
+                    return this.columndebe_jul;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn haber_julColumn {
+                get {
+                    return this.columnhaber_jul;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn saldo_final_julColumn {
+                get {
+                    return this.columnsaldo_final_jul;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn debe_agoColumn {
+                get {
+                    return this.columndebe_ago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn haber_agoColumn {
+                get {
+                    return this.columnhaber_ago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn saldo_final_agoColumn {
+                get {
+                    return this.columnsaldo_final_ago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn debe_sepColumn {
+                get {
+                    return this.columndebe_sep;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn haber_sepColumn {
+                get {
+                    return this.columnhaber_sep;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn saldo_final_sepColumn {
+                get {
+                    return this.columnsaldo_final_sep;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn debe_octColumn {
+                get {
+                    return this.columndebe_oct;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn haber_octColumn {
+                get {
+                    return this.columnhaber_oct;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn saldo_final_octColumn {
+                get {
+                    return this.columnsaldo_final_oct;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn debe_novColumn {
+                get {
+                    return this.columndebe_nov;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn haber_novColumn {
+                get {
+                    return this.columnhaber_nov;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn saldo_final_novColumn {
+                get {
+                    return this.columnsaldo_final_nov;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn debe_dicColumn {
+                get {
+                    return this.columndebe_dic;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn haber_dicColumn {
+                get {
+                    return this.columnhaber_dic;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn saldo_final_dicColumn {
+                get {
+                    return this.columnsaldo_final_dic;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn yearColumn {
+                get {
+                    return this.columnyear;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_ene_cuentas_cierre_mesColumn {
+                get {
+                    return this.columnfecha_ene_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cerrado_ene_cuentas_cierre_mesColumn {
+                get {
+                    return this.columncerrado_ene_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_feb_cuentas_cierre_mesColumn {
+                get {
+                    return this.columnfecha_feb_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cerrado_feb_cuentas_cierre_mesColumn {
+                get {
+                    return this.columncerrado_feb_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_mar_cuentas_cierre_mesColumn {
+                get {
+                    return this.columnfecha_mar_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cerrado_mar_cuentas_cierre_mesColumn {
+                get {
+                    return this.columncerrado_mar_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_abr_cuentas_cierre_mesColumn {
+                get {
+                    return this.columnfecha_abr_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cerrado_abr_cuentas_cierre_mesColumn {
+                get {
+                    return this.columncerrado_abr_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_may_cuentas_cierre_mesColumn {
+                get {
+                    return this.columnfecha_may_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cerrado_may_cuentas_cierre_mesColumn {
+                get {
+                    return this.columncerrado_may_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_jun_cuentas_cierre_mesColumn {
+                get {
+                    return this.columnfecha_jun_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cerrado_jun_cuentas_cierre_mesColumn {
+                get {
+                    return this.columncerrado_jun_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_jul_cuentas_cierre_mesColumn {
+                get {
+                    return this.columnfecha_jul_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cerrado_jul_cuentas_cierre_mesColumn {
+                get {
+                    return this.columncerrado_jul_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_ago_cuentas_cierre_mesColumn {
+                get {
+                    return this.columnfecha_ago_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cerrado_ago_cuentas_cierre_mesColumn {
+                get {
+                    return this.columncerrado_ago_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_sep_cuentas_cierre_mesColumn {
+                get {
+                    return this.columnfecha_sep_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cerrado_sep_cuentas_cierre_mesColumn {
+                get {
+                    return this.columncerrado_sep_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_oct_cuentas_cierre_mesColumn {
+                get {
+                    return this.columnfecha_oct_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cerrado_oct_cuentas_cierre_mesColumn {
+                get {
+                    return this.columncerrado_oct_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_nov_cuentas_cierre_mesColumn {
+                get {
+                    return this.columnfecha_nov_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cerrado_nov_cuentas_cierre_mesColumn {
+                get {
+                    return this.columncerrado_nov_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_dic_cuentas_cierre_mesColumn {
+                get {
+                    return this.columnfecha_dic_cuentas_cierre_mes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cerrado_dic_cuentas_cierre_mesColumn {
+                get {
+                    return this.columncerrado_dic_cuentas_cierre_mes;
                 }
             }
             
@@ -499,24 +1089,157 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string nombre_usuarios, string nombre_entidades, string ruc_entidades, string telefono_entidades, string direccion_entidades, string ciudad_entidades, byte[] logo_entidades, System.DateTime fecha_cierre_mes, string nombre_tipo_cierre, decimal saldo_ini, decimal debe, decimal haber, decimal saldo_final, string codigo_plan_cuentas, string nombre_plan_cuentas) {
+            public DataTable1Row AddDataTable1Row(
+                        int id_entidades, 
+                        string ruc_entidades, 
+                        string nombre_entidades, 
+                        string telefono_entidades, 
+                        string direccion_entidades, 
+                        string ciudad_entidades, 
+                        byte[] logo_entidades, 
+                        int id_cierre_mes, 
+                        int id_usuario_creador, 
+                        System.DateTime fecha_cierre_mes, 
+                        string nombre_tipo_cierre, 
+                        string codigo_plan_cuentas, 
+                        string nombre_plan_cuentas, 
+                        double debe_ene, 
+                        double haber_ene, 
+                        double saldo_final_ene, 
+                        double debe_feb, 
+                        double haber_feb, 
+                        double saldo_final_feb, 
+                        double debe_mar, 
+                        double haber_mar, 
+                        double saldo_final_mar, 
+                        double debe_abr, 
+                        double haber_abr, 
+                        double saldo_final_abr, 
+                        double debe_may, 
+                        double haber_may, 
+                        double saldo_final_may, 
+                        double debe_jun, 
+                        double haber_jun, 
+                        double saldo_final_jun, 
+                        double debe_jul, 
+                        double haber_jul, 
+                        double saldo_final_jul, 
+                        double debe_ago, 
+                        double haber_ago, 
+                        double saldo_final_ago, 
+                        double debe_sep, 
+                        double haber_sep, 
+                        double saldo_final_sep, 
+                        double debe_oct, 
+                        double haber_oct, 
+                        double saldo_final_oct, 
+                        double debe_nov, 
+                        double haber_nov, 
+                        double saldo_final_nov, 
+                        double debe_dic, 
+                        double haber_dic, 
+                        double saldo_final_dic, 
+                        string year, 
+                        string fecha_ene_cuentas_cierre_mes, 
+                        string cerrado_ene_cuentas_cierre_mes, 
+                        string fecha_feb_cuentas_cierre_mes, 
+                        string cerrado_feb_cuentas_cierre_mes, 
+                        string fecha_mar_cuentas_cierre_mes, 
+                        string cerrado_mar_cuentas_cierre_mes, 
+                        string fecha_abr_cuentas_cierre_mes, 
+                        string cerrado_abr_cuentas_cierre_mes, 
+                        string fecha_may_cuentas_cierre_mes, 
+                        string cerrado_may_cuentas_cierre_mes, 
+                        string fecha_jun_cuentas_cierre_mes, 
+                        string cerrado_jun_cuentas_cierre_mes, 
+                        string fecha_jul_cuentas_cierre_mes, 
+                        string cerrado_jul_cuentas_cierre_mes, 
+                        string fecha_ago_cuentas_cierre_mes, 
+                        string cerrado_ago_cuentas_cierre_mes, 
+                        string fecha_sep_cuentas_cierre_mes, 
+                        string cerrado_sep_cuentas_cierre_mes, 
+                        string fecha_oct_cuentas_cierre_mes, 
+                        string cerrado_oct_cuentas_cierre_mes, 
+                        string fecha_nov_cuentas_cierre_mes, 
+                        string cerrado_nov_cuentas_cierre_mes, 
+                        string fecha_dic_cuentas_cierre_mes, 
+                        string cerrado_dic_cuentas_cierre_mes) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        nombre_usuarios,
-                        nombre_entidades,
+                        id_entidades,
                         ruc_entidades,
+                        nombre_entidades,
                         telefono_entidades,
                         direccion_entidades,
                         ciudad_entidades,
                         logo_entidades,
+                        id_cierre_mes,
+                        id_usuario_creador,
                         fecha_cierre_mes,
                         nombre_tipo_cierre,
-                        saldo_ini,
-                        debe,
-                        haber,
-                        saldo_final,
                         codigo_plan_cuentas,
-                        nombre_plan_cuentas};
+                        nombre_plan_cuentas,
+                        debe_ene,
+                        haber_ene,
+                        saldo_final_ene,
+                        debe_feb,
+                        haber_feb,
+                        saldo_final_feb,
+                        debe_mar,
+                        haber_mar,
+                        saldo_final_mar,
+                        debe_abr,
+                        haber_abr,
+                        saldo_final_abr,
+                        debe_may,
+                        haber_may,
+                        saldo_final_may,
+                        debe_jun,
+                        haber_jun,
+                        saldo_final_jun,
+                        debe_jul,
+                        haber_jul,
+                        saldo_final_jul,
+                        debe_ago,
+                        haber_ago,
+                        saldo_final_ago,
+                        debe_sep,
+                        haber_sep,
+                        saldo_final_sep,
+                        debe_oct,
+                        haber_oct,
+                        saldo_final_oct,
+                        debe_nov,
+                        haber_nov,
+                        saldo_final_nov,
+                        debe_dic,
+                        haber_dic,
+                        saldo_final_dic,
+                        year,
+                        fecha_ene_cuentas_cierre_mes,
+                        cerrado_ene_cuentas_cierre_mes,
+                        fecha_feb_cuentas_cierre_mes,
+                        cerrado_feb_cuentas_cierre_mes,
+                        fecha_mar_cuentas_cierre_mes,
+                        cerrado_mar_cuentas_cierre_mes,
+                        fecha_abr_cuentas_cierre_mes,
+                        cerrado_abr_cuentas_cierre_mes,
+                        fecha_may_cuentas_cierre_mes,
+                        cerrado_may_cuentas_cierre_mes,
+                        fecha_jun_cuentas_cierre_mes,
+                        cerrado_jun_cuentas_cierre_mes,
+                        fecha_jul_cuentas_cierre_mes,
+                        cerrado_jul_cuentas_cierre_mes,
+                        fecha_ago_cuentas_cierre_mes,
+                        cerrado_ago_cuentas_cierre_mes,
+                        fecha_sep_cuentas_cierre_mes,
+                        cerrado_sep_cuentas_cierre_mes,
+                        fecha_oct_cuentas_cierre_mes,
+                        cerrado_oct_cuentas_cierre_mes,
+                        fecha_nov_cuentas_cierre_mes,
+                        cerrado_nov_cuentas_cierre_mes,
+                        fecha_dic_cuentas_cierre_mes,
+                        cerrado_dic_cuentas_cierre_mes};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -539,32 +1262,91 @@ namespace Presentacion.Php.Datas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnnombre_usuarios = base.Columns["nombre_usuarios"];
-                this.columnnombre_entidades = base.Columns["nombre_entidades"];
+                this.columnid_entidades = base.Columns["id_entidades"];
                 this.columnruc_entidades = base.Columns["ruc_entidades"];
+                this.columnnombre_entidades = base.Columns["nombre_entidades"];
                 this.columntelefono_entidades = base.Columns["telefono_entidades"];
                 this.columndireccion_entidades = base.Columns["direccion_entidades"];
                 this.columnciudad_entidades = base.Columns["ciudad_entidades"];
                 this.columnlogo_entidades = base.Columns["logo_entidades"];
+                this.columnid_cierre_mes = base.Columns["id_cierre_mes"];
+                this.columnid_usuario_creador = base.Columns["id_usuario_creador"];
                 this.columnfecha_cierre_mes = base.Columns["fecha_cierre_mes"];
                 this.columnnombre_tipo_cierre = base.Columns["nombre_tipo_cierre"];
-                this.columnsaldo_ini = base.Columns["saldo_ini"];
-                this.columndebe = base.Columns["debe"];
-                this.columnhaber = base.Columns["haber"];
-                this.columnsaldo_final = base.Columns["saldo_final"];
                 this.columncodigo_plan_cuentas = base.Columns["codigo_plan_cuentas"];
                 this.columnnombre_plan_cuentas = base.Columns["nombre_plan_cuentas"];
+                this.columndebe_ene = base.Columns["debe_ene"];
+                this.columnhaber_ene = base.Columns["haber_ene"];
+                this.columnsaldo_final_ene = base.Columns["saldo_final_ene"];
+                this.columndebe_feb = base.Columns["debe_feb"];
+                this.columnhaber_feb = base.Columns["haber_feb"];
+                this.columnsaldo_final_feb = base.Columns["saldo_final_feb"];
+                this.columndebe_mar = base.Columns["debe_mar"];
+                this.columnhaber_mar = base.Columns["haber_mar"];
+                this.columnsaldo_final_mar = base.Columns["saldo_final_mar"];
+                this.columndebe_abr = base.Columns["debe_abr"];
+                this.columnhaber_abr = base.Columns["haber_abr"];
+                this.columnsaldo_final_abr = base.Columns["saldo_final_abr"];
+                this.columndebe_may = base.Columns["debe_may"];
+                this.columnhaber_may = base.Columns["haber_may"];
+                this.columnsaldo_final_may = base.Columns["saldo_final_may"];
+                this.columndebe_jun = base.Columns["debe_jun"];
+                this.columnhaber_jun = base.Columns["haber_jun"];
+                this.columnsaldo_final_jun = base.Columns["saldo_final_jun"];
+                this.columndebe_jul = base.Columns["debe_jul"];
+                this.columnhaber_jul = base.Columns["haber_jul"];
+                this.columnsaldo_final_jul = base.Columns["saldo_final_jul"];
+                this.columndebe_ago = base.Columns["debe_ago"];
+                this.columnhaber_ago = base.Columns["haber_ago"];
+                this.columnsaldo_final_ago = base.Columns["saldo_final_ago"];
+                this.columndebe_sep = base.Columns["debe_sep"];
+                this.columnhaber_sep = base.Columns["haber_sep"];
+                this.columnsaldo_final_sep = base.Columns["saldo_final_sep"];
+                this.columndebe_oct = base.Columns["debe_oct"];
+                this.columnhaber_oct = base.Columns["haber_oct"];
+                this.columnsaldo_final_oct = base.Columns["saldo_final_oct"];
+                this.columndebe_nov = base.Columns["debe_nov"];
+                this.columnhaber_nov = base.Columns["haber_nov"];
+                this.columnsaldo_final_nov = base.Columns["saldo_final_nov"];
+                this.columndebe_dic = base.Columns["debe_dic"];
+                this.columnhaber_dic = base.Columns["haber_dic"];
+                this.columnsaldo_final_dic = base.Columns["saldo_final_dic"];
+                this.columnyear = base.Columns["year"];
+                this.columnfecha_ene_cuentas_cierre_mes = base.Columns["fecha_ene_cuentas_cierre_mes"];
+                this.columncerrado_ene_cuentas_cierre_mes = base.Columns["cerrado_ene_cuentas_cierre_mes"];
+                this.columnfecha_feb_cuentas_cierre_mes = base.Columns["fecha_feb_cuentas_cierre_mes"];
+                this.columncerrado_feb_cuentas_cierre_mes = base.Columns["cerrado_feb_cuentas_cierre_mes"];
+                this.columnfecha_mar_cuentas_cierre_mes = base.Columns["fecha_mar_cuentas_cierre_mes"];
+                this.columncerrado_mar_cuentas_cierre_mes = base.Columns["cerrado_mar_cuentas_cierre_mes"];
+                this.columnfecha_abr_cuentas_cierre_mes = base.Columns["fecha_abr_cuentas_cierre_mes"];
+                this.columncerrado_abr_cuentas_cierre_mes = base.Columns["cerrado_abr_cuentas_cierre_mes"];
+                this.columnfecha_may_cuentas_cierre_mes = base.Columns["fecha_may_cuentas_cierre_mes"];
+                this.columncerrado_may_cuentas_cierre_mes = base.Columns["cerrado_may_cuentas_cierre_mes"];
+                this.columnfecha_jun_cuentas_cierre_mes = base.Columns["fecha_jun_cuentas_cierre_mes"];
+                this.columncerrado_jun_cuentas_cierre_mes = base.Columns["cerrado_jun_cuentas_cierre_mes"];
+                this.columnfecha_jul_cuentas_cierre_mes = base.Columns["fecha_jul_cuentas_cierre_mes"];
+                this.columncerrado_jul_cuentas_cierre_mes = base.Columns["cerrado_jul_cuentas_cierre_mes"];
+                this.columnfecha_ago_cuentas_cierre_mes = base.Columns["fecha_ago_cuentas_cierre_mes"];
+                this.columncerrado_ago_cuentas_cierre_mes = base.Columns["cerrado_ago_cuentas_cierre_mes"];
+                this.columnfecha_sep_cuentas_cierre_mes = base.Columns["fecha_sep_cuentas_cierre_mes"];
+                this.columncerrado_sep_cuentas_cierre_mes = base.Columns["cerrado_sep_cuentas_cierre_mes"];
+                this.columnfecha_oct_cuentas_cierre_mes = base.Columns["fecha_oct_cuentas_cierre_mes"];
+                this.columncerrado_oct_cuentas_cierre_mes = base.Columns["cerrado_oct_cuentas_cierre_mes"];
+                this.columnfecha_nov_cuentas_cierre_mes = base.Columns["fecha_nov_cuentas_cierre_mes"];
+                this.columncerrado_nov_cuentas_cierre_mes = base.Columns["cerrado_nov_cuentas_cierre_mes"];
+                this.columnfecha_dic_cuentas_cierre_mes = base.Columns["fecha_dic_cuentas_cierre_mes"];
+                this.columncerrado_dic_cuentas_cierre_mes = base.Columns["cerrado_dic_cuentas_cierre_mes"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnnombre_usuarios = new global::System.Data.DataColumn("nombre_usuarios", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre_usuarios);
-                this.columnnombre_entidades = new global::System.Data.DataColumn("nombre_entidades", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre_entidades);
+                this.columnid_entidades = new global::System.Data.DataColumn("id_entidades", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_entidades);
                 this.columnruc_entidades = new global::System.Data.DataColumn("ruc_entidades", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnruc_entidades);
+                this.columnnombre_entidades = new global::System.Data.DataColumn("nombre_entidades", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre_entidades);
                 this.columntelefono_entidades = new global::System.Data.DataColumn("telefono_entidades", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntelefono_entidades);
                 this.columndireccion_entidades = new global::System.Data.DataColumn("direccion_entidades", typeof(string), null, global::System.Data.MappingType.Element);
@@ -573,22 +1355,140 @@ namespace Presentacion.Php.Datas {
                 base.Columns.Add(this.columnciudad_entidades);
                 this.columnlogo_entidades = new global::System.Data.DataColumn("logo_entidades", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlogo_entidades);
+                this.columnid_cierre_mes = new global::System.Data.DataColumn("id_cierre_mes", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_cierre_mes);
+                this.columnid_usuario_creador = new global::System.Data.DataColumn("id_usuario_creador", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_usuario_creador);
                 this.columnfecha_cierre_mes = new global::System.Data.DataColumn("fecha_cierre_mes", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfecha_cierre_mes);
                 this.columnnombre_tipo_cierre = new global::System.Data.DataColumn("nombre_tipo_cierre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre_tipo_cierre);
-                this.columnsaldo_ini = new global::System.Data.DataColumn("saldo_ini", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsaldo_ini);
-                this.columndebe = new global::System.Data.DataColumn("debe", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndebe);
-                this.columnhaber = new global::System.Data.DataColumn("haber", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnhaber);
-                this.columnsaldo_final = new global::System.Data.DataColumn("saldo_final", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsaldo_final);
                 this.columncodigo_plan_cuentas = new global::System.Data.DataColumn("codigo_plan_cuentas", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncodigo_plan_cuentas);
                 this.columnnombre_plan_cuentas = new global::System.Data.DataColumn("nombre_plan_cuentas", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre_plan_cuentas);
+                this.columndebe_ene = new global::System.Data.DataColumn("debe_ene", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndebe_ene);
+                this.columnhaber_ene = new global::System.Data.DataColumn("haber_ene", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhaber_ene);
+                this.columnsaldo_final_ene = new global::System.Data.DataColumn("saldo_final_ene", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_final_ene);
+                this.columndebe_feb = new global::System.Data.DataColumn("debe_feb", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndebe_feb);
+                this.columnhaber_feb = new global::System.Data.DataColumn("haber_feb", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhaber_feb);
+                this.columnsaldo_final_feb = new global::System.Data.DataColumn("saldo_final_feb", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_final_feb);
+                this.columndebe_mar = new global::System.Data.DataColumn("debe_mar", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndebe_mar);
+                this.columnhaber_mar = new global::System.Data.DataColumn("haber_mar", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhaber_mar);
+                this.columnsaldo_final_mar = new global::System.Data.DataColumn("saldo_final_mar", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_final_mar);
+                this.columndebe_abr = new global::System.Data.DataColumn("debe_abr", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndebe_abr);
+                this.columnhaber_abr = new global::System.Data.DataColumn("haber_abr", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhaber_abr);
+                this.columnsaldo_final_abr = new global::System.Data.DataColumn("saldo_final_abr", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_final_abr);
+                this.columndebe_may = new global::System.Data.DataColumn("debe_may", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndebe_may);
+                this.columnhaber_may = new global::System.Data.DataColumn("haber_may", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhaber_may);
+                this.columnsaldo_final_may = new global::System.Data.DataColumn("saldo_final_may", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_final_may);
+                this.columndebe_jun = new global::System.Data.DataColumn("debe_jun", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndebe_jun);
+                this.columnhaber_jun = new global::System.Data.DataColumn("haber_jun", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhaber_jun);
+                this.columnsaldo_final_jun = new global::System.Data.DataColumn("saldo_final_jun", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_final_jun);
+                this.columndebe_jul = new global::System.Data.DataColumn("debe_jul", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndebe_jul);
+                this.columnhaber_jul = new global::System.Data.DataColumn("haber_jul", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhaber_jul);
+                this.columnsaldo_final_jul = new global::System.Data.DataColumn("saldo_final_jul", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_final_jul);
+                this.columndebe_ago = new global::System.Data.DataColumn("debe_ago", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndebe_ago);
+                this.columnhaber_ago = new global::System.Data.DataColumn("haber_ago", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhaber_ago);
+                this.columnsaldo_final_ago = new global::System.Data.DataColumn("saldo_final_ago", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_final_ago);
+                this.columndebe_sep = new global::System.Data.DataColumn("debe_sep", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndebe_sep);
+                this.columnhaber_sep = new global::System.Data.DataColumn("haber_sep", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhaber_sep);
+                this.columnsaldo_final_sep = new global::System.Data.DataColumn("saldo_final_sep", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_final_sep);
+                this.columndebe_oct = new global::System.Data.DataColumn("debe_oct", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndebe_oct);
+                this.columnhaber_oct = new global::System.Data.DataColumn("haber_oct", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhaber_oct);
+                this.columnsaldo_final_oct = new global::System.Data.DataColumn("saldo_final_oct", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_final_oct);
+                this.columndebe_nov = new global::System.Data.DataColumn("debe_nov", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndebe_nov);
+                this.columnhaber_nov = new global::System.Data.DataColumn("haber_nov", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhaber_nov);
+                this.columnsaldo_final_nov = new global::System.Data.DataColumn("saldo_final_nov", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_final_nov);
+                this.columndebe_dic = new global::System.Data.DataColumn("debe_dic", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndebe_dic);
+                this.columnhaber_dic = new global::System.Data.DataColumn("haber_dic", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhaber_dic);
+                this.columnsaldo_final_dic = new global::System.Data.DataColumn("saldo_final_dic", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldo_final_dic);
+                this.columnyear = new global::System.Data.DataColumn("year", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnyear);
+                this.columnfecha_ene_cuentas_cierre_mes = new global::System.Data.DataColumn("fecha_ene_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_ene_cuentas_cierre_mes);
+                this.columncerrado_ene_cuentas_cierre_mes = new global::System.Data.DataColumn("cerrado_ene_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncerrado_ene_cuentas_cierre_mes);
+                this.columnfecha_feb_cuentas_cierre_mes = new global::System.Data.DataColumn("fecha_feb_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_feb_cuentas_cierre_mes);
+                this.columncerrado_feb_cuentas_cierre_mes = new global::System.Data.DataColumn("cerrado_feb_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncerrado_feb_cuentas_cierre_mes);
+                this.columnfecha_mar_cuentas_cierre_mes = new global::System.Data.DataColumn("fecha_mar_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_mar_cuentas_cierre_mes);
+                this.columncerrado_mar_cuentas_cierre_mes = new global::System.Data.DataColumn("cerrado_mar_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncerrado_mar_cuentas_cierre_mes);
+                this.columnfecha_abr_cuentas_cierre_mes = new global::System.Data.DataColumn("fecha_abr_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_abr_cuentas_cierre_mes);
+                this.columncerrado_abr_cuentas_cierre_mes = new global::System.Data.DataColumn("cerrado_abr_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncerrado_abr_cuentas_cierre_mes);
+                this.columnfecha_may_cuentas_cierre_mes = new global::System.Data.DataColumn("fecha_may_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_may_cuentas_cierre_mes);
+                this.columncerrado_may_cuentas_cierre_mes = new global::System.Data.DataColumn("cerrado_may_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncerrado_may_cuentas_cierre_mes);
+                this.columnfecha_jun_cuentas_cierre_mes = new global::System.Data.DataColumn("fecha_jun_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_jun_cuentas_cierre_mes);
+                this.columncerrado_jun_cuentas_cierre_mes = new global::System.Data.DataColumn("cerrado_jun_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncerrado_jun_cuentas_cierre_mes);
+                this.columnfecha_jul_cuentas_cierre_mes = new global::System.Data.DataColumn("fecha_jul_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_jul_cuentas_cierre_mes);
+                this.columncerrado_jul_cuentas_cierre_mes = new global::System.Data.DataColumn("cerrado_jul_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncerrado_jul_cuentas_cierre_mes);
+                this.columnfecha_ago_cuentas_cierre_mes = new global::System.Data.DataColumn("fecha_ago_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_ago_cuentas_cierre_mes);
+                this.columncerrado_ago_cuentas_cierre_mes = new global::System.Data.DataColumn("cerrado_ago_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncerrado_ago_cuentas_cierre_mes);
+                this.columnfecha_sep_cuentas_cierre_mes = new global::System.Data.DataColumn("fecha_sep_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_sep_cuentas_cierre_mes);
+                this.columncerrado_sep_cuentas_cierre_mes = new global::System.Data.DataColumn("cerrado_sep_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncerrado_sep_cuentas_cierre_mes);
+                this.columnfecha_oct_cuentas_cierre_mes = new global::System.Data.DataColumn("fecha_oct_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_oct_cuentas_cierre_mes);
+                this.columncerrado_oct_cuentas_cierre_mes = new global::System.Data.DataColumn("cerrado_oct_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncerrado_oct_cuentas_cierre_mes);
+                this.columnfecha_nov_cuentas_cierre_mes = new global::System.Data.DataColumn("fecha_nov_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_nov_cuentas_cierre_mes);
+                this.columncerrado_nov_cuentas_cierre_mes = new global::System.Data.DataColumn("cerrado_nov_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncerrado_nov_cuentas_cierre_mes);
+                this.columnfecha_dic_cuentas_cierre_mes = new global::System.Data.DataColumn("fecha_dic_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_dic_cuentas_cierre_mes);
+                this.columncerrado_dic_cuentas_cierre_mes = new global::System.Data.DataColumn("cerrado_dic_cuentas_cierre_mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncerrado_dic_cuentas_cierre_mes);
                 this.Locale = new global::System.Globalization.CultureInfo("es-EC");
             }
             
@@ -732,33 +1632,17 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombre_usuarios {
+            public int id_entidades {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.nombre_usuariosColumn]));
+                        return ((int)(this[this.tableDataTable1.id_entidadesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre_usuarios\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_entidades\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.nombre_usuariosColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombre_entidades {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.nombre_entidadesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre_entidades\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.nombre_entidadesColumn] = value;
+                    this[this.tableDataTable1.id_entidadesColumn] = value;
                 }
             }
             
@@ -775,6 +1659,22 @@ namespace Presentacion.Php.Datas {
                 }
                 set {
                     this[this.tableDataTable1.ruc_entidadesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre_entidades {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.nombre_entidadesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre_entidades\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.nombre_entidadesColumn] = value;
                 }
             }
             
@@ -844,6 +1744,38 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int id_cierre_mes {
+                get {
+                    try {
+                        return ((int)(this[this.tableDataTable1.id_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_cierre_mes\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.id_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int id_usuario_creador {
+                get {
+                    try {
+                        return ((int)(this[this.tableDataTable1.id_usuario_creadorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_usuario_creador\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.id_usuario_creadorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime fecha_cierre_mes {
                 get {
                     try {
@@ -871,70 +1803,6 @@ namespace Presentacion.Php.Datas {
                 }
                 set {
                     this[this.tableDataTable1.nombre_tipo_cierreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal saldo_ini {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableDataTable1.saldo_iniColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_ini\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.saldo_iniColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal debe {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableDataTable1.debeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.debeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal haber {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableDataTable1.haberColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.haberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal saldo_final {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableDataTable1.saldo_finalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.saldo_finalColumn] = value;
                 }
             }
             
@@ -972,26 +1840,1014 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isnombre_usuariosNull() {
-                return this.IsNull(this.tableDataTable1.nombre_usuariosColumn);
+            public double debe_ene {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.debe_eneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe_ene\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.debe_eneColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setnombre_usuariosNull() {
-                this[this.tableDataTable1.nombre_usuariosColumn] = global::System.Convert.DBNull;
+            public double haber_ene {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.haber_eneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber_ene\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.haber_eneColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isnombre_entidadesNull() {
-                return this.IsNull(this.tableDataTable1.nombre_entidadesColumn);
+            public double saldo_final_ene {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.saldo_final_eneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final_ene\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.saldo_final_eneColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setnombre_entidadesNull() {
-                this[this.tableDataTable1.nombre_entidadesColumn] = global::System.Convert.DBNull;
+            public double debe_feb {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.debe_febColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe_feb\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.debe_febColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double haber_feb {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.haber_febColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber_feb\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.haber_febColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double saldo_final_feb {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.saldo_final_febColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final_feb\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.saldo_final_febColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double debe_mar {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.debe_marColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe_mar\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.debe_marColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double haber_mar {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.haber_marColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber_mar\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.haber_marColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double saldo_final_mar {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.saldo_final_marColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final_mar\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.saldo_final_marColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double debe_abr {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.debe_abrColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe_abr\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.debe_abrColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double haber_abr {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.haber_abrColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber_abr\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.haber_abrColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double saldo_final_abr {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.saldo_final_abrColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final_abr\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.saldo_final_abrColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double debe_may {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.debe_mayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe_may\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.debe_mayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double haber_may {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.haber_mayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber_may\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.haber_mayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double saldo_final_may {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.saldo_final_mayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final_may\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.saldo_final_mayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double debe_jun {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.debe_junColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe_jun\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.debe_junColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double haber_jun {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.haber_junColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber_jun\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.haber_junColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double saldo_final_jun {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.saldo_final_junColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final_jun\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.saldo_final_junColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double debe_jul {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.debe_julColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe_jul\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.debe_julColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double haber_jul {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.haber_julColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber_jul\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.haber_julColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double saldo_final_jul {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.saldo_final_julColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final_jul\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.saldo_final_julColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double debe_ago {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.debe_agoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe_ago\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.debe_agoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double haber_ago {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.haber_agoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber_ago\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.haber_agoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double saldo_final_ago {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.saldo_final_agoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final_ago\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.saldo_final_agoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double debe_sep {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.debe_sepColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe_sep\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.debe_sepColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double haber_sep {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.haber_sepColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber_sep\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.haber_sepColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double saldo_final_sep {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.saldo_final_sepColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final_sep\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.saldo_final_sepColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double debe_oct {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.debe_octColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe_oct\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.debe_octColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double haber_oct {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.haber_octColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber_oct\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.haber_octColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double saldo_final_oct {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.saldo_final_octColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final_oct\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.saldo_final_octColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double debe_nov {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.debe_novColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe_nov\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.debe_novColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double haber_nov {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.haber_novColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber_nov\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.haber_novColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double saldo_final_nov {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.saldo_final_novColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final_nov\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.saldo_final_novColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double debe_dic {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.debe_dicColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'debe_dic\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.debe_dicColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double haber_dic {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.haber_dicColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'haber_dic\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.haber_dicColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double saldo_final_dic {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.saldo_final_dicColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldo_final_dic\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.saldo_final_dicColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string year {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.yearColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'year\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.yearColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fecha_ene_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.fecha_ene_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_ene_cuentas_cierre_mes\' de la tabla \'DataTable1\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.fecha_ene_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cerrado_ene_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.cerrado_ene_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cerrado_ene_cuentas_cierre_mes\' de la tabla \'DataTable1\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.cerrado_ene_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fecha_feb_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.fecha_feb_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_feb_cuentas_cierre_mes\' de la tabla \'DataTable1\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.fecha_feb_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cerrado_feb_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.cerrado_feb_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cerrado_feb_cuentas_cierre_mes\' de la tabla \'DataTable1\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.cerrado_feb_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fecha_mar_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.fecha_mar_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_mar_cuentas_cierre_mes\' de la tabla \'DataTable1\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.fecha_mar_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cerrado_mar_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.cerrado_mar_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cerrado_mar_cuentas_cierre_mes\' de la tabla \'DataTable1\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.cerrado_mar_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fecha_abr_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.fecha_abr_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_abr_cuentas_cierre_mes\' de la tabla \'DataTable1\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.fecha_abr_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cerrado_abr_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.cerrado_abr_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cerrado_abr_cuentas_cierre_mes\' de la tabla \'DataTable1\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.cerrado_abr_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fecha_may_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.fecha_may_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_may_cuentas_cierre_mes\' de la tabla \'DataTable1\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.fecha_may_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cerrado_may_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.cerrado_may_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cerrado_may_cuentas_cierre_mes\' de la tabla \'DataTable1\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.cerrado_may_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fecha_jun_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.fecha_jun_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_jun_cuentas_cierre_mes\' de la tabla \'DataTable1\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.fecha_jun_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cerrado_jun_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.cerrado_jun_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cerrado_jun_cuentas_cierre_mes\' de la tabla \'DataTable1\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.cerrado_jun_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fecha_jul_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.fecha_jul_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_jul_cuentas_cierre_mes\' de la tabla \'DataTable1\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.fecha_jul_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cerrado_jul_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.cerrado_jul_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cerrado_jul_cuentas_cierre_mes\' de la tabla \'DataTable1\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.cerrado_jul_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fecha_ago_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.fecha_ago_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_ago_cuentas_cierre_mes\' de la tabla \'DataTable1\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.fecha_ago_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cerrado_ago_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.cerrado_ago_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cerrado_ago_cuentas_cierre_mes\' de la tabla \'DataTable1\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.cerrado_ago_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fecha_sep_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.fecha_sep_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_sep_cuentas_cierre_mes\' de la tabla \'DataTable1\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.fecha_sep_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cerrado_sep_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.cerrado_sep_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cerrado_sep_cuentas_cierre_mes\' de la tabla \'DataTable1\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.cerrado_sep_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fecha_oct_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.fecha_oct_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_oct_cuentas_cierre_mes\' de la tabla \'DataTable1\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.fecha_oct_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cerrado_oct_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.cerrado_oct_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cerrado_oct_cuentas_cierre_mes\' de la tabla \'DataTable1\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.cerrado_oct_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fecha_nov_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.fecha_nov_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_nov_cuentas_cierre_mes\' de la tabla \'DataTable1\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.fecha_nov_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cerrado_nov_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.cerrado_nov_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cerrado_nov_cuentas_cierre_mes\' de la tabla \'DataTable1\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.cerrado_nov_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fecha_dic_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.fecha_dic_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_dic_cuentas_cierre_mes\' de la tabla \'DataTable1\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.fecha_dic_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cerrado_dic_cuentas_cierre_mes {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.cerrado_dic_cuentas_cierre_mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cerrado_dic_cuentas_cierre_mes\' de la tabla \'DataTable1\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.cerrado_dic_cuentas_cierre_mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isid_entidadesNull() {
+                return this.IsNull(this.tableDataTable1.id_entidadesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setid_entidadesNull() {
+                this[this.tableDataTable1.id_entidadesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1004,6 +2860,18 @@ namespace Presentacion.Php.Datas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setruc_entidadesNull() {
                 this[this.tableDataTable1.ruc_entidadesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isnombre_entidadesNull() {
+                return this.IsNull(this.tableDataTable1.nombre_entidadesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnombre_entidadesNull() {
+                this[this.tableDataTable1.nombre_entidadesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1056,6 +2924,30 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isid_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.id_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setid_cierre_mesNull() {
+                this[this.tableDataTable1.id_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isid_usuario_creadorNull() {
+                return this.IsNull(this.tableDataTable1.id_usuario_creadorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setid_usuario_creadorNull() {
+                this[this.tableDataTable1.id_usuario_creadorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isfecha_cierre_mesNull() {
                 return this.IsNull(this.tableDataTable1.fecha_cierre_mesColumn);
             }
@@ -1080,54 +2972,6 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Issaldo_iniNull() {
-                return this.IsNull(this.tableDataTable1.saldo_iniColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setsaldo_iniNull() {
-                this[this.tableDataTable1.saldo_iniColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsdebeNull() {
-                return this.IsNull(this.tableDataTable1.debeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetdebeNull() {
-                this[this.tableDataTable1.debeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IshaberNull() {
-                return this.IsNull(this.tableDataTable1.haberColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SethaberNull() {
-                this[this.tableDataTable1.haberColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Issaldo_finalNull() {
-                return this.IsNull(this.tableDataTable1.saldo_finalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setsaldo_finalNull() {
-                this[this.tableDataTable1.saldo_finalColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Iscodigo_plan_cuentasNull() {
                 return this.IsNull(this.tableDataTable1.codigo_plan_cuentasColumn);
             }
@@ -1148,6 +2992,738 @@ namespace Presentacion.Php.Datas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setnombre_plan_cuentasNull() {
                 this[this.tableDataTable1.nombre_plan_cuentasColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdebe_eneNull() {
+                return this.IsNull(this.tableDataTable1.debe_eneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdebe_eneNull() {
+                this[this.tableDataTable1.debe_eneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ishaber_eneNull() {
+                return this.IsNull(this.tableDataTable1.haber_eneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Sethaber_eneNull() {
+                this[this.tableDataTable1.haber_eneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issaldo_final_eneNull() {
+                return this.IsNull(this.tableDataTable1.saldo_final_eneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsaldo_final_eneNull() {
+                this[this.tableDataTable1.saldo_final_eneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdebe_febNull() {
+                return this.IsNull(this.tableDataTable1.debe_febColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdebe_febNull() {
+                this[this.tableDataTable1.debe_febColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ishaber_febNull() {
+                return this.IsNull(this.tableDataTable1.haber_febColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Sethaber_febNull() {
+                this[this.tableDataTable1.haber_febColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issaldo_final_febNull() {
+                return this.IsNull(this.tableDataTable1.saldo_final_febColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsaldo_final_febNull() {
+                this[this.tableDataTable1.saldo_final_febColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdebe_marNull() {
+                return this.IsNull(this.tableDataTable1.debe_marColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdebe_marNull() {
+                this[this.tableDataTable1.debe_marColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ishaber_marNull() {
+                return this.IsNull(this.tableDataTable1.haber_marColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Sethaber_marNull() {
+                this[this.tableDataTable1.haber_marColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issaldo_final_marNull() {
+                return this.IsNull(this.tableDataTable1.saldo_final_marColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsaldo_final_marNull() {
+                this[this.tableDataTable1.saldo_final_marColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdebe_abrNull() {
+                return this.IsNull(this.tableDataTable1.debe_abrColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdebe_abrNull() {
+                this[this.tableDataTable1.debe_abrColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ishaber_abrNull() {
+                return this.IsNull(this.tableDataTable1.haber_abrColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Sethaber_abrNull() {
+                this[this.tableDataTable1.haber_abrColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issaldo_final_abrNull() {
+                return this.IsNull(this.tableDataTable1.saldo_final_abrColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsaldo_final_abrNull() {
+                this[this.tableDataTable1.saldo_final_abrColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdebe_mayNull() {
+                return this.IsNull(this.tableDataTable1.debe_mayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdebe_mayNull() {
+                this[this.tableDataTable1.debe_mayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ishaber_mayNull() {
+                return this.IsNull(this.tableDataTable1.haber_mayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Sethaber_mayNull() {
+                this[this.tableDataTable1.haber_mayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issaldo_final_mayNull() {
+                return this.IsNull(this.tableDataTable1.saldo_final_mayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsaldo_final_mayNull() {
+                this[this.tableDataTable1.saldo_final_mayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdebe_junNull() {
+                return this.IsNull(this.tableDataTable1.debe_junColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdebe_junNull() {
+                this[this.tableDataTable1.debe_junColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ishaber_junNull() {
+                return this.IsNull(this.tableDataTable1.haber_junColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Sethaber_junNull() {
+                this[this.tableDataTable1.haber_junColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issaldo_final_junNull() {
+                return this.IsNull(this.tableDataTable1.saldo_final_junColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsaldo_final_junNull() {
+                this[this.tableDataTable1.saldo_final_junColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdebe_julNull() {
+                return this.IsNull(this.tableDataTable1.debe_julColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdebe_julNull() {
+                this[this.tableDataTable1.debe_julColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ishaber_julNull() {
+                return this.IsNull(this.tableDataTable1.haber_julColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Sethaber_julNull() {
+                this[this.tableDataTable1.haber_julColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issaldo_final_julNull() {
+                return this.IsNull(this.tableDataTable1.saldo_final_julColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsaldo_final_julNull() {
+                this[this.tableDataTable1.saldo_final_julColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdebe_agoNull() {
+                return this.IsNull(this.tableDataTable1.debe_agoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdebe_agoNull() {
+                this[this.tableDataTable1.debe_agoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ishaber_agoNull() {
+                return this.IsNull(this.tableDataTable1.haber_agoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Sethaber_agoNull() {
+                this[this.tableDataTable1.haber_agoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issaldo_final_agoNull() {
+                return this.IsNull(this.tableDataTable1.saldo_final_agoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsaldo_final_agoNull() {
+                this[this.tableDataTable1.saldo_final_agoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdebe_sepNull() {
+                return this.IsNull(this.tableDataTable1.debe_sepColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdebe_sepNull() {
+                this[this.tableDataTable1.debe_sepColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ishaber_sepNull() {
+                return this.IsNull(this.tableDataTable1.haber_sepColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Sethaber_sepNull() {
+                this[this.tableDataTable1.haber_sepColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issaldo_final_sepNull() {
+                return this.IsNull(this.tableDataTable1.saldo_final_sepColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsaldo_final_sepNull() {
+                this[this.tableDataTable1.saldo_final_sepColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdebe_octNull() {
+                return this.IsNull(this.tableDataTable1.debe_octColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdebe_octNull() {
+                this[this.tableDataTable1.debe_octColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ishaber_octNull() {
+                return this.IsNull(this.tableDataTable1.haber_octColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Sethaber_octNull() {
+                this[this.tableDataTable1.haber_octColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issaldo_final_octNull() {
+                return this.IsNull(this.tableDataTable1.saldo_final_octColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsaldo_final_octNull() {
+                this[this.tableDataTable1.saldo_final_octColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdebe_novNull() {
+                return this.IsNull(this.tableDataTable1.debe_novColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdebe_novNull() {
+                this[this.tableDataTable1.debe_novColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ishaber_novNull() {
+                return this.IsNull(this.tableDataTable1.haber_novColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Sethaber_novNull() {
+                this[this.tableDataTable1.haber_novColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issaldo_final_novNull() {
+                return this.IsNull(this.tableDataTable1.saldo_final_novColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsaldo_final_novNull() {
+                this[this.tableDataTable1.saldo_final_novColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdebe_dicNull() {
+                return this.IsNull(this.tableDataTable1.debe_dicColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdebe_dicNull() {
+                this[this.tableDataTable1.debe_dicColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ishaber_dicNull() {
+                return this.IsNull(this.tableDataTable1.haber_dicColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Sethaber_dicNull() {
+                this[this.tableDataTable1.haber_dicColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issaldo_final_dicNull() {
+                return this.IsNull(this.tableDataTable1.saldo_final_dicColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsaldo_final_dicNull() {
+                this[this.tableDataTable1.saldo_final_dicColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsyearNull() {
+                return this.IsNull(this.tableDataTable1.yearColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetyearNull() {
+                this[this.tableDataTable1.yearColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfecha_ene_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.fecha_ene_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfecha_ene_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.fecha_ene_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscerrado_ene_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.cerrado_ene_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcerrado_ene_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.cerrado_ene_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfecha_feb_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.fecha_feb_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfecha_feb_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.fecha_feb_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscerrado_feb_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.cerrado_feb_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcerrado_feb_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.cerrado_feb_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfecha_mar_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.fecha_mar_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfecha_mar_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.fecha_mar_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscerrado_mar_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.cerrado_mar_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcerrado_mar_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.cerrado_mar_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfecha_abr_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.fecha_abr_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfecha_abr_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.fecha_abr_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscerrado_abr_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.cerrado_abr_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcerrado_abr_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.cerrado_abr_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfecha_may_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.fecha_may_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfecha_may_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.fecha_may_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscerrado_may_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.cerrado_may_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcerrado_may_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.cerrado_may_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfecha_jun_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.fecha_jun_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfecha_jun_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.fecha_jun_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscerrado_jun_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.cerrado_jun_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcerrado_jun_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.cerrado_jun_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfecha_jul_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.fecha_jul_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfecha_jul_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.fecha_jul_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscerrado_jul_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.cerrado_jul_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcerrado_jul_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.cerrado_jul_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfecha_ago_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.fecha_ago_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfecha_ago_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.fecha_ago_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscerrado_ago_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.cerrado_ago_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcerrado_ago_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.cerrado_ago_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfecha_sep_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.fecha_sep_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfecha_sep_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.fecha_sep_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscerrado_sep_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.cerrado_sep_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcerrado_sep_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.cerrado_sep_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfecha_oct_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.fecha_oct_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfecha_oct_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.fecha_oct_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscerrado_oct_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.cerrado_oct_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcerrado_oct_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.cerrado_oct_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfecha_nov_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.fecha_nov_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfecha_nov_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.fecha_nov_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscerrado_nov_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.cerrado_nov_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcerrado_nov_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.cerrado_nov_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfecha_dic_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.fecha_dic_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfecha_dic_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.fecha_dic_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscerrado_dic_cuentas_cierre_mesNull() {
+                return this.IsNull(this.tableDataTable1.cerrado_dic_cuentas_cierre_mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcerrado_dic_cuentas_cierre_mesNull() {
+                this[this.tableDataTable1.cerrado_dic_cuentas_cierre_mesColumn] = global::System.Convert.DBNull;
             }
         }
         
