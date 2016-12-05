@@ -9,6 +9,8 @@ using CrystalDecisions.CrystalReports.Engine;
 using System.Data;
 using System.IO;
 using System.Drawing;
+using Presentacion.Php.Clases;
+
 namespace Presentacion.Php.Contendor
 {
     public partial class conComprobantesIngresos : System.Web.UI.Page
@@ -24,6 +26,12 @@ namespace Presentacion.Php.Contendor
             ReportDocument crystalReport = new ReportDocument();
             var dsComprobantesIngresos= new Datas.dsComprobantesIngresos();
             DataTable dt_Reporte1 = new DataTable();
+            
+            ParametrosRpt parametros = new ParametrosRpt();
+
+            try
+            { parametros.id_comprobantes = Convert.ToInt32(Request.QueryString["id_comprobantes"]); }
+            catch (Exception) { parametros.id_comprobantes = 0; }
 
 
             string columnas = "entidades.ruc_entidades," +
@@ -57,14 +65,23 @@ namespace Presentacion.Php.Contendor
 
             string tablas = " public.ccomprobantes, public.dcomprobantes, public.entidades, public.usuarios, public.tipo_comprobantes, public.plan_cuentas, public.rol, public.forma_pago";
 
-            string where = "ccomprobantes.id_usuarios = usuarios.id_usuarios AND dcomprobantes.id_ccomprobantes = ccomprobantes.id_ccomprobantes AND entidades.id_entidades = ccomprobantes.id_entidades AND usuarios.id_rol = rol.id_rol AND tipo_comprobantes.id_tipo_comprobantes = ccomprobantes.id_tipo_comprobantes AND plan_cuentas.id_plan_cuentas = dcomprobantes.id_plan_cuentas AND forma_pago.id_forma_pago = ccomprobantes.id_forma_pago AND ccomprobantes.id_ccomprobantes='173'";
+            string where = "ccomprobantes.id_usuarios = usuarios.id_usuarios AND dcomprobantes.id_ccomprobantes = ccomprobantes.id_ccomprobantes AND "+
+                "entidades.id_entidades = ccomprobantes.id_entidades AND usuarios.id_rol = rol.id_rol AND tipo_comprobantes.id_tipo_comprobantes = ccomprobantes.id_tipo_comprobantes AND "+
+                "plan_cuentas.id_plan_cuentas = dcomprobantes.id_plan_cuentas AND forma_pago.id_forma_pago = ccomprobantes.id_forma_pago ";
+
+            String where_to = "";
+
+            if (parametros.id_comprobantes > 0)
+            { 
+                where_to += "  AND ccomprobantes.id_ccomprobantes = '" + parametros.id_comprobantes + "'";
+            }
+
+            where = where + where_to;
 
             dt_Reporte1 = AccesoLogica.Select(columnas, tablas, where);
-
             //dsCuentas.Cuentas= dt_Reporte;
 
             dsComprobantesIngresos.Tables.Add(dt_Reporte1);
-
 
             string cadena = Server.MapPath("~/Php/Reporte/crComprobantesIngresos.rpt");
 
