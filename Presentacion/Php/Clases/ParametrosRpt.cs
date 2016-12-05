@@ -18,7 +18,7 @@ namespace Presentacion.Php.Clases
         public string reporte { get; set; }
         public int id_usuarios { get; set; }
         public int total_registros { get; set; }
-
-
+        public int anio_balance { get; set; }
+        
     }
 }

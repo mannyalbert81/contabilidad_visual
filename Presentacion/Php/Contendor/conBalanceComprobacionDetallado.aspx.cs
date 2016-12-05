@@ -10,6 +10,7 @@ using System.Data;
 
 using System.IO;
 using System.Drawing;
+using Presentacion.Php.Clases;
 
 namespace Presentacion.Php.Contendor
 {
@@ -28,7 +29,12 @@ namespace Presentacion.Php.Contendor
             ReportDocument crystalReport = new ReportDocument();
             var dsBalanceComprobacionDetallado = new Datas.dsBalanceComprobacionDetallado();
             DataTable dt_Reporte1 = new DataTable();
-           
+
+            ParametrosRpt param = new ParametrosRpt();
+
+            param.id_entidades = Request.QueryString["id_entidades"];
+            param.id_usuarios = Convert.ToInt32(Request.QueryString["id_usuarios"]);
+            param.anio_balance = Convert.ToInt32(Request.QueryString["anio"]);
 
             string columnas = "entidades.id_entidades, entidades.ruc_entidades, entidades.nombre_entidades, entidades.telefono_entidades,"+ 
                           "entidades.direccion_entidades, entidades.ciudad_entidades, entidades.logo_entidades, cierre_mes.id_cierre_mes,"+ 
@@ -47,7 +53,7 @@ namespace Presentacion.Php.Contendor
                           "cuentas_cierre_mes.debe_nov, cuentas_cierre_mes.haber_nov, cuentas_cierre_mes.saldo_final_nov,"+
                           "cuentas_cierre_mes.debe_dic, cuentas_cierre_mes.haber_dic, cuentas_cierre_mes.saldo_final_dic,"+
                           "cuentas_cierre_mes.year," +
-                            "fecha_ene_cuentas_cierre_mes," +
+                           "fecha_ene_cuentas_cierre_mes," +
                           "cerrado_ene_cuentas_cierre_mes," +
                           "fecha_feb_cuentas_cierre_mes," +
                           "cerrado_feb_cuentas_cierre_mes," +
