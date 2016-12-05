@@ -190,9 +190,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="app\entrega.nfc.apk" />
-    <Content Include="Php\Contendor\conBalanceComprobacionSimplificado.aspx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Php\Contendor\conBalanceComprobacionDetallado.aspx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -212,17 +209,6 @@
     </Content>
     <Content Include="Php\Datas\dsBalanceComprobacionDetallado.xss">
       <DependentUpon>dsBalanceComprobacionDetallado.xsd</DependentUpon>
-    </Content>
-    <Content Include="Php\Datas\dsBalanceComprobacionSimplificado.xsc">
-      <DependentUpon>dsBalanceComprobacionSimplificado.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsBalanceComprobacionSimplificado.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsBalanceComprobacionSimplificado.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Php\Datas\dsBalanceComprobacionSimplificado.xss">
-      <DependentUpon>dsBalanceComprobacionSimplificado.xsd</DependentUpon>
     </Content>
     <Content Include="Php\Datas\dsComprobantesContables.xsc">
       <DependentUpon>dsComprobantesContables.xsd</DependentUpon>
@@ -348,15 +334,6 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Php\Clases\ParametrosRpt.cs" />
-    <Compile Include="Php\Contendor\conBalanceComprobacionSimplificado.aspx.cs">
-      <DependentUpon>conBalanceComprobacionSimplificado.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Php\Contendor\conBalanceComprobacionSimplificado.aspx.designer.cs">
-      <DependentUpon>conBalanceComprobacionSimplificado.aspx</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="Php\Contendor\conBalanceComprobacionDetallado.aspx.cs">
       <DependentUpon>conBalanceComprobacionDetallado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -411,14 +388,6 @@
       <DependentUpon>conReporteComprobantes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Php\Contendor\Contenedor.cs" />
-    <Compile Include="Php\Datas\dsBalanceComprobacionSimplificado.cs">
-      <DependentUpon>dsBalanceComprobacionSimplificado.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Datas\dsBalanceComprobacionSimplificado.Designer.cs">
-      <DependentUpon>dsBalanceComprobacionSimplificado.xsd</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Php\Datas\dsBalanceComprobacionDetallado.cs">
       <DependentUpon>dsBalanceComprobacionDetallado.xsd</DependentUpon>
     </Compile>
