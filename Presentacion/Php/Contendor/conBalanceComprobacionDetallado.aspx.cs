@@ -82,7 +82,7 @@ namespace Presentacion.Php.Contendor
   
             string where = "cierre_mes.id_tipo_cierre = tipo_cierre.id_tipo_cierre AND cuentas_cierre_mes.id_cierre_mes = cierre_mes.id_cierre_mes AND "+
                 "entidades.id_entidades = cierre_mes.id_entidades AND usuarios.id_entidades = entidades.id_entidades AND "+
-                "plan_cuentas.id_plan_cuentas = cuentas_cierre_mes.id_plan_cuentas AND usuarios.id_usuarios = '94' AND entidades.id_entidades = '3'"+ 
+                "plan_cuentas.id_plan_cuentas = cuentas_cierre_mes.id_plan_cuentas  AND entidades.id_entidades = '3'"+ 
                 "ORDER BY plan_cuentas.codigo_plan_cuentas";
 
             String where_to = "";
@@ -92,32 +92,15 @@ namespace Presentacion.Php.Contendor
 
                 where_to += " AND usuarios.id_usuarios=" + parametros.id_usuarios + "";
             }
-
-            if (!String.IsNullOrEmpty(parametros.tipo_comprobantes) && Convert.ToInt32(parametros.tipo_comprobantes) != 0)
-            {
-
-                where_to += " AND tipo_comprobantes.id_tipo_comprobantes='" + parametros.tipo_comprobantes + "'";
-            }
-
-            if (!String.IsNullOrEmpty(parametros.fecha_desde) && !String.IsNullOrEmpty(parametros.Fecha_hasta))
-            {
-
-                where_to += " AND  ccomprobantes.fecha_ccomprobantes BETWEEN '" + parametros.fecha_desde + "' AND '" + parametros.Fecha_hasta + "'";
-            }
-
+            
             if (!String.IsNullOrEmpty(parametros.id_entidades))
             {
 
                 where_to += " AND entidades.id_entidades = " + parametros.id_entidades;
             }
 
-            if (!String.IsNullOrEmpty(parametros.numero_comprobantes))
-            {
-
-                where_to += " AND ccomprobantes.numero_ccomprobantes='" + parametros.numero_comprobantes + "' ";
-            }
-
-            if (!String.IsNullOrEmpty(parametros.referencia_doc_comprobantes))
+            
+            if (parametros.anio_balance>0)
             {
 
                 where_to += " AND ccomprobantes.referencia_doc_ccomprobantes ='" + parametros.referencia_doc_comprobantes + "'";
