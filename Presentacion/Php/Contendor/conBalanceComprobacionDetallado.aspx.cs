@@ -30,11 +30,11 @@ namespace Presentacion.Php.Contendor
             var dsBalanceComprobacionDetallado = new Datas.dsBalanceComprobacionDetallado();
             DataTable dt_Reporte1 = new DataTable();
 
-            ParametrosRpt param = new ParametrosRpt();
+            ParametrosRpt parametros = new ParametrosRpt();
 
-            param.id_entidades = Request.QueryString["id_entidades"];
-            param.id_usuarios = Convert.ToInt32(Request.QueryString["id_usuarios"]);
-            param.anio_balance = Convert.ToInt32(Request.QueryString["anio"]);
+            parametros.id_entidades = Request.QueryString["id_entidades"];
+            parametros.id_usuarios = Convert.ToInt32(Request.QueryString["id_usuarios"]);
+            parametros.anio_balance = Convert.ToInt32(Request.QueryString["anio"]);
 
             string columnas = "entidades.id_entidades, entidades.ruc_entidades, entidades.nombre_entidades, entidades.telefono_entidades,"+ 
                           "entidades.direccion_entidades, entidades.ciudad_entidades, entidades.logo_entidades, cierre_mes.id_cierre_mes,"+ 
@@ -80,8 +80,53 @@ namespace Presentacion.Php.Contendor
 
             string tablas = "public.cierre_mes, public.cuentas_cierre_mes, public.entidades, public.usuarios, public.plan_cuentas, public.tipo_cierre";
   
-            string where = "cierre_mes.id_tipo_cierre = tipo_cierre.id_tipo_cierre AND cuentas_cierre_mes.id_cierre_mes = cierre_mes.id_cierre_mes AND entidades.id_entidades = cierre_mes.id_entidades AND usuarios.id_entidades = entidades.id_entidades AND plan_cuentas.id_plan_cuentas = cuentas_cierre_mes.id_plan_cuentas AND usuarios.id_usuarios = '94' AND entidades.id_entidades = '3' ORDER BY plan_cuentas.codigo_plan_cuentas";
-            
+            string where = "cierre_mes.id_tipo_cierre = tipo_cierre.id_tipo_cierre AND cuentas_cierre_mes.id_cierre_mes = cierre_mes.id_cierre_mes AND "+
+                "entidades.id_entidades = cierre_mes.id_entidades AND usuarios.id_entidades = entidades.id_entidades AND "+
+                "plan_cuentas.id_plan_cuentas = cuentas_cierre_mes.id_plan_cuentas AND usuarios.id_usuarios = '94' AND entidades.id_entidades = '3'"+ 
+                "ORDER BY plan_cuentas.codigo_plan_cuentas";
+
+            String where_to = "";
+            //
+            if (parametros.id_usuarios > 0)
+            {
+
+                where_to += " AND usuarios.id_usuarios=" + parametros.id_usuarios + "";
+            }
+
+            if (!String.IsNullOrEmpty(parametros.tipo_comprobantes) && Convert.ToInt32(parametros.tipo_comprobantes) != 0)
+            {
+
+                where_to += " AND tipo_comprobantes.id_tipo_comprobantes='" + parametros.tipo_comprobantes + "'";
+            }
+
+            if (!String.IsNullOrEmpty(parametros.fecha_desde) && !String.IsNullOrEmpty(parametros.Fecha_hasta))
+            {
+
+                where_to += " AND  ccomprobantes.fecha_ccomprobantes BETWEEN '" + parametros.fecha_desde + "' AND '" + parametros.Fecha_hasta + "'";
+            }
+
+            if (!String.IsNullOrEmpty(parametros.id_entidades))
+            {
+
+                where_to += " AND entidades.id_entidades = " + parametros.id_entidades;
+            }
+
+            if (!String.IsNullOrEmpty(parametros.numero_comprobantes))
+            {
+
+                where_to += " AND ccomprobantes.numero_ccomprobantes='" + parametros.numero_comprobantes + "' ";
+            }
+
+            if (!String.IsNullOrEmpty(parametros.referencia_doc_comprobantes))
+            {
+
+                where_to += " AND ccomprobantes.referencia_doc_ccomprobantes ='" + parametros.referencia_doc_comprobantes + "'";
+            }
+
+            where = where + where_to;
+
+
+
             dt_Reporte1 = AccesoLogica.Select(columnas, tablas, where);
 
             //dsCuentas.Cuentas= dt_Reporte;
