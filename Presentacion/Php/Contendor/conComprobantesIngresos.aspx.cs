@@ -90,10 +90,6 @@ namespace Presentacion.Php.Contendor
             CrystalReportViewer1.ReportSource = crystalReport;
 
 
-
-
-
-
         }
     }
 }

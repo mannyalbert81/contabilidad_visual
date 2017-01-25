@@ -139,6 +139,10 @@ namespace Presentacion.Php.Contendor
                     parametros.total_registros = dt_Reporte.Rows.Count;
                 }
 
+                ///aqui van los parametros q van al reporte en caso de declararale en el rpt
+                /// si no se los ininicializa muestra pantalla 
+                /// de conexion a la base de datoss
+
                 crystalReport.SetParameterValue("total_registros", parametros.total_registros);
                 crystalReport.SetParameterValue("fecha_desde", parametros.fecha_desde);
                 crystalReport.SetParameterValue("fecha_hasta", parametros.Fecha_hasta);
