@@ -15,7 +15,7 @@ using Presentacion.Php.Clases;
 namespace Presentacion.Php.Contendor
 {
 
-
+    //maycol
 
     public partial class conBalanceComprobacionDetallado : System.Web.UI.Page
     {
