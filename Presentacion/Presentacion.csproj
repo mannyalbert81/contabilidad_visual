@@ -317,7 +317,6 @@
     <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="favicon.ico" />
-    <Content Include="servicioweb\controlentregas.asmx" />
     <Content Include="servicioweb\ReporteContabilidad.asmx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -583,10 +582,6 @@
     </Compile>
     <Compile Include="Reporte.aspx.designer.cs">
       <DependentUpon>Reporte.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="servicioweb\controlentregas.asmx.cs">
-      <DependentUpon>controlentregas.asmx</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="servicioweb\ReporteContabilidad.asmx.cs">
       <DependentUpon>ReporteContabilidad.asmx</DependentUpon>

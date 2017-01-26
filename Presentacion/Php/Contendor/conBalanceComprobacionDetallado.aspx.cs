@@ -21,6 +21,7 @@ namespace Presentacion.Php.Contendor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ParametrosRpt parametros = new ParametrosRpt();
 
         }
 
@@ -34,17 +35,26 @@ namespace Presentacion.Php.Contendor
 
             parametros.id_entidades = Request.QueryString["id_entidades"];
             parametros.reporte = Request.QueryString["reporte"];
-           
-            try
-            {   parametros.id_usuarios = Convert.ToInt32(Request.QueryString["id_usuarios"]); }
-            catch (Exception) { parametros.id_usuarios = 0; }
+
+          
 
             try
-            {   parametros.anio_balance = Convert.ToInt32(Request.QueryString["anio"]); }
+            {
+
+                parametros.id_usuarios = Convert.ToInt32(Request.QueryString["id_usuarios"]);
+            }
+             catch (Exception) { parametros.id_usuarios = 0; }
+
+            try
+            { 
+            parametros.anio_balance = Convert.ToInt32(Request.QueryString["anio"]);
+            }
             catch (Exception) { parametros.anio_balance = 0; }
 
-            try
-            { parametros.mes_balance = Convert.ToInt32(Request.QueryString["mes"]); }
+             try
+           {
+            parametros.mes_balance = Convert.ToInt32(Request.QueryString["mes"]);
+        }
             catch (Exception) { parametros.mes_balance = 0; }
 
             
@@ -184,8 +194,8 @@ namespace Presentacion.Php.Contendor
                 }
 
             }
-           
 
+            Label1.Text = parametros.id_entidades + '-' + parametros.id_usuarios + '-' + parametros.mes_balance + '-' + parametros.reporte + '-'+ parametros.anio_balance;
 
             crystalReport.Load(cadena);
             crystalReport.SetDataSource(dsBalanceComprobacionDetallado.Tables[1]);
