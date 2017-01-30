@@ -7,22 +7,17 @@ using System.Web.UI.WebControls;
 using Negocio;
 using CrystalDecisions.CrystalReports.Engine;
 using System.Data;
-
 using System.IO;
 using System.Drawing;
 using Presentacion.Php.Clases;
 
 namespace Presentacion.Php.Contendor
 {
-
-    //maycol
-
     public partial class conBalanceComprobacionDetallado : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             ParametrosRpt parametros = new ParametrosRpt();
-
         }
 
         protected void CrystalReportViewer1_Init(object sender, EventArgs e)
@@ -30,18 +25,13 @@ namespace Presentacion.Php.Contendor
             ReportDocument crystalReport = new ReportDocument();
             var dsBalanceComprobacionDetallado = new Datas.dsBalanceComprobacionDetallado();
             DataTable dt_Reporte1 = new DataTable();
-
             ParametrosRpt parametros = new ParametrosRpt();
-
             parametros.id_entidades = Request.QueryString["id_entidades"];
             parametros.reporte = Request.QueryString["reporte"];
-
-          
-
+            
             try
             {
-
-                parametros.id_usuarios = Convert.ToInt32(Request.QueryString["id_usuarios"]);
+            parametros.id_usuarios = Convert.ToInt32(Request.QueryString["id_usuarios"]);
             }
              catch (Exception) { parametros.id_usuarios = 0; }
 
@@ -54,21 +44,18 @@ namespace Presentacion.Php.Contendor
              try
            {
             parametros.mes_balance = Convert.ToInt32(Request.QueryString["mes"]);
-        }
+            }
             catch (Exception) { parametros.mes_balance = 0; }
 
-            
-            if(parametros.mes_balance>0)
+            if (parametros.mes_balance>0)
             {
-
             }
 
             string columnas = "entidades.id_entidades, entidades.ruc_entidades, entidades.nombre_entidades, entidades.telefono_entidades,"+ 
                           "entidades.direccion_entidades, entidades.ciudad_entidades, entidades.logo_entidades, cierre_mes.id_cierre_mes,"+ 
                           "cierre_mes.id_usuario_creador, cierre_mes.fecha_cierre_mes, tipo_cierre.nombre_tipo_cierre, plan_cuentas.codigo_plan_cuentas,"+ 
                           "plan_cuentas.nombre_plan_cuentas, cuentas_cierre_mes.debe_ene, cuentas_cierre_mes.haber_ene, cuentas_cierre_mes.saldo_final_ene,"+
-
-                          "cuentas_cierre_mes.debe_feb,  cuentas_cierre_mes.haber_feb,  cuentas_cierre_mes.saldo_final_feb,"+ 
+                         "cuentas_cierre_mes.debe_feb,  cuentas_cierre_mes.haber_feb,  cuentas_cierre_mes.saldo_final_feb,"+ 
                           "cuentas_cierre_mes.debe_mar, cuentas_cierre_mes.haber_mar, cuentas_cierre_mes.saldo_final_mar,"+ 
                           "cuentas_cierre_mes.debe_abr, cuentas_cierre_mes.haber_abr, cuentas_cierre_mes.saldo_final_abr,"+ 
                           "cuentas_cierre_mes.debe_may, cuentas_cierre_mes.haber_may, cuentas_cierre_mes.saldo_final_may,"+
@@ -106,43 +93,35 @@ namespace Presentacion.Php.Contendor
                           "cerrado_dic_cuentas_cierre_mes" ;
 
             string tablas = "public.cierre_mes, public.cuentas_cierre_mes, public.entidades, public.usuarios, public.plan_cuentas, public.tipo_cierre";
-
             string where = "cierre_mes.id_tipo_cierre = tipo_cierre.id_tipo_cierre AND cuentas_cierre_mes.id_cierre_mes = cierre_mes.id_cierre_mes AND " +
                 "entidades.id_entidades = cierre_mes.id_entidades AND usuarios.id_entidades = entidades.id_entidades AND " +
                 "plan_cuentas.id_plan_cuentas = cuentas_cierre_mes.id_plan_cuentas";                
 
             string order_by = "plan_cuentas.codigo_plan_cuentas";
-
             String where_to = "";
             //
             if (parametros.id_usuarios > 0)
             {
-
                 where_to += " AND usuarios.id_usuarios=" + parametros.id_usuarios + "";
             }
             
             if (!String.IsNullOrEmpty(parametros.id_entidades))
             {
-
                 where_to += " AND entidades.id_entidades = " + parametros.id_entidades;
             }
 
-            
             if (parametros.anio_balance>0)
             {
-
                 where_to += " AND cuentas_cierre_mes.year ='" + parametros.anio_balance + "'";
             }
-
             where = where + where_to;
-
             dt_Reporte1 = AccesoLogica.Select(columnas, tablas, where, order_by);
 
             //dsCuentas.Cuentas= dt_Reporte;
 
             dsBalanceComprobacionDetallado.Tables.Add(dt_Reporte1);
-
             string cadena = Server.MapPath("~/Php/Reporte/empty.rpt");
+
             if (parametros.reporte == "simplificado")
             {
                 cadena = Server.MapPath("~/Php/Reporte/crBalanceComprobacionDetallado.rpt");
@@ -190,21 +169,12 @@ namespace Presentacion.Php.Contendor
                     default:
                         cadena = Server.MapPath("~/Php/Reporte/empty.rpt");
                         break;
-
-                }
-
-            }
-
+                    }
+             }
             Label1.Text = parametros.id_entidades + '-' + parametros.id_usuarios + '-' + parametros.mes_balance + '-' + parametros.reporte + '-'+ parametros.anio_balance;
-
             crystalReport.Load(cadena);
             crystalReport.SetDataSource(dsBalanceComprobacionDetallado.Tables[1]);
             CrystalReportViewer1.ReportSource = crystalReport;
-            
         }
-
-
-       
-
     }
 }

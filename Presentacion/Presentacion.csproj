@@ -200,6 +200,7 @@
     <Content Include="Php\Contendor\conComprobantesEgresos.aspx" />
     <Content Include="Php\Contendor\conComprobantesIngresos.aspx" />
     <Content Include="Php\Contendor\conMayorDetallado.aspx" />
+    <Content Include="Php\Contendor\conpruebas.aspx" />
     <Content Include="Php\Contendor\conReporteComprobantes.aspx" />
     <Content Include="Php\Datas\dsCuentas.xsc">
       <DependentUpon>dsCuentas.xsd</DependentUpon>
@@ -378,6 +379,13 @@
     </Compile>
     <Compile Include="Php\Contendor\conMayorDetallado.aspx.designer.cs">
       <DependentUpon>conMayorDetallado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Contendor\conpruebas.aspx.cs">
+      <DependentUpon>conpruebas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Php\Contendor\conpruebas.aspx.designer.cs">
+      <DependentUpon>conpruebas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Php\Contendor\conReporteComprobantes.aspx.cs">
       <DependentUpon>conReporteComprobantes.aspx</DependentUpon>

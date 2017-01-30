@@ -7,13 +7,17 @@ using System.Web.UI.WebControls;
 using Negocio;
 using CrystalDecisions.CrystalReports.Engine;
 using System.Data;
+
 using System.IO;
 using System.Drawing;
+using Presentacion.Php.Clases;
 
 namespace Presentacion.Php.Contendor
 {
     public partial class conComprobantesContables : System.Web.UI.Page
     {
+        ParametrosRpt parametros = new ParametrosRpt();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -25,6 +29,7 @@ namespace Presentacion.Php.Contendor
             var dsComprobantesContables = new Datas.dsComprobantesContables();
             DataTable dt_Reporte1 = new DataTable();
 
+            parametros.id_ccomprobantes = Request.QueryString["id_ccomprobantes"];
 
             string columnas = "entidades.ruc_entidades," + 
                               "entidades.nombre_entidades," + 
@@ -58,6 +63,20 @@ namespace Presentacion.Php.Contendor
             string tablas = "public.ccomprobantes, public.dcomprobantes, public.entidades, public.usuarios, public.tipo_comprobantes, public.plan_cuentas, public.rol, public.forma_pago";
 
             string where = "ccomprobantes.id_usuarios = usuarios.id_usuarios AND dcomprobantes.id_ccomprobantes = ccomprobantes.id_ccomprobantes AND entidades.id_entidades = ccomprobantes.id_entidades AND usuarios.id_rol = rol.id_rol AND tipo_comprobantes.id_tipo_comprobantes = ccomprobantes.id_tipo_comprobantes AND plan_cuentas.id_plan_cuentas = dcomprobantes.id_plan_cuentas AND forma_pago.id_forma_pago = ccomprobantes.id_forma_pago";
+
+            String where_to = "";
+
+
+            if (!String.IsNullOrEmpty(parametros.id_ccomprobantes))
+            {
+
+                where_to += " AND ccomprobantes.id_ccomprobantes = " + parametros.id_ccomprobantes;
+            }
+
+
+
+
+            where = where + where_to;
 
             dt_Reporte1 = AccesoLogica.Select(columnas, tablas, where);
 

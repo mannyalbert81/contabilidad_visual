@@ -20,5 +20,7 @@ namespace Presentacion.Php.Clases
         public int total_registros { get; set; }
         public int anio_balance { get; set; }
         public int mes_balance { get; set; }
+        public string id_ccomprobantes { get; set; }
+        
     }
 }
