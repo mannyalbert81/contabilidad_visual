@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="conReporteComprobantes.aspx.cs" Inherits="Presentacion.Php.Contendor.conReporteComprobantes" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="conTablaAmortizacionIndividual.aspx.cs" Inherits="Presentacion.Php.Contendor.conTablaAmortizacionIndividual" %>
 
 <%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
 

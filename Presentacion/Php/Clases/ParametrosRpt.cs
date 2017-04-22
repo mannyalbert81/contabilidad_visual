@@ -20,7 +20,15 @@ namespace Presentacion.Php.Clases
         public int total_registros { get; set; }
         public int anio_balance { get; set; }
         public int mes_balance { get; set; }
+        public string id_amortizacion_cabeza { get; set; }
         public string id_ccomprobantes { get; set; }
-        
+        public string ruc_clientes { get; set; }
+        public string razon_social_clientes { get; set; }
+        public string numero_credito_amortizacion_cabeza { get; set; }
+        public string numero_pagare_amortizacion_cabeza { get; set; }
+        public string id_recaudacion { get; set; }
+        public string numero_cuota_recaudacion { get; set; }
+        public string id_clientes { get; set; }
+
     }
 }
