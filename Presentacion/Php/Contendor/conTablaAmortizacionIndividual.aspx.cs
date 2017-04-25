@@ -90,7 +90,6 @@ namespace Presentacion.Php.Contendor
 
 
             string cadena = Server.MapPath("~/Php/Reporte/crTablaAmortizacion.rpt");
-            crystalReport.PrintToPrinter(1, false, 0, 0);
             
             crystalReport.Load(cadena);
             crystalReport.SetDataSource(dsTablaAmortizacionIndividual.Tables[1]);
