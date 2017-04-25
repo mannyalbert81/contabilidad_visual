@@ -59,6 +59,7 @@ namespace Presentacion.Php.Contendor
                               "entidades.telefono_entidades," +
                               "entidades.direccion_entidades," +
                               "entidades.ciudad_entidades," +
+                              "amortizacion_detalle.estado_cancelado_amortizacion_detalle," +
                               "entidades.logo_entidades";
 
             string tablas = " public.amortizacion_cabeza, public.fc_clientes, public.tipo_creditos, public.intereses, public.amortizacion_detalle, public.entidades";

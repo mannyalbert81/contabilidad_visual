@@ -337,6 +337,8 @@ namespace Presentacion.Php.Datas {
             
             private global::System.Data.DataColumn columnnumero_operacion;
             
+            private global::System.Data.DataColumn columnestado_cancelado_amortizacion_detalle;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DataTable1DataTable() {
@@ -604,6 +606,14 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn estado_cancelado_amortizacion_detalleColumn {
+                get {
+                    return this.columnestado_cancelado_amortizacion_detalle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -668,7 +678,8 @@ namespace Presentacion.Php.Datas {
                         byte[] logo_entidades, 
                         int id_amortizacion_cabeza, 
                         double total_deuda, 
-                        string numero_operacion) {
+                        string numero_operacion, 
+                        bool estado_cancelado_amortizacion_detalle) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         numero_credito_amortizacion_cabeza,
@@ -699,7 +710,8 @@ namespace Presentacion.Php.Datas {
                         logo_entidades,
                         id_amortizacion_cabeza,
                         total_deuda,
-                        numero_operacion};
+                        numero_operacion,
+                        estado_cancelado_amortizacion_detalle};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -751,6 +763,7 @@ namespace Presentacion.Php.Datas {
                 this.columnid_amortizacion_cabeza = base.Columns["id_amortizacion_cabeza"];
                 this.columntotal_deuda = base.Columns["total_deuda"];
                 this.columnnumero_operacion = base.Columns["numero_operacion"];
+                this.columnestado_cancelado_amortizacion_detalle = base.Columns["estado_cancelado_amortizacion_detalle"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -814,6 +827,8 @@ namespace Presentacion.Php.Datas {
                 base.Columns.Add(this.columntotal_deuda);
                 this.columnnumero_operacion = new global::System.Data.DataColumn("numero_operacion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnumero_operacion);
+                this.columnestado_cancelado_amortizacion_detalle = new global::System.Data.DataColumn("estado_cancelado_amortizacion_detalle", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnestado_cancelado_amortizacion_detalle);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1439,6 +1454,23 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool estado_cancelado_amortizacion_detalle {
+                get {
+                    try {
+                        return ((bool)(this[this.tableDataTable1.estado_cancelado_amortizacion_detalleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'estado_cancelado_amortizacion_detalle\' de la tabla \'DataT" +
+                                "able1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.estado_cancelado_amortizacion_detalleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isnumero_credito_amortizacion_cabezaNull() {
                 return this.IsNull(this.tableDataTable1.numero_credito_amortizacion_cabezaColumn);
             }
@@ -1783,6 +1815,18 @@ namespace Presentacion.Php.Datas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setnumero_operacionNull() {
                 this[this.tableDataTable1.numero_operacionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isestado_cancelado_amortizacion_detalleNull() {
+                return this.IsNull(this.tableDataTable1.estado_cancelado_amortizacion_detalleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setestado_cancelado_amortizacion_detalleNull() {
+                this[this.tableDataTable1.estado_cancelado_amortizacion_detalleColumn] = global::System.Convert.DBNull;
             }
         }
         

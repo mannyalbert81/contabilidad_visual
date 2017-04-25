@@ -56,7 +56,7 @@ namespace Presentacion.Php.Contendor
 
             String where_to = "";
 
-            if (!String.IsNullOrEmpty(parametros.id_recaudacion))
+            if (!String.IsNullOrEmpty(parametros.id_amortizacion_cabeza))
             {
 
                 where_to += " AND amortizacion_cabeza.id_amortizacion_cabeza = " + parametros.id_amortizacion_cabeza;
