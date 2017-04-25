@@ -204,6 +204,7 @@
     <Content Include="Php\Contendor\conReporteRecaudacion.aspx" />
     <Content Include="Php\Contendor\conReporteRecaudacionIndividual.aspx" />
     <Content Include="Php\Contendor\conReporteTablaAmortizacion.aspx" />
+    <Content Include="Php\Contendor\conReporteTablaAmortizacionPagos.aspx" />
     <Content Include="Php\Contendor\conTablaAmortizacionIndividual.aspx" />
     <Content Include="Php\Datas\dsCuentas.xsc">
       <DependentUpon>dsCuentas.xsd</DependentUpon>
@@ -408,6 +409,13 @@
     </Compile>
     <Compile Include="Php\Contendor\conReporteRecaudacionIndividual.aspx.designer.cs">
       <DependentUpon>conReporteRecaudacionIndividual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Contendor\conReporteTablaAmortizacionPagos.aspx.cs">
+      <DependentUpon>conReporteTablaAmortizacionPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Php\Contendor\conReporteTablaAmortizacionPagos.aspx.designer.cs">
+      <DependentUpon>conReporteTablaAmortizacionPagos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Php\Contendor\conTablaAmortizacionIndividual.aspx.cs">
       <DependentUpon>conTablaAmortizacionIndividual.aspx</DependentUpon>
