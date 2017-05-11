@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="conReporteTablaAmortizacionPagos.aspx.cs" Inherits="Presentacion.Php.Contendor.conReporteTablaAmortizacionPagos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="conReporteTablaAmortizacionIndividualPagos.aspx.cs" Inherits="Presentacion.Php.Contendor.conReporteTablaAmortizacionIndividualPagos" %>
+
 
 <%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
 
@@ -13,10 +14,9 @@
     <form id="form1" runat="server">
     <div>
     
-        <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" OnInit="CrystalReportViewer1_Init" ToolPanelView="None" />
-     
+         <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" OnInit="CrystalReportViewer1_Init" ToolPanelView="None" />
+        
     </div>
     </form>
 </body>
 </html>
-<a href="conReporteTablaAmortizacionPagos.aspx">conReporteTablaAmortizacionPagos.aspx</a>

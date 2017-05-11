@@ -339,6 +339,12 @@ namespace Presentacion.Php.Datas {
             
             private global::System.Data.DataColumn columnestado_cancelado_amortizacion_detalle;
             
+            private global::System.Data.DataColumn columncapital_pagado_recaudacion;
+            
+            private global::System.Data.DataColumn columnfecha_pago_recaudacion;
+            
+            private global::System.Data.DataColumn columnnumero_cuota_recaudacion;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DataTable1DataTable() {
@@ -614,6 +620,30 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn capital_pagado_recaudacionColumn {
+                get {
+                    return this.columncapital_pagado_recaudacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_pago_recaudacionColumn {
+                get {
+                    return this.columnfecha_pago_recaudacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn numero_cuota_recaudacionColumn {
+                get {
+                    return this.columnnumero_cuota_recaudacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -679,7 +709,10 @@ namespace Presentacion.Php.Datas {
                         int id_amortizacion_cabeza, 
                         double total_deuda, 
                         string numero_operacion, 
-                        bool estado_cancelado_amortizacion_detalle) {
+                        bool estado_cancelado_amortizacion_detalle, 
+                        decimal capital_pagado_recaudacion, 
+                        System.DateTime fecha_pago_recaudacion, 
+                        double numero_cuota_recaudacion) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         numero_credito_amortizacion_cabeza,
@@ -711,7 +744,10 @@ namespace Presentacion.Php.Datas {
                         id_amortizacion_cabeza,
                         total_deuda,
                         numero_operacion,
-                        estado_cancelado_amortizacion_detalle};
+                        estado_cancelado_amortizacion_detalle,
+                        capital_pagado_recaudacion,
+                        fecha_pago_recaudacion,
+                        numero_cuota_recaudacion};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -764,6 +800,9 @@ namespace Presentacion.Php.Datas {
                 this.columntotal_deuda = base.Columns["total_deuda"];
                 this.columnnumero_operacion = base.Columns["numero_operacion"];
                 this.columnestado_cancelado_amortizacion_detalle = base.Columns["estado_cancelado_amortizacion_detalle"];
+                this.columncapital_pagado_recaudacion = base.Columns["capital_pagado_recaudacion"];
+                this.columnfecha_pago_recaudacion = base.Columns["fecha_pago_recaudacion"];
+                this.columnnumero_cuota_recaudacion = base.Columns["numero_cuota_recaudacion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -829,6 +868,12 @@ namespace Presentacion.Php.Datas {
                 base.Columns.Add(this.columnnumero_operacion);
                 this.columnestado_cancelado_amortizacion_detalle = new global::System.Data.DataColumn("estado_cancelado_amortizacion_detalle", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnestado_cancelado_amortizacion_detalle);
+                this.columncapital_pagado_recaudacion = new global::System.Data.DataColumn("capital_pagado_recaudacion", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncapital_pagado_recaudacion);
+                this.columnfecha_pago_recaudacion = new global::System.Data.DataColumn("fecha_pago_recaudacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_pago_recaudacion);
+                this.columnnumero_cuota_recaudacion = new global::System.Data.DataColumn("numero_cuota_recaudacion", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnumero_cuota_recaudacion);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1471,6 +1516,57 @@ namespace Presentacion.Php.Datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal capital_pagado_recaudacion {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableDataTable1.capital_pagado_recaudacionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'capital_pagado_recaudacion\' de la tabla \'DataTable1\' es D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.capital_pagado_recaudacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime fecha_pago_recaudacion {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableDataTable1.fecha_pago_recaudacionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_pago_recaudacion\' de la tabla \'DataTable1\' es DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.fecha_pago_recaudacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double numero_cuota_recaudacion {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTable1.numero_cuota_recaudacionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'numero_cuota_recaudacion\' de la tabla \'DataTable1\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.numero_cuota_recaudacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isnumero_credito_amortizacion_cabezaNull() {
                 return this.IsNull(this.tableDataTable1.numero_credito_amortizacion_cabezaColumn);
             }
@@ -1827,6 +1923,42 @@ namespace Presentacion.Php.Datas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setestado_cancelado_amortizacion_detalleNull() {
                 this[this.tableDataTable1.estado_cancelado_amortizacion_detalleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscapital_pagado_recaudacionNull() {
+                return this.IsNull(this.tableDataTable1.capital_pagado_recaudacionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcapital_pagado_recaudacionNull() {
+                this[this.tableDataTable1.capital_pagado_recaudacionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfecha_pago_recaudacionNull() {
+                return this.IsNull(this.tableDataTable1.fecha_pago_recaudacionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfecha_pago_recaudacionNull() {
+                this[this.tableDataTable1.fecha_pago_recaudacionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isnumero_cuota_recaudacionNull() {
+                return this.IsNull(this.tableDataTable1.numero_cuota_recaudacionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnumero_cuota_recaudacionNull() {
+                this[this.tableDataTable1.numero_cuota_recaudacionColumn] = global::System.Convert.DBNull;
             }
         }
         

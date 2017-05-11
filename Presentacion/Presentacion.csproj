@@ -29,6 +29,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -196,6 +197,7 @@
     <Content Include="Php\Contendor\conComprobantesContables.aspx" />
     <Content Include="Php\Contendor\conComprobantesEgresos.aspx" />
     <Content Include="Php\Contendor\conComprobantesIngresos.aspx" />
+    <Content Include="Php\Contendor\conEres04.aspx" />
     <Content Include="Php\Contendor\conMayorDetallado.aspx" />
     <Content Include="Php\Contendor\conpruebas.aspx" />
     <Content Include="Php\Contendor\conReporteComprobantes.aspx" />
@@ -204,6 +206,7 @@
     <Content Include="Php\Contendor\conReporteRecaudacion.aspx" />
     <Content Include="Php\Contendor\conReporteRecaudacionIndividual.aspx" />
     <Content Include="Php\Contendor\conReporteTablaAmortizacion.aspx" />
+    <Content Include="Php\Contendor\conReporteTablaAmortizacionIndividualPagos.aspx" />
     <Content Include="Php\Contendor\conReporteTablaAmortizacionPagos.aspx" />
     <Content Include="Php\Contendor\conTablaAmortizacionIndividual.aspx" />
     <Content Include="Php\Datas\dsCuentas.xsc">
@@ -275,6 +278,17 @@
       <LastGenOutput>dsBalanceComprobacionDetallado.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Php\Datas\dsEres04.xsc">
+      <DependentUpon>dsEres04.xsd</DependentUpon>
+    </Content>
+    <None Include="Php\Datas\dsEres04.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEres04.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Php\Datas\dsEres04.xss">
+      <DependentUpon>dsEres04.xsd</DependentUpon>
+    </Content>
     <None Include="Php\Datas\dsMayor.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -285,6 +299,17 @@
     </Content>
     <Content Include="Php\Datas\dsReporteComprobantes.xsc">
       <DependentUpon>dsReporteComprobantes.xsd</DependentUpon>
+    </Content>
+    <Content Include="Php\Datas\dsRecaudacion_tabla.xsc">
+      <DependentUpon>dsRecaudacion_tabla.xsd</DependentUpon>
+    </Content>
+    <None Include="Php\Datas\dsRecaudacion_tabla.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRecaudacion_tabla.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Php\Datas\dsRecaudacion_tabla.xss">
+      <DependentUpon>dsRecaudacion_tabla.xsd</DependentUpon>
     </Content>
     <None Include="Php\Datas\dsReporteComprobantes.xsd">
       <Generator>MSDataSetGenerator</Generator>
@@ -382,6 +407,13 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Php\Clases\ParametrosRpt.cs" />
+    <Compile Include="Php\Contendor\conEres04.aspx.cs">
+      <DependentUpon>conEres04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Php\Contendor\conEres04.aspx.designer.cs">
+      <DependentUpon>conEres04.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Php\Contendor\conReporteDeuda.aspx.cs">
       <DependentUpon>conReporteDeuda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -409,6 +441,13 @@
     </Compile>
     <Compile Include="Php\Contendor\conReporteRecaudacionIndividual.aspx.designer.cs">
       <DependentUpon>conReporteRecaudacionIndividual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Contendor\conReporteTablaAmortizacionIndividualPagos.aspx.cs">
+      <DependentUpon>conReporteTablaAmortizacionIndividualPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Php\Contendor\conReporteTablaAmortizacionIndividualPagos.aspx.designer.cs">
+      <DependentUpon>conReporteTablaAmortizacionIndividualPagos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Php\Contendor\conReporteTablaAmortizacionPagos.aspx.cs">
       <DependentUpon>conReporteTablaAmortizacionPagos.aspx</DependentUpon>
@@ -525,10 +564,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Php\Datas\dsEres04.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEres04.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Php\Datas\dsMayor.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMayor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Php\Datas\dsRecaudacion_tabla.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRecaudacion_tabla.xsd</DependentUpon>
     </Compile>
     <Compile Include="Php\Datas\dsReporteComprobantes.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -604,6 +653,12 @@
       <DependentUpon>crBalanceComprobacionJulio.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Php\Reporte\crEres04.cs">
+      <DependentUpon>crEres04.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Php\Reporte\crReporteRecaudacion.cs">
       <DependentUpon>crReporteRecaudacion.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -612,6 +667,12 @@
     </Compile>
     <Compile Include="Php\Reporte\crReporteDeuda.cs">
       <DependentUpon>crReporteDeuda.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Php\Reporte\crTablaAmortizacionPagos.cs">
+      <DependentUpon>crTablaAmortizacionPagos.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
@@ -788,6 +849,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crBalanceComprobacionJulio.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crEres04.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crEres04.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Php\Reporte\crReporteRecaudacion.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crReporteRecaudacion.cs</LastGenOutput>
@@ -795,6 +860,10 @@
     <EmbeddedResource Include="Php\Reporte\crReporteDeuda.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crReporteDeuda.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Php\Reporte\crTablaAmortizacionPagos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTablaAmortizacionPagos.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Php\Reporte\crTablaAmortizacion.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
