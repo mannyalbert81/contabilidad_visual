@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="conEres04.aspx.cs" Inherits="Presentacion.Php.Contendor.conEres04" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="conEres04Cabeza.aspx.cs" Inherits="Presentacion.Php.Contendor.conEres04Cabeza" %>
 
 <%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
 
