@@ -29,6 +29,9 @@ namespace Presentacion.Php.Clases
         public string id_recaudacion { get; set; }
         public string numero_cuota_recaudacion { get; set; }
         public string id_clientes { get; set; }
+        public string identificacion_sujeto_eres_04 { get; set; }
+        public string numero_operacion_eres_04 { get; set; }
+
 
     }
 }

@@ -16,14 +16,14 @@ namespace Presentacion.Php.Reporte {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class crReporteRecaudacion : ReportClass {
+    public class crEres04 : ReportClass {
         
-        public crReporteRecaudacion() {
+        public crEres04() {
         }
         
         public override string ResourceName {
             get {
-                return "crReporteRecaudacion.rpt";
+                return "crEres04.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Presentacion.Php.Reporte {
         
         public override string FullResourceName {
             get {
-                return "Presentacion.Php.Reporte.crReporteRecaudacion.rpt";
+                return "Presentacion.Php.Reporte.crEres04.rpt";
             }
             set {
                 // Do nothing
@@ -114,9 +114,9 @@ namespace Presentacion.Php.Reporte {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcrReporteRecaudacion : Component, ICachedReport {
+    public class CachedcrEres04 : Component, ICachedReport {
         
-        public CachedcrReporteRecaudacion() {
+        public CachedcrEres04() {
         }
         
         [Browsable(false)]
@@ -153,7 +153,7 @@ namespace Presentacion.Php.Reporte {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            crReporteRecaudacion rpt = new crReporteRecaudacion();
+            crEres04 rpt = new crEres04();
             rpt.Site = this.Site;
             return rpt;
         }

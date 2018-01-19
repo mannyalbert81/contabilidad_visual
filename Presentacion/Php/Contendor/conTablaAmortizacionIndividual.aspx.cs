@@ -59,9 +59,10 @@ namespace Presentacion.Php.Contendor
                               "entidades.telefono_entidades," +
                               "entidades.direccion_entidades," +
                               "entidades.ciudad_entidades," +
+                              "amortizacion_detalle.estado_cancelado_amortizacion_detalle," +
                               "entidades.logo_entidades";
 
-            string tablas = " public.amortizacion_cabeza, public.fc_clientes, public.tipo_creditos, public.intereses, public.amortizacion_detalle, public.entidades";
+            string tablas = "public.amortizacion_cabeza, public.fc_clientes, public.tipo_creditos, public.intereses, public.amortizacion_detalle, public.entidades";
 
             string where = "   fc_clientes.id_clientes = amortizacion_cabeza.id_fc_clientes AND tipo_creditos.id_tipo_creditos = amortizacion_cabeza.id_tipo_creditos AND intereses.id_intereses = amortizacion_cabeza.id_intereses AND amortizacion_detalle.id_amortizacion_cabeza = amortizacion_cabeza.id_amortizacion_cabeza AND entidades.id_entidades = fc_clientes.id_entidades AND estado_final = 'FALSE'";
 
@@ -90,7 +91,6 @@ namespace Presentacion.Php.Contendor
 
             string cadena = Server.MapPath("~/Php/Reporte/crTablaAmortizacion.rpt");
             
-
             crystalReport.Load(cadena);
             crystalReport.SetDataSource(dsTablaAmortizacionIndividual.Tables[1]);
             CrystalReportViewer1.ReportSource = crystalReport;
